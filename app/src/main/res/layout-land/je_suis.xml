@@ -9,29 +9,29 @@
         android:id="@+id/previousstep"
         android:layout_width="160dp"
         android:layout_height="54dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="36dp"
         android:text="Previous step"
-        app:layout_constraintEnd_toStartOf="@+id/nextstep"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="637dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/nextstep"
         android:layout_width="160dp"
         android:layout_height="54dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="36dp"
         android:text="Next Step"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/previousstep"
-        tools:layout_editor_absoluteY="637dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="148dp"
         android:layout_height="153dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/profil" />
@@ -40,7 +40,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:text="Your profil"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -48,6 +48,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -55,8 +56,8 @@
         android:id="@+id/textView2"
         android:layout_width="84dp"
         android:layout_height="33dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginBottom="116dp"
         android:text="You are"
         android:textAllCaps="true"
         android:textColor="#673AB7"
@@ -69,7 +70,8 @@
         android:id="@+id/textView3"
         android:layout_width="94dp"
         android:layout_height="27dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginBottom="52dp"
         android:text="Your age"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -77,58 +79,48 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/previousstep"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
-        app:layout_constraintHorizontal_bias="0.66"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="52dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="0"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
     <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="247dp"
-        android:layout_height="161dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.678"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        android:layout_width="304dp"
+        android:layout_height="174dp"
+        tools:layout_editor_absoluteX="396dp"
+        tools:layout_editor_absoluteY="37dp">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButton4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="man"
+            android:text="MAN"
             android:textAllCaps="true"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButton5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Woman"
-            android:textAlignment="textStart"
+            android:text="WOMAN"
             android:textAllCaps="true"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButton6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Other"
             android:textAllCaps="true"
             android:textSize="16sp" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="297dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="400dp"
+        tools:layout_editor_absoluteY="232dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

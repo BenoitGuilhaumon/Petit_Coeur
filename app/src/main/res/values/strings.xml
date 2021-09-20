@@ -3,4 +3,12 @@
     <string name="Name">Name</string>
     <string name="name">Your Name</string>
     <string name="buttonstart">Start</string>
+    <string name="profil">Your Profil</string>
+    <string name="sexe">You Are</string>
+    <string name="age">Your Age</string>
+    <string name="man">Man</string>
+    <string name="woman">Woman</string>
+    <string name="autre_sexe">other</string>
+    <string name="Previous_Step">Previous Step</string>
+    <string name="next_step">Next Step</string>
 </resources>
