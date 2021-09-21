@@ -23,13 +23,13 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suivi_cardiaque);
 
-        @Override
+        /*@Override
         public boolean onKey(View view, int i, KeyEvent keyEvent) {
             Log.d(TAG, "onKey: touche : switch yes");
             if (switch1.isChecked())
                 conversion();
             return false;
-        }
+        }*/
 
     }
 }
