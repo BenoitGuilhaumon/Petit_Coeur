@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetitCoeur">
         <activity
+            android:name=".Suivi_Cardiaque"
+            android:exported="true" />
+        <activity
+            android:name=".MonCoeur"
+            android:exported="true" />
+        <activity
+            android:name=".Profil"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
