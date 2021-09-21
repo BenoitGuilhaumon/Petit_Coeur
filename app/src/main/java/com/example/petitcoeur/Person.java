@@ -29,6 +29,7 @@ public class Person implements Parcelable {
     private Response diabetic;
     private Response cholesterol;
     private Response first_degree_relative;
+    private Response cardiovascularcheck;
 
     /**
      * Constructor. All members get default values
