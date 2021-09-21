@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="name">Votre Nom</string>
+    <string name="your_name">Quel est votre nom ?</string>
     <string name="buttonstart">Commencer</string>
     <string name="Name">Nom</string>
     <string name="sexe">Vous êtes</string>

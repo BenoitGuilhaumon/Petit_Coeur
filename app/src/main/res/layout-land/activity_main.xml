@@ -6,15 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/start2"
+        android:layout_width="192dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="76dp"
+        android:background="#4809BA"
+        android:text="@string/buttonstart"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/name"
-        android:layout_width="143dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="132dp"
-        android:text="@string/name"
+        android:layout_width="299dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        android:background="#4809BA"
+        android:text="@string/your_name"
         android:textAlignment="center"
-        android:textColor="#8102FF"
+        android:textColor="#FAF9FB"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,16 +37,16 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="277dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="297dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="204dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.885"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -42,18 +57,7 @@
         app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
+        app:layout_constraintVertical_bias="0.179"
         app:srcCompat="@drawable/commentvavotrecoeur" />
-
-    <Button
-        android:id="@+id/buttonstart"
-        android:layout_width="89dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/buttonstart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.757"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
