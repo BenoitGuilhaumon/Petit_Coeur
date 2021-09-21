@@ -30,29 +30,32 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner7"
+        android:id="@+id/spinner3"
         android:layout_width="364dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
+        android:entries="@array/array_response"
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Spinner
-        android:id="@+id/spinner6"
+        android:id="@+id/spinner2"
         android:layout_width="360dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
+        android:entries="@array/array_response"
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Spinner
-        android:id="@+id/spinner5"
+        android:id="@+id/spinner1"
         android:layout_width="359dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
+        android:entries="@array/array_response"
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -74,8 +77,8 @@
         android:id="@+id/textView4"
         android:layout_width="360dp"
         android:layout_height="19dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="164dp"
         android:text="@string/heart_condition"
         android:textColor="#DD2C00"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,17 +120,9 @@
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
-        android:entries="Yes"
+        android:entries="@array/array_response"
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="48dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

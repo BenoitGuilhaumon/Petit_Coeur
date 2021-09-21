@@ -15,5 +15,7 @@
     <string name="diabetic">Are you diabetic ?</string>
     <string name="first_degree_relative">Do you have a first-degree relative (father, mother, brother or sister) who had heart problems (heart attack, stroke, sudden death) before age 55 for a man or before age 65 for a woman ?</string>
     <string name="cholesterol">Do you have a cholesterol problem ?</string>
-    <string name="todo">TODO</string>
+    <string name="doctor_cardiovascular">Have you already checked with your doctor about your cardiovascular risk ? (Yes/No/I don\'t remember)</string>
+    <string name="cardiac_chekup">Have you ever had a cardiac check-up (Default = No)</string>
+    <string name="cariologist">Have you ever consulted a cardiologist ?</string>
 </resources>

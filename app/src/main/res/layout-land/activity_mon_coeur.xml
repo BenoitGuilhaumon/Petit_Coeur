@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nextstep2" />
 
     <Spinner
-        android:id="@+id/spinner7"
+        android:id="@+id/spinner3"
         android:layout_width="124dp"
         android:layout_height="25dp"
         android:layout_marginStart="24dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Spinner
-        android:id="@+id/spinner6"
+        android:id="@+id/spinner2"
         android:layout_width="124dp"
         android:layout_height="25dp"
         android:layout_marginStart="24dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Spinner
-        android:id="@+id/spinner5"
+        android:id="@+id/spinner1"
         android:layout_width="124dp"
         android:layout_height="25dp"
         android:layout_marginStart="24dp"

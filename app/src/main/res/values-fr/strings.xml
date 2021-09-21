@@ -15,4 +15,7 @@
     <string name="diabetic">Êtes-vous diabétique ?</string>
     <string name="first_degree_relative">Avez-vous un parent au premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (crise cardiaque, attaque, mort subite) avant l\'âge de 55 ans pour un homme ou avant l\'âge de 65 ans pour une femme ?</string>
     <string name="cholesterol">Avez-vous un problème de cholestérol ?</string>
+    <string name="doctor_cardiovascular">Avez-vous déjà consulté votre médecin au sujet de votre risque cardiovasculaire ? (Oui/Non/Je ne me souviens pas)</string>
+    <string name="cardiac_chekup">Avez-vous déjà eu un bilan cardiaque (Par défaut = Non)</string>
+    <string name="cariologist">Avez-vous déjà consulté un cardiologue ?</string>
 </resources>
