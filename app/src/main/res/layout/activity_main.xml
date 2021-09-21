@@ -51,6 +51,7 @@
         android:layout_height="66dp"
         android:layout_marginBottom="120dp"
         android:background="#4809BA"
+        android:onClick="action_start"
         android:text="@string/buttonstart"
         android:textSize="20sp"
         android:textStyle="bold"
