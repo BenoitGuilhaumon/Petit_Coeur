@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="name">Votre Nom</string>
+    <string name="name">Quel est votre nom ?</string>
     <string name="buttonstart">Commencer</string>
     <string name="Name">Nom</string>
     <string name="sexe">Vous êtes</string>
-    <string name="profil">Votre Profil</string>
+    <string name="profil">Qui etes vous ?</string>
     <string name="age">Votre Age</string>
     <string name="man">Homme</string>
     <string name="woman">Femme</string>

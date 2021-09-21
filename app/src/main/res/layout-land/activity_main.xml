@@ -27,7 +27,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:background="#4809BA"
-        android:text="@string/your_name"
+        android:text="@string/name"
         android:textAlignment="center"
         android:textColor="#FAF9FB"
         android:textSize="24sp"

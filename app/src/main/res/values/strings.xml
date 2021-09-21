@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name" translatable="false">Petit Coeur</string>
     <string name="Name">Name</string>
-    <string name="name">Your Name</string>
+    <string name="name">What\'s your name ?</string>
     <string name="buttonstart">Start</string>
-    <string name="profil">Your Profil</string>
+    <string name="profil">Who are you ?</string>
     <string name="sexe">You Are</string>
     <string name="age">Your Age</string>
     <string name="man">Man</string>
