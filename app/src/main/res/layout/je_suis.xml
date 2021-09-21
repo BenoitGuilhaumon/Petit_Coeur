@@ -9,26 +9,28 @@
         android:id="@+id/previousstep"
         android:layout_width="160dp"
         android:layout_height="54dp"
+        android:layout_marginBottom="40dp"
         android:background="#4809BA"
         android:text="@string/Previous_Step"
         android:textSize="14sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nextstep"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="637dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/nextstep"
         android:layout_width="160dp"
         android:layout_height="54dp"
+        android:layout_marginBottom="40dp"
         android:background="#4809BA"
         android:text="@string/next_step"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/previousstep"
-        tools:layout_editor_absoluteY="637dp" />
+        app:layout_constraintStart_toEndOf="@+id/previousstep" />
 
     <ImageView
         android:id="@+id/imageView"
