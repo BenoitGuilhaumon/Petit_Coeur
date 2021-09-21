@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="your_name">Quel est votre nom ?</string>
+    <string name="name">Votre Nom</string>
     <string name="buttonstart">Commencer</string>
     <string name="Name">Nom</string>
     <string name="sexe">Vous êtes</string>
@@ -11,5 +11,8 @@
     <string name="autre_sexe">Autre</string>
     <string name="Previous_Step">Etape Précédente</string>
     <string name="next_step">Etape Suivante</string>
-    <string name="you_are">Qui etes vous ?</string>
+    <string name="heart_condition">"Avez-vous un problème cardiaque ? "</string>
+    <string name="diabetic">Êtes-vous diabétique ?</string>
+    <string name="first_degree_relative">Avez-vous un parent au premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (crise cardiaque, attaque, mort subite) avant l\'âge de 55 ans pour un homme ou avant l\'âge de 65 ans pour une femme ?</string>
+    <string name="cholesterol">Avez-vous un problème de cholestérol ?</string>
 </resources>

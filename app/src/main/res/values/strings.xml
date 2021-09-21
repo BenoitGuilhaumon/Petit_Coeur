@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">Petit Coeur</string>
     <string name="Name">Name</string>
-    <string name="your_name">What\'s your name ?</string>
+    <string name="name">Your Name</string>
     <string name="buttonstart">Start</string>
     <string name="profil">Your Profil</string>
     <string name="sexe">You Are</string>
@@ -11,5 +11,9 @@
     <string name="autre_sexe">other</string>
     <string name="Previous_Step">Previous Step</string>
     <string name="next_step">Next Step</string>
-    <string name="you_are">Who are you ?</string>
+    <string name="heart_condition">Do you have a heart condition ?</string>
+    <string name="diabetic">Are you diabetic ?</string>
+    <string name="first_degree_relative">Do you have a first-degree relative (father, mother, brother or sister) who had heart problems (heart attack, stroke, sudden death) before age 55 for a man or before age 65 for a woman ?</string>
+    <string name="cholesterol">Do you have a cholesterol problem ?</string>
+    <string name="todo">TODO</string>
 </resources>

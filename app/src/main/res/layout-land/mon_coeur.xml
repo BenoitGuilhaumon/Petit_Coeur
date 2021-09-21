@@ -9,30 +9,27 @@
         android:id="@+id/nextstep2"
         android:layout_width="160dp"
         android:layout_height="54dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="108dp"
         android:text="@string/next_step"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toEndOf="@+id/previousstep2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/previousstep2"
         android:layout_width="160dp"
         android:layout_height="54dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="16dp"
         android:text="@string/Previous_Step"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nextstep"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextstep2" />
 
     <Spinner
         android:id="@+id/spinner7"
-        android:layout_width="364dp"
-        android:layout_height="48dp"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
         android:layout_marginStart="24dp"
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +37,8 @@
 
     <Spinner
         android:id="@+id/spinner6"
-        android:layout_width="360dp"
-        android:layout_height="48dp"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
         android:layout_marginStart="24dp"
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,35 +46,44 @@
 
     <Spinner
         android:id="@+id/spinner5"
-        android:layout_width="359dp"
-        android:layout_height="48dp"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="195dp"
         android:layout_height="117dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
-        app:srcCompat="@drawable/img_coeur"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintVertical_bias="0.185"
+        app:srcCompat="@drawable/img_coeur" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="360dp"
         android:layout_height="19dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
         android:text="@string/heart_condition"
-        android:textColor="#DD2C00"
+        android:textColor="#FF0000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,9 +92,9 @@
         android:layout_width="360dp"
         android:layout_height="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="108dp"
         android:text="@string/diabetic"
-        android:textColor="#DD2C00"
+        android:textColor="#FF0000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -96,30 +102,18 @@
         android:id="@+id/textView6"
         android:layout_width="363dp"
         android:layout_height="82dp"
-        android:layout_marginStart="24dp"
         android:text="@string/first_degree_relative"
-        android:textColor="#DD2C00"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="349dp" />
+        android:textColor="#FB0000"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="182dp" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="364dp"
         android:layout_height="23dp"
         android:text="@string/cholesterol"
-        android:textColor="#DD2C00"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="497dp" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="360dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
-        android:entries="Yes"
-        android:spinnerMode="dropdown"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:textColor="#FB0000"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="331dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
