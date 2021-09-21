@@ -11,7 +11,7 @@
         android:layout_height="54dp"
         android:layout_marginStart="140dp"
         android:layout_marginBottom="36dp"
-        android:text="Previous step"
+        android:text="@string/Previous_Step"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -21,7 +21,7 @@
         android:layout_height="54dp"
         android:layout_marginEnd="144dp"
         android:layout_marginBottom="36dp"
-        android:text="Next Step"
+        android:text="@string/next_step"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Your profil"
+        android:text="@string/profil"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#673AB7"
@@ -58,7 +58,7 @@
         android:layout_height="33dp"
         android:layout_marginStart="288dp"
         android:layout_marginBottom="116dp"
-        android:text="You are"
+        android:text="@string/sexe"
         android:textAllCaps="true"
         android:textColor="#673AB7"
         android:textSize="18sp"
@@ -72,7 +72,7 @@
         android:layout_height="27dp"
         android:layout_marginStart="288dp"
         android:layout_marginBottom="52dp"
-        android:text="Your age"
+        android:text="@string/age"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#673AB7"
@@ -91,7 +91,7 @@
             android:id="@+id/radioButton4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MAN"
+            android:text="@string/man"
             android:textAllCaps="true"
             android:textSize="16sp" />
 
@@ -99,7 +99,7 @@
             android:id="@+id/radioButton5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="WOMAN"
+            android:text="@string/woman"
             android:textAllCaps="true"
             android:textSize="16sp" />
 
@@ -107,7 +107,7 @@
             android:id="@+id/radioButton6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Other"
+            android:text="@string/autre_sexe"
             android:textAllCaps="true"
             android:textSize="16sp" />
     </RadioGroup>
