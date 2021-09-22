@@ -34,23 +34,11 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/previousstep" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="148dp"
-        android:layout_height="153dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profil" />
-
     <TextView
         android:id="@+id/textView"
-        android:layout_width="411dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="32dp"
-        android:background="#4809BA"
+        android:layout_width="405dp"
+        android:layout_height="41dp"
+        android:background="#AB9CC6"
         android:text="@string/profil"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -59,15 +47,15 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        tools:layout_editor_absoluteY="229dp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="123dp"
-        android:layout_height="37dp"
+        android:layout_width="124dp"
+        android:layout_height="29dp"
         android:layout_marginStart="28dp"
-        android:layout_marginBottom="108dp"
-        android:background="#4809BA"
+        android:layout_marginBottom="120dp"
+        android:background="#AB9CC6"
         android:text="@string/sexe"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -79,10 +67,10 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="123dp"
-        android:layout_height="37dp"
+        android:layout_width="124dp"
+        android:layout_height="29dp"
         android:layout_marginBottom="68dp"
-        android:background="#4809BA"
+        android:background="#AB9CC6"
         android:text="@string/age"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -98,7 +86,7 @@
         android:id="@+id/editTextNumber"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="52dp"
         android:ems="10"
         android:inputType="number"
@@ -144,5 +132,16 @@
             android:textAllCaps="true"
             android:textSize="16sp" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/capture_d_cran_2021_09_22___14_11_44" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

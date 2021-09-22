@@ -60,19 +60,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="195dp"
-        android:layout_height="117dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
-        app:srcCompat="@drawable/img_coeur"
-        tools:ignore="ImageContrastCheck" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="360dp"
@@ -80,7 +67,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="164dp"
         android:text="@string/heart_condition"
-        android:textColor="#DD2C00"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,7 +78,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="240dp"
         android:text="@string/diabetic"
-        android:textColor="#DD2C00"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,7 +88,7 @@
         android:layout_height="82dp"
         android:layout_marginStart="24dp"
         android:text="@string/first_degree_relative"
-        android:textColor="#DD2C00"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="349dp" />
 
@@ -110,7 +97,7 @@
         android:layout_width="364dp"
         android:layout_height="23dp"
         android:text="@string/cholesterol"
-        android:textColor="#DD2C00"
+        android:textColor="@color/black"
         tools:layout_editor_absoluteX="24dp"
         tools:layout_editor_absoluteY="497dp" />
 
@@ -124,5 +111,16 @@
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="194dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/capture_d_cran_2021_09_22___14_12_18" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
