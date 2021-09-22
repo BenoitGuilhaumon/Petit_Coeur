@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 
@@ -23,13 +24,12 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suivi_cardiaque);
 
-        /*@Override
-        public boolean onKey(View view, int i, KeyEvent keyEvent) {
-            Log.d(TAG, "onKey: touche : switch yes");
-            if (switch1.isChecked())
-                conversion();
-            return false;
-        }*/
-
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                Log.d(TAG, "onCheckedChanged: Etat du switch : " + b);
+                Log.d(TAG, "onCheckedChanged: Etat du composant graphique : " + switch1.isChecked());
+            }
+        });
     }
 }

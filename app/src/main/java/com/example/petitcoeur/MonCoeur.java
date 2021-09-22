@@ -2,7 +2,11 @@ package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,6 +23,7 @@ public class MonCoeur extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_coeur);
+
         spinner = findViewById(R.id.spinner);
         spinner1 = findViewById(R.id.spinner1);
         spinner2 = findViewById(R.id.spinner2);
@@ -34,7 +39,7 @@ public class MonCoeur extends AppCompatActivity {
 
             @Override // Si rien n'est selectionne, un message apparait
             public void onNothingSelected(AdapterView<?> adapterView) {
-                // METTRE UNE VIBRATION QUAND RIEN N EST SELECTIONNE
+                vibrate(60);
             }
         });
 
@@ -48,7 +53,7 @@ public class MonCoeur extends AppCompatActivity {
 
             @Override // Si rien n'est selectionne, un message apparait
             public void onNothingSelected(AdapterView<?> adapterView) {
-                // METTRE UNE VIBRATION QUAND RIEN N EST SELECTIONNE
+                vibrate(60);
             }
         });
 
@@ -62,7 +67,7 @@ public class MonCoeur extends AppCompatActivity {
 
             @Override // Si rien n'est selectionne, un message apparait
             public void onNothingSelected(AdapterView<?> adapterView) {
-                // METTRE UNE VIBRATION QUAND RIEN N EST SELECTIONNE
+                vibrate(60);
             }
         });
 
@@ -76,8 +81,23 @@ public class MonCoeur extends AppCompatActivity {
 
             @Override // Si rien n'est selectionne, un message apparait
             public void onNothingSelected(AdapterView<?> adapterView) {
-                // METTRE UNE VIBRATION QUAND RIEN N EST SELECTIONNE
+                vibrate(60);
             }
         });
     }
-}
+
+        public void vibrate(long duration_ms) {
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            if (duration_ms < 1);
+                duration_ms = 1;
+                if(v != null && v.hasVibrator()) {
+                    if(Build.VERSION.SDK_INT >= 26) {
+                        v.vibrate(VibrationEffect.createOneShot(duration_ms, VibrationEffect.DEFAULT_AMPLITUDE));
+                    }
+                }
+                    else {
+                v.vibrate(duration_ms);
+            }
+                    // Pas de vibration
+        }
+    }
