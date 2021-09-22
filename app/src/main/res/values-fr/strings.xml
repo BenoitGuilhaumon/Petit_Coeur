@@ -18,4 +18,8 @@
     <string name="doctor_cardiovascular">Avez-vous déjà consulté votre médecin au sujet de votre risque cardiovasculaire ? (Oui/Non/Je ne me souviens pas)</string>
     <string name="cardiac_chekup">Avez-vous déjà eu un bilan cardiaque (Par défaut = Non)</string>
     <string name="cariologist">Avez-vous déjà consulté un cardiologue ?</string>
+    <string name="energy">Vous arrive-t-il de boire des boissons énergisantes ?</string>
+    <string name="drink">Vous arrive-t-il de boire plus de 3 verres d’alcool dans la journée 1 à 2 fois par semaine (vin et bière compris) ?</string>
+    <string name="sleep">Dormez-vous plus de 7 heures par nuit ?</string>
+    <string name="sleep_disorders">Êtes-vous sujet à des troubles du sommeil ?</string>
 </resources>

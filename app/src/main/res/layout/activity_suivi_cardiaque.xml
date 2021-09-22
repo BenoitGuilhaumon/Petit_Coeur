@@ -9,13 +9,15 @@
         android:id="@+id/nextstep3"
         android:layout_width="160dp"
         android:layout_height="54dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="80dp"
         android:text="@string/next_step"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toEndOf="@+id/previousstep2" />
+        app:layout_constraintStart_toEndOf="@+id/previousstep2"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/previousstep3"
@@ -25,30 +27,33 @@
         android:layout_marginBottom="80dp"
         android:text="@string/Previous_Step"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nextstep"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/nextstep3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="375dp"
         android:layout_height="39dp"
+        android:layout_marginTop="20dp"
         android:text="Have you already checked with your doctor about your cardiovascular risk ? (Yes/No/I don't remember)"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="574dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Have you ever had a cardiac check-up (Default = No)"
         android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="345dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -59,6 +64,7 @@
         android:inputType="textPersonName"
         android:text="Cardiovascular risk ? "
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -77,11 +83,14 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         android:text="Have you ever consulted a cardiologist ?"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/previousstep3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="455dp" />
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintVertical_bias="0.096" />
 
     <ImageButton
         android:id="@+id/imageButton9"
@@ -118,7 +127,7 @@
         android:id="@+id/imageButton"
         android:layout_width="180dp"
         android:layout_height="127dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"

@@ -18,4 +18,8 @@
     <string name="doctor_cardiovascular">Have you already checked with your doctor about your cardiovascular risk ? (Yes/No/I don\'t remember)</string>
     <string name="cardiac_chekup">Have you ever had a cardiac check-up (Default = No)</string>
     <string name="cariologist">Have you ever consulted a cardiologist ?</string>
+    <string name="drink">Do you ever drink more than 3 glasses of alcohol in a day once or twice a week (including wine and beer)?</string>
+    <string name="energy">Do you ever drink energy drinks ?</string>
+    <string name="sleep">Do you sleep more than 7 hours a night ?</string>
+    <string name="sleep_disorders">Are you prone to sleep disorders ?</string>
 </resources>

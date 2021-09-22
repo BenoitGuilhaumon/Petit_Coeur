@@ -2,19 +2,23 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <locale>fr</locale>
+      </config>
     </shared>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Change the interface">
+    <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Modify spinner and switch">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mon_coeur.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mon_coeur.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_suivi_cardiaque.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_suivi_cardiaque.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-fr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-fr/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\benoi\.android\avd\Pixel_4_XL_API_25_1.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/leana/.android/avd/Pixel_4_API_25.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -31,9 +35,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
@@ -65,6 +69,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.petitcoeur" />
+    </key>
+    <key name="android.template.-1532144838">
       <recent name="com.example.petitcoeur" />
     </key>
     <key name="android.template.-1762561158">
@@ -224,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632314517315</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Modify spinner and switch">
+      <created>1632317550169</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1632317550169</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,6 +259,7 @@
     <MESSAGE value="All project" />
     <MESSAGE value="Spinner and switch" />
     <MESSAGE value="Change the interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change the interface" />
+    <MESSAGE value="Modify spinner and switch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify spinner and switch" />
   </component>
 </project>
