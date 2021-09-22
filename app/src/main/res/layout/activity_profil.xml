@@ -38,6 +38,7 @@
         android:id="@+id/textView"
         android:layout_width="405dp"
         android:layout_height="41dp"
+        android:layout_marginBottom="104dp"
         android:background="#AB9CC6"
         android:text="@string/profil"
         android:textAlignment="center"
@@ -45,9 +46,9 @@
         android:textColor="#F5F5F6"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -134,14 +135,14 @@
     </RadioGroup>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/capture_d_cran_2021_09_22___14_11_44" />
+        app:srcCompat="@drawable/profil_patient" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
