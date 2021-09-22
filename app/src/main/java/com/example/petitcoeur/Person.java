@@ -37,6 +37,11 @@ public class Person implements Parcelable {
     private Boolean cardiovascularRisk; // si le patient a des rsiques vasculaires
     private String consultCardiologist; // Si le patient a consulter un cardiologue
     public static final String DEFAULT_CONSULT = "UNDEFINED";
+    private Response alcool;
+    private Response energisant;
+    private Response heuresSommeil;
+    private Response troublesSommeil;
+
 
     /**
      * Constructor. All members get default values
@@ -52,6 +57,10 @@ public class Person implements Parcelable {
         this.setCardiovascularCheck(Person.DEFAULT_CARDIO_CHECK);
         this.setCardiovascularRisk(false);
         this.setConsultCardiologist(Person.DEFAULT_CONSULT);
+        this.setAlcool(Response.Undefined);
+        this.setEnergisant(Response.Undefined);
+        this.setHeuresSommeil(Response.Undefined);
+        this.setTroublesSommeil(Response.Undefined);
     }
     /**
      * @return the description of this class as a String
@@ -68,6 +77,10 @@ public class Person implements Parcelable {
         sBuilder.append("\t Cardiovascular Check: ").append(this.getCardiovascularCheck()).append("\n");
         sBuilder.append("\t Cardiovascular Risk: ").append(this.getCardiovascularRisk()).append("\n");
         sBuilder.append("\t Consult Cardiologist: ").append(this.getConsultCardiologist()).append("\n");
+        sBuilder.append("\t Consommation Alcool: ").append(this.getAlcool()).append("\n");
+        sBuilder.append("\t Consommation Energisant: ").append(this.getEnergisant()).append("\n");
+        sBuilder.append("\t 7 Heures de Sommeil: ").append(this.getHeuresSommeil()).append("\n");
+        sBuilder.append("\t Troubles du Sommeil: ").append(this.getTroublesSommeil()).append("\n");
         return sBuilder.toString();
     }
     /**
@@ -113,6 +126,18 @@ public void setCardiovascularRisk(Boolean aCardiovascularRisk) {
 public String getConsultCardiologist() { return this.consultCardiologist; }
 public void setConsultCardiologist(String aConsultCardiologist) { this.consultCardiologist = aConsultCardiologist; }
 
+public Response getAlcool() { return this.alcool; }
+public void setAlcool(Response anAlcool) { this.alcool = anAlcool; }
+
+public Response getEnergisant() { return this.energisant; }
+public void setEnergisant(Response anEnergisant) { this.energisant = anEnergisant; }
+
+public Response getHeuresSommeil() { return this.heuresSommeil; }
+public void setHeuresSommeil(Response aHeuresSommeil) { this.heuresSommeil = aHeuresSommeil; }
+
+public Response getTroublesSommeil() { return this.troublesSommeil; }
+public void setTroublesSommeil(Response aTroublesSommeil) { this.troublesSommeil = aTroublesSommeil; }
+
 @Override // Parcelable method
 public int describeContents() { return 0;}
 @RequiresApi(api = Build.VERSION_CODES.Q)
@@ -134,7 +159,11 @@ public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.getCardiovascularCheck());
         dest.writeBoolean(this.getCardiovascularRisk());
         dest.writeString(this.getConsultCardiologist());
-        }
+        dest.writeInt(this.getAlcool().ordinal());
+        dest.writeInt(this.getEnergisant().ordinal());
+        dest.writeInt(this.getHeuresSommeil().ordinal());
+        dest.writeInt(this.getTroublesSommeil().ordinal());
+}
 /**
  * https://developer.android.com/reference/android/os/Parcelable#java
  */
@@ -164,5 +193,9 @@ private Person(Parcel in) {
         this.setCardiovascularCheck(in.readString());
         this.setCardiovascularRisk(in.readBoolean());
         this.setConsultCardiologist(in.readString());
+        this.setAlcool(Response.values()[in.readInt()]);
+        this.setEnergisant(Response.values()[in.readInt()]);
+        this.setHeuresSommeil(Response.values()[in.readInt()]);
+        this.setTroublesSommeil(Response.values()[in.readInt()]);
         }
 }
