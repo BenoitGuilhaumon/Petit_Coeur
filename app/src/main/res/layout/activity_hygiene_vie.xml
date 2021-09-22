@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hygiene_vie">
+
+    <RadioButton
+        android:id="@+id/radioButton20"
+        android:layout_width="184dp"
+        android:layout_height="41dp"
+        android:text="Yes"
+        app:layout_constraintEnd_toStartOf="@+id/radioButton19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <RadioButton
+        android:id="@+id/radioButton19"
+        android:layout_width="199dp"
+        android:layout_height="41dp"
+        android:text="No"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <RadioButton
+        android:id="@+id/radioButton17"
+        android:layout_width="199dp"
+        android:layout_height="41dp"
+        android:text="No"
+        app:layout_constraintTop_toTopOf="@+id/radioButton18"
+        tools:layout_editor_absoluteX="193dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton18"
+        android:layout_width="184dp"
+        android:layout_height="41dp"
+        android:text="Yes"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton16"
+        android:layout_width="184dp"
+        android:layout_height="41dp"
+        android:text="Yes"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton15"
+        android:layout_width="199dp"
+        android:layout_height="41dp"
+        android:text="No"
+        app:layout_constraintTop_toTopOf="@+id/radioButton16"
+        tools:layout_editor_absoluteX="193dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton13"
+        android:layout_width="199dp"
+        android:layout_height="41dp"
+        android:text="No"
+        app:layout_constraintTop_toTopOf="@+id/radioButton14"
+        tools:layout_editor_absoluteX="197dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton14"
+        android:layout_width="184dp"
+        android:layout_height="41dp"
+        android:text="Yes"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        tools:layout_editor_absoluteX="13dp" />
+
+    <Button
+        android:id="@+id/previousstep4"
+        android:layout_width="160dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="84dp"
+        android:text="@string/Previous_Step"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextstep"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/nextstep4"
+        android:layout_width="160dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="84dp"
+        android:text="@string/next_step"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toEndOf="@+id/previousstep2" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="175dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/capture_d_cran_2021_09_22___15_54_08" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="384dp"
+        android:layout_height="44dp"
+        android:text="@string/drink"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="137dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/energy"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="265dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sleep"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sleep_disorders"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="284dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
