@@ -89,13 +89,22 @@ public class MonCoeur extends AppCompatActivity {
         processIntentData();
     }
 
-    // Permet de passer à la premiere page du formulaire via le bouton start
+    // Permet de passer à la page suivante du formulaire
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, hygiene_vie.class);
         startActivity(intent);
 
         goToActivity4();
+    }
+
+    // Permet de revenir à la page précédente du formulaire
+    public void action_previous_page(View sender){
+        Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
+        Intent intent = new Intent(this, Profil.class);
+        startActivity(intent);
+
+        goToActivity2();
     }
 
         public void vibrate(long duration_ms) {
@@ -120,12 +129,20 @@ public class MonCoeur extends AppCompatActivity {
 // we need the key "FromActivity1ToActivity2" which was used for transfer
 // No need to calls "new()" for allocating memory to transferredPerson
             Person transferredPerson = intent.getParcelableExtra("FromActivity2ToActivity3");
+            Person transferredPersonPrevious = intent.getParcelableExtra("FromActivity4ToActivity3");
             if (transferredPerson != null) {
                 this.person = transferredPerson;
                 this.person.print();
             }
             else {
                 Log.d(TAG, "No Person found after transfer from Activity2");
+            }
+            if (transferredPersonPrevious != null) {
+                this.person = transferredPersonPrevious;
+                this.person.print();
+            }
+            else {
+                Log.d(TAG, "No Person found after transfer from Activity4");
             }
         }
         else {
@@ -134,8 +151,14 @@ public class MonCoeur extends AppCompatActivity {
     }
 
     public void goToActivity4(){
-        Intent activity4Intent = new Intent(this, hygiene_vie.class);
+        Intent activity4Intent = new Intent(this, Suivi_Cardiaque.class);
         activity4Intent.putExtra("FromActivity3ToActivity4", this.person);
         startActivity(activity4Intent);
     }
+
+    public void goToActivity2(){
+        Intent activityIntent = new Intent(this, Profil.class);
+        activityIntent.putExtra("FromActivity3ToActivity2", this.person);
+        startActivity(activityIntent);
     }
+}
