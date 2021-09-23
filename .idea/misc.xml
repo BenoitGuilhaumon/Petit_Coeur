@@ -6,9 +6,11 @@
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_mon_coeur.xml" value="0.1728395061728395" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_profil.xml" value="0.1728395061728395" />
+        <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_suivi_cardiaque.xml" value="0.25" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/je_suis.xml" value="0.33" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/mon_coeur.xml" value="0.1728395061728395" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/mon_suivi_cardiaque.xml" value="0.1728395061728395" />
+        <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout/activity_hygiene_vie.xml" value="0.22" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout/activity_mon_coeur.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout/activity_profil.xml" value="0.20416666666666666" />
@@ -16,18 +18,16 @@
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout/je_suis.xml" value="0.25" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout/mon_coeur.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout/mon_suivi_cardiaque.xml" value="0.22" />
-        <entry key="app/src/main/res/layout-land/activity_hygiene_vie.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-land/activity_hygiene_vie.xml" value="0.2838101555640612" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.14506172839506173" />
         <entry key="app/src/main/res/layout-land/activity_mon_coeur.xml" value="0.2623456790123457" />
         <entry key="app/src/main/res/layout-land/activity_profil.xml" value="0.246875" />
         <entry key="app/src/main/res/layout-land/activity_suivi_cardiaque.xml" value="0.23677248677248677" />
-        <entry key="app/src/main/res/layout/activity_bilan.xml" value="0.2318840579710145" />
-        <entry key="app/src/main/res/layout/activity_hygiene_vie.xml" value="0.45" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_hygiene_vie.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17135416666666667" />
         <entry key="app/src/main/res/layout/activity_mon_coeur.xml" value="0.3017720690253094" />
         <entry key="app/src/main/res/layout/activity_profil.xml" value="0.2533739669764577" />
-        <entry key="app/src/main/res/layout/activity_suivi_cardiaque.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/mon_coeur.xml" value="0.22708333333333333" />
+        <entry key="app/src/main/res/layout/activity_suivi_cardiaque.xml" value="0.23591892195022982" />
       </map>
     </option>
   </component>

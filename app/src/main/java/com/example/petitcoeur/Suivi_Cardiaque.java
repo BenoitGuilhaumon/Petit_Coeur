@@ -98,7 +98,7 @@ public class Suivi_Cardiaque extends AppCompatActivity {
             }
         }
         else {
-            Log.d(TAG, "Error when transferring from Activity2");
+            Log.d(TAG, "Error when transferring from Activity3");
         }
     }
 
