@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
 
     public static final String TAG = "UPCoeur";
     private EditText editName;
+    private Person person;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -39,6 +40,8 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, Profil.class);
         intent.putExtra("personname",editName.getText().toString());// Permet de transferer la donnée de nom lors du changement de page
         startActivity(intent);
+
+        goToActivity2();
     }
 
     @Override // C'est android qui appel cette fonction de sauvegarde
@@ -55,4 +58,11 @@ public class MainActivity extends Activity {
             editName.setText(personname);
         }
     }
+
+    public void goToActivity2(){
+        Intent activity2Intent = new Intent(this, Profil.class);
+        activity2Intent.putExtra("FromActivity1ToActivity2", this.person);
+        startActivity(activity2Intent);
+    }
+
 }

@@ -3,6 +3,7 @@ package com.example.petitcoeur;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
@@ -16,7 +17,7 @@ import android.widget.Toast;
 public class MonCoeur extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
-
+    private Person person;
     private Spinner spinner, spinner1, spinner2, spinner3;
 
     @Override
@@ -84,6 +85,17 @@ public class MonCoeur extends AppCompatActivity {
                 vibrate(60);
             }
         });
+
+        processIntentData();
+    }
+
+    // Permet de passer à la premiere page du formulaire via le bouton start
+    public void action_next_page(View sender){
+        Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
+        Intent intent = new Intent(this, hygiene_vie.class);
+        startActivity(intent);
+
+        goToActivity4();
     }
 
         public void vibrate(long duration_ms) {
@@ -100,4 +112,30 @@ public class MonCoeur extends AppCompatActivity {
             }
                     // Pas de vibration
         }
+
+    private void processIntentData() {
+        Intent intent = getIntent();
+        if(intent != null) {
+// intent may store different data. To get the one matching the Person class,
+// we need the key "FromActivity1ToActivity2" which was used for transfer
+// No need to calls "new()" for allocating memory to transferredPerson
+            Person transferredPerson = intent.getParcelableExtra("FromActivity2ToActivity3");
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+                this.person.print();
+            }
+            else {
+                Log.d(TAG, "No Person found after transfer from Activity2");
+            }
+        }
+        else {
+            Log.d(TAG, "Error when transferring from Activity2");
+        }
+    }
+
+    public void goToActivity4(){
+        Intent activity4Intent = new Intent(this, hygiene_vie.class);
+        activity4Intent.putExtra("FromActivity3ToActivity4", this.person);
+        startActivity(activity4Intent);
+    }
     }
