@@ -27,13 +27,22 @@ public class Profil extends AppCompatActivity {
         processIntentData();
     }
 
-    // Permet de passer à la premiere page du formulaire via le bouton start
+    // Permet de passer à la page suivante du formulaire
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, MonCoeur.class);
         startActivity(intent);
 
         goToActivity3();
+    }
+
+    // Permet de passer à la premiere page du formulaire via le bouton start
+    public void action_previous_page(View sender){
+        Log.d(TAG, "action_next_page: Passage à la page précédente du formulaire");
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
+        goToActivity1();
     }
 
     // This method (whose name is abritrary) is called by onCreate().
@@ -44,12 +53,20 @@ public class Profil extends AppCompatActivity {
 // we need the key "FromActivity1ToActivity2" which was used for transfer
 // No need to calls "new()" for allocating memory to transferredPerson
             Person transferredPerson = intent.getParcelableExtra("FromActivity1ToActivity2");
+            Person transferredPersonPrevious = intent.getParcelableExtra("FromActivity3ToActivity2");
             if (transferredPerson != null) {
                 this.person = transferredPerson;
                 this.person.print();
             }
             else {
                 Log.d(TAG, "No Person found after transfer from Activity1");
+            }
+            if (transferredPersonPrevious != null) {
+                this.person = transferredPersonPrevious;
+                this.person.print();
+            }
+            else {
+                Log.d(TAG, "No Person found after transfer from Activity3");
             }
         }
         else {
@@ -61,6 +78,12 @@ public class Profil extends AppCompatActivity {
         Intent activity3Intent = new Intent(this, MonCoeur.class);
         activity3Intent.putExtra("FromActivity2ToActivity3", this.person);
         startActivity(activity3Intent);
+    }
+
+    public void goToActivity1(){
+        Intent activityIntent = new Intent(this, MainActivity.class);
+        activityIntent.putExtra("FromActivity2ToActivity1", this.person);
+        startActivity(activityIntent);
     }
 
     public void action_finish(View v){

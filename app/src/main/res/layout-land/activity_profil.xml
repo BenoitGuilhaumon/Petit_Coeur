@@ -11,7 +11,7 @@
         android:layout_height="54dp"
         android:layout_marginBottom="36dp"
         android:background="#4809BA"
-        android:onClick="action_finish"
+        android:onClick="action_previous_page"
         android:text="@string/Previous_Step"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

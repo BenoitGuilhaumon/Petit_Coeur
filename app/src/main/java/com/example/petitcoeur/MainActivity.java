@@ -32,6 +32,8 @@ public class MainActivity extends Activity {
             String personname = savedInstanceState.getString("personname");
             editName.setText(personname);
         }
+
+        processIntentData();
     }
 
     // Permet de passer à la premiere page du formulaire via le bouton start
@@ -56,6 +58,27 @@ public class MainActivity extends Activity {
         if (savedInstanceState.containsKey("personname")) {// On verifie qu'il y ait bien un resultat
             String personname = savedInstanceState.getString("personname");
             editName.setText(personname);
+        }
+    }
+
+    // This method (whose name is abritrary) is called by onCreate().
+    private void processIntentData() {
+        Intent intent = getIntent();
+        if(intent != null) {
+// intent may store different data. To get the one matching the Person class,
+// we need the key "FromActivity1ToActivity2" which was used for transfer
+// No need to calls "new()" for allocating memory to transferredPerson
+            Person transferredPersonPrevious = intent.getParcelableExtra("FromActivity3ToActivity2");
+            if (transferredPersonPrevious != null) {
+                this.person = transferredPersonPrevious;
+                this.person.print();
+            }
+            else {
+                Log.d(TAG, "No Person found after transfer from Activity2");
+            }
+        }
+        else {
+            Log.d(TAG, "Error when transferring from Activity2");
         }
     }
 
