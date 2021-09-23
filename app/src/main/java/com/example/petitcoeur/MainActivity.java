@@ -82,10 +82,42 @@ public class MainActivity extends Activity {
         }
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause: onPause");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart: onStart");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy: onDestroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart: onRestart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume: onResume");
+    }
+
     public void goToActivity2(){
         Intent activity2Intent = new Intent(this, Profil.class);
         activity2Intent.putExtra("FromActivity1ToActivity2", this.person);
         startActivity(activity2Intent);
     }
+
+    private static final String KEY_COEUR = "coeur";
 
 }

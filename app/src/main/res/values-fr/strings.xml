@@ -23,4 +23,6 @@
     <string name="sleep">Dormez-vous plus de 7 heures par nuit ?</string>
     <string name="sleep_disorders">Êtes-vous sujet à des troubles du sommeil ?</string>
     <string name="federation_cardiology">Fédération Française de cardiologie</string>
+    <string name="finish">Terminer</string>
+    <string name="bilan">Votre bilan</string>
 </resources>

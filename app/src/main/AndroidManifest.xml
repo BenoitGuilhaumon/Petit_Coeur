@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetitCoeur">
         <activity
+            android:name=".bilan"
+            android:exported="true" />
+        <activity
             android:name=".hygiene_vie"
             android:exported="true" />
         <activity
