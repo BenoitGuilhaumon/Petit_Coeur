@@ -22,4 +22,5 @@
     <string name="energy">Do you ever drink energy drinks ?</string>
     <string name="sleep">Do you sleep more than 7 hours a night ?</string>
     <string name="sleep_disorders">Are you prone to sleep disorders ?</string>
+    <string name="federation_cardiology">French Federation of Cardiology</string>
 </resources>

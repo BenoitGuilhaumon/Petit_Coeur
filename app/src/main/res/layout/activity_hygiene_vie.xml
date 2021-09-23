@@ -75,25 +75,13 @@
         android:id="@+id/previousstep4"
         android:layout_width="160dp"
         android:layout_height="54dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="132dp"
         android:text="@string/Previous_Step"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nextstep"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/nextstep4"
-        android:layout_width="160dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="84dp"
-        android:text="@string/next_step"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toEndOf="@+id/previousstep2" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -142,5 +130,14 @@
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="284dp" />
+
+    <Button
+        android:id="@+id/buttonfed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/federation_cardiology"
+        app:iconTint="#000000"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="639dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

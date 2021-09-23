@@ -22,4 +22,5 @@
     <string name="drink">Vous arrive-t-il de boire plus de 3 verres d’alcool dans la journée 1 à 2 fois par semaine (vin et bière compris) ?</string>
     <string name="sleep">Dormez-vous plus de 7 heures par nuit ?</string>
     <string name="sleep_disorders">Êtes-vous sujet à des troubles du sommeil ?</string>
+    <string name="federation_cardiology">Fédération Française de cardiologie</string>
 </resources>
