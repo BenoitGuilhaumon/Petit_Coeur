@@ -14,7 +14,8 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
-
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ToggleButton;
 
 
 public class Suivi_Cardiaque extends AppCompatActivity {
@@ -31,7 +32,9 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suivi_cardiaque);
 
-        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        Switch switch1 = findViewById(R.id.switch1);
+
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { //PROMBLEME AVEC LE SWITCH
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 Log.d(TAG, "onCheckedChanged: Etat du switch : " + b);

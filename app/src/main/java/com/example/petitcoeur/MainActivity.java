@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "UPCoeur";
     private EditText editName;
@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        editName = findViewById((R.id.name));
+        editName = findViewById((R.id.editTextTextPersonName)); // probleme ici apparement
 
         // On restaure suite à un OnCreate
         if(savedInstanceState != null && savedInstanceState.containsKey("personname")){

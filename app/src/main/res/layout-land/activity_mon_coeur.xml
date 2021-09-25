@@ -115,6 +115,7 @@
         android:layout_height="54dp"
         android:layout_marginEnd="124dp"
         android:layout_marginBottom="16dp"
+        android:onClick="action_next_page"
         android:text="@string/next_step"
         app:layout_constraintBottom_toTopOf="@+id/previousstepMonCoeur"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -125,6 +126,7 @@
         android:layout_height="54dp"
         android:layout_marginEnd="124dp"
         android:layout_marginBottom="48dp"
+        android:onClick="action_previous_page"
         android:text="@string/Previous_Step"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

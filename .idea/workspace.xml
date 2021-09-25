@@ -9,18 +9,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Transfert des donnees">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Interfaces et passage d'une page à une autre">
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Suivi_Cardiaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Suivi_Cardiaque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/bilan.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/bilan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/hygiene_vie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/hygiene_vie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/je_suis.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_hygiene_vie.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_hygiene_vie.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_profil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_profil.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_suivi_cardiaque.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_suivi_cardiaque.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_mon_coeur.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_mon_coeur.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bilan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bilan.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_hygiene_vie.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_hygiene_vie.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profil.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_suivi_cardiaque.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_suivi_cardiaque.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mon_coeur.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mon_coeur.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\benoi\.android\avd\Pixel_4_XL_API_25_1.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\benoi\.android\avd\Pixel_4_XL_API_25_2.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -68,6 +68,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -286,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632412244488</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Interfaces et passage d'une page à une autre">
+      <created>1632561042663</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1632561042664</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,6 +317,7 @@
     <MESSAGE value="Change the interface" />
     <MESSAGE value="Person" />
     <MESSAGE value="Transfert des donnees" />
-    <option name="LAST_COMMIT_MESSAGE" value="Transfert des donnees" />
+    <MESSAGE value="Interfaces et passage d'une page à une autre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces et passage d'une page à une autre" />
   </component>
 </project>
