@@ -24,6 +24,7 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     private Switch switch1;
     private EditText editInputTemp;
     private Person person;
+    private String contentDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

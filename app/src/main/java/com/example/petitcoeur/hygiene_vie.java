@@ -48,6 +48,21 @@ public class hygiene_vie extends AppCompatActivity {
         activityIntent.putExtra("FromActivity5ToActivity4", this.person);
         startActivity(activityIntent);
     }
+
+    // Permet de passer à la page suivante du formulaire
+    public void action_next_page(View sender){
+        Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
+        Intent intent = new Intent(this, bilan.class);
+        startActivity(intent);
+
+        goToActivity6();
+    }
+    public void goToActivity6(){
+        Intent activity6Intent = new Intent(this, bilan.class);
+        activity6Intent.putExtra("FromActivity5ToActivity6", this.person);
+        startActivity(activity6Intent);
+    }
+
     private void processIntentData() {
         Intent intent = getIntent();
         if(intent != null) {

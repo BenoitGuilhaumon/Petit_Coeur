@@ -34,21 +34,21 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="148dp"
-        android:layout_height="153dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="196dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profil" />
+        app:srcCompat="@drawable/profil_patient" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="266dp"
         android:layout_height="43dp"
         android:layout_marginTop="36dp"
-        android:background="#4809BA"
+        android:background="#AB9CC6"
         android:text="@string/profil"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -59,7 +59,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView2"
@@ -67,7 +68,7 @@
         android:layout_height="37dp"
         android:layout_marginStart="304dp"
         android:layout_marginBottom="116dp"
-        android:background="#4809BA"
+        android:background="#AB9CC6"
         android:text="@string/sexe"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -75,14 +76,15 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="123dp"
         android:layout_height="37dp"
         android:layout_marginBottom="44dp"
-        android:background="#4809BA"
+        android:background="#AB9CC6"
         android:text="@string/age"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -90,7 +92,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/previousstep"
-        app:layout_constraintStart_toStartOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        tools:ignore="TextContrastCheck" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
