@@ -25,4 +25,7 @@
     <string name="federation_cardiology">French Federation of Cardiology</string>
     <string name="finish">Finish</string>
     <string name="bilan">Your review</string>
+    <string name="heart_condition_2">Heart condition ?</string>
+    <string name="diabetic_2">Diabetic ?</string>
+    <string name="cholesterol_2">Cholesterol problem ?</string>
 </resources>

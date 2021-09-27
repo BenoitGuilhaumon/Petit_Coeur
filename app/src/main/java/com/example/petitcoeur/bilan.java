@@ -39,6 +39,6 @@ public class bilan extends AppCompatActivity {
     }
 
     public void action_finish(View v){
-        finish(); //Permet de revenir à la page initiale
+        finish();//Permet de revenir à la page initiale
     }
 }

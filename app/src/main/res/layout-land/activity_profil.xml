@@ -9,36 +9,35 @@
         android:id="@+id/previousstep"
         android:layout_width="160dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="24dp"
         android:background="#4809BA"
         android:onClick="action_previous_page"
         android:text="@string/Previous_Step"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nextstep"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/nextstep"
         android:layout_width="160dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="384dp"
         android:background="#4809BA"
         android:onClick="action_next_page"
         android:text="@string/next_step"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/previousstep" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="196dp"
         android:layout_height="157dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/profil_patient" />
@@ -55,9 +54,8 @@
         android:textColor="#FAFAFB"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="TextContrastCheck" />
@@ -67,7 +65,7 @@
         android:layout_width="123dp"
         android:layout_height="37dp"
         android:layout_marginStart="304dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginTop="76dp"
         android:background="#AB9CC6"
         android:text="@string/sexe"
         android:textAlignment="center"
@@ -75,15 +73,17 @@
         android:textColor="#F8F7FA"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="123dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="108dp"
         android:background="#AB9CC6"
         android:text="@string/age"
         android:textAlignment="center"
@@ -91,16 +91,18 @@
         android:textColor="#F8F8F8"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/previousstep"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="TextContrastCheck" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
         android:layout_width="246dp"
         android:layout_height="176dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

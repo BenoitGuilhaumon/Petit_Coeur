@@ -121,7 +121,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/capture_d_cran_2021_09_22___15_54_08" />
+        app:srcCompat="@drawable/mon_coeur" />
 
     <TextView
         android:id="@+id/textView11"

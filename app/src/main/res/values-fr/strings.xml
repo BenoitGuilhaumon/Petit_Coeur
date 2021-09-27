@@ -25,4 +25,7 @@
     <string name="federation_cardiology">Fédération Française de cardiologie</string>
     <string name="finish">Terminer</string>
     <string name="bilan">Votre bilan</string>
+    <string name="heart_condition_2">Problème cardiaque ?</string>
+    <string name="diabetic_2">Diabétique ?</string>
+    <string name="cholesterol_2">Problème de cholesterol ?</string>
 </resources>
