@@ -81,13 +81,13 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/previousstep"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+        app:layout_constraintEnd_toStartOf="@+id/editAge"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editAge"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="36dp"
@@ -112,7 +112,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/SexButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/man"

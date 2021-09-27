@@ -9,36 +9,42 @@ import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Switch;
-import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.ToggleButton;
 
 
 public class Suivi_Cardiaque extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
 
-    private Switch switch1;
-    private EditText editInputTemp;
-    private Person person;
-    private String contentDescription;
+    private Person person; // Attribution a la classe Person
+
+    private EditText risk;
+    private Switch cardiacCheckUp;
+    private ImageButton yesCardiologist;
+    private ImageButton noCardiologist;
+    private ImageButton dontKnowCardiologist;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suivi_cardiaque);
 
-        Switch switch1 = findViewById(R.id.switch1);
+        risk = findViewById((R.id.CardiovascularRisk));
+        cardiacCheckUp = findViewById(R.id.checkUp);
+        yesCardiologist = findViewById((R.id.YesConsult));
+        noCardiologist = findViewById((R.id.NoConsult));
+        dontKnowCardiologist = findViewById(R.id.dontKnowConsult);
 
-        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { //PROMBLEME AVEC LE SWITCH
+
+        cardiacCheckUp.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { //PROMBLEME AVEC LE SWITCH
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Log.d(TAG, "onCheckedChanged: Etat du switch : " + b);
-                Log.d(TAG, "onCheckedChanged: Etat du composant graphique : " + switch1.isChecked());
+                Log.d(TAG, "onCheckedChanged: Etat du switch : " + cardiacCheckUp.isChecked());
             }
         });
 
@@ -63,27 +69,10 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         goToActivity3();
     }
 
-    public void vibrate(long duration_ms) {
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        if (duration_ms < 1);
-        duration_ms = 1;
-        if(v != null && v.hasVibrator()) {
-            if(Build.VERSION.SDK_INT >= 26) {
-                v.vibrate(VibrationEffect.createOneShot(duration_ms, VibrationEffect.DEFAULT_AMPLITUDE));
-            }
-        }
-        else {
-            v.vibrate(duration_ms);
-        }
-        // Pas de vibration
-    }
-
+    // Methode appele par la methode onCreate
     private void processIntentData() {
         Intent intent = getIntent();
         if(intent != null) {
-// intent may store different data. To get the one matching the Person class,
-// we need the key "FromActivity1ToActivity2" which was used for transfer
-// No need to calls "new()" for allocating memory to transferredPerson
             Person transferredPerson = intent.getParcelableExtra("FromActivity3ToActivity4");
             Person transferredPersonPrevious = intent.getParcelableExtra("FromActivity5ToActivity4");
             if (transferredPerson != null) {

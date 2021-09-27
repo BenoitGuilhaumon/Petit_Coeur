@@ -6,12 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 public class Profil extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
-    private Person person;
+    private Person person; // Attribution a la classe Person
+    private RadioButton genre; // Sexe de l'utilisateur
+    private EditText age; // Age de l'utilisateur
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,10 @@ public class Profil extends AppCompatActivity {
         Intent intent = getIntent();
         String name = intent.getStringExtra("personname");
         Log.d(TAG, "onCreate: Person name : " + name);
+
+        // Reference aux elements graphiques
+        genre = findViewById((R.id.SexButton));
+        age = findViewById(R.id.editAge);
 
         processIntentData();
     }
@@ -45,13 +53,10 @@ public class Profil extends AppCompatActivity {
         goToActivity1();
     }
 
-    // This method (whose name is abritrary) is called by onCreate().
+    // Methode appele par la methode onCreate
     private void processIntentData() {
         Intent intent = getIntent();
         if(intent != null) {
-// intent may store different data. To get the one matching the Person class,
-// we need the key "FromActivity1ToActivity2" which was used for transfer
-// No need to calls "new()" for allocating memory to transferredPerson
             Person transferredPerson = intent.getParcelableExtra("FromActivity1ToActivity2");
             Person transferredPersonPrevious = intent.getParcelableExtra("FromActivity3ToActivity2");
             if (transferredPerson != null) {
@@ -74,19 +79,18 @@ public class Profil extends AppCompatActivity {
         }
     }
 
+    // Passage a l'activite suivante
     public void goToActivity3(){
         Intent activity3Intent = new Intent(this, MonCoeur.class);
         activity3Intent.putExtra("FromActivity2ToActivity3", this.person);
         startActivity(activity3Intent);
     }
 
+    // Retour a l'activite precedente
     public void goToActivity1(){
         Intent activityIntent = new Intent(this, MainActivity.class);
         activityIntent.putExtra("FromActivity2ToActivity1", this.person);
         startActivity(activityIntent);
     }
 
-    public void action_finish(View v){
-        finish(); //Permet de revenir à la page initiale
-    }
 }
