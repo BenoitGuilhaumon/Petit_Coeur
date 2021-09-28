@@ -8,6 +8,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -40,15 +42,58 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         noCardiologist = findViewById((R.id.NoConsult));
         dontKnowCardiologist = findViewById(R.id.dontKnowConsult);
 
+        // Notification lorsque l'utilisateur saisi du texte
+        risk.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        cardiacCheckUp.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { //PROMBLEME AVEC LE SWITCH
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        // Bouton switch coche ou non
+        cardiacCheckUp.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 Log.d(TAG, "onCheckedChanged: Etat du switch : " + cardiacCheckUp.isChecked());
             }
         });
 
+/*        yesCardiologist.setOnClickListener() {
+
+        }
+
+        noCardiologist.setOnClickListener(){
+
+        }
+
+        dontKnowCardiologist.setOnClickListener();*/
+
         processIntentData();
+    }
+
+
+
+    // Methode pour passer a la page suivante
+    public void goToActivity5(){
+        Intent activity5Intent = new Intent(this, hygiene_vie.class);
+        activity5Intent.putExtra("FromActivity4ToActivity5", this.person);
+        startActivity(activity5Intent);
+    }
+
+    // Methode pour retourner a la page précedente
+    public void goToActivity3(){
+        Intent activityIntent = new Intent(this, MonCoeur.class);
+        activityIntent.putExtra("FromActivity4ToActivity3", this.person);
+        startActivity(activityIntent);
     }
 
     // Permet de passer à la page suivante du formulaire
@@ -95,15 +140,4 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         }
     }
 
-    public void goToActivity5(){
-        Intent activity5Intent = new Intent(this, hygiene_vie.class);
-        activity5Intent.putExtra("FromActivity4ToActivity5", this.person);
-        startActivity(activity5Intent);
-    }
-
-    public void goToActivity3(){
-        Intent activityIntent = new Intent(this, MonCoeur.class);
-        activityIntent.putExtra("FromActivity4ToActivity3", this.person);
-        startActivity(activityIntent);
-    }
 }
