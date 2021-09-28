@@ -6,16 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 public class bilan extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
+
     private Person person;
+
+    private Button finish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bilan);
+
+        finish = findViewById(R.id.button);
     }
 
     private void processIntentData() {

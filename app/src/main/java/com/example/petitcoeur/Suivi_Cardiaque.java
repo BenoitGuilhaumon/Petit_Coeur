@@ -12,6 +12,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -29,7 +30,8 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     private ImageButton yesCardiologist;
     private ImageButton noCardiologist;
     private ImageButton dontKnowCardiologist;
-
+    private Button nextstep;
+    private Button previousstep;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         yesCardiologist = findViewById((R.id.YesConsult));
         noCardiologist = findViewById((R.id.NoConsult));
         dontKnowCardiologist = findViewById(R.id.dontKnowConsult);
+        nextstep = findViewById(R.id.nextstep3);
+        previousstep = findViewById(R.id.previousstep3);
 
         // Notification lorsque l'utilisateur saisi du texte
         risk.addTextChangedListener(new TextWatcher() {

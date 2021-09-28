@@ -65,35 +65,35 @@ public class hygiene_vie extends AppCompatActivity {
         Log.d(TAG, "onCreate: Person name : " + name);
 
         // Restauration suite à un OnCreate
-        if (savedInstanceState.containsKey("consoAlcoholYes")) {// On verifie qu'il y ait bien un resultat
+        if (savedInstanceState != null && savedInstanceState.containsKey("consoAlcoholYes")) {// On verifie qu'il y ait bien un resultat
             String consoAlcoholYes = savedInstanceState.getString("consoAlcoholYes");
             yesAlcohol.setText(consoAlcoholYes);
         }
-        if (savedInstanceState.containsKey("consoAlcoholNo")) {// On verifie qu'il y ait bien un resultat
+        if (savedInstanceState != null && savedInstanceState.containsKey("consoAlcoholNo")) {// On verifie qu'il y ait bien un resultat
             String consoAlcoholNo = savedInstanceState.getString("consoAlcoholNo");
             noAlcohol.setText(consoAlcoholNo);
         }
-        if (savedInstanceState.containsKey("consoEnergyYes")) {// On verifie qu'il y ait bien un resultat
+        if (savedInstanceState != null && savedInstanceState.containsKey("consoEnergyYes")) {// On verifie qu'il y ait bien un resultat
             String consoEnergyYes = savedInstanceState.getString("consoEnergyYes");
             yesEnergyDrink.setText(consoEnergyYes);
         }
-        if (savedInstanceState.containsKey("consoEnergyNo")) {// On verifie qu'il y ait bien un resultat
+        if (savedInstanceState != null && savedInstanceState.containsKey("consoEnergyNo")) {// On verifie qu'il y ait bien un resultat
             String consoEnergyNo = savedInstanceState.getString("consoEnergyNo");
             noEnergyDrink.setText(consoEnergyNo);
         }
-        if (savedInstanceState.containsKey("sleepDisorderYes")) {// On verifie qu'il y ait bien un resultat
+        if (savedInstanceState != null && savedInstanceState.containsKey("sleepDisorderYes")) {// On verifie qu'il y ait bien un resultat
             String sleepDisorderYes = savedInstanceState.getString("sleepDisorderYes");
             yesSleepDisorders.setText(sleepDisorderYes);
         }
-        if (savedInstanceState.containsKey("sleepDisorderNo")) {// On verifie qu'il y ait bien un resultat
+        if (savedInstanceState != null && savedInstanceState.containsKey("sleepDisorderNo")) {// On verifie qu'il y ait bien un resultat
             String sleepDisorderNo = savedInstanceState.getString("sleepDisorderNo");
             noSleepDisorders.setText(sleepDisorderNo);
         }
-        if (savedInstanceState.containsKey("sleepHoursYes")) {// On verifie qu'il y ait bien un resultat
+        if (savedInstanceState != null && savedInstanceState.containsKey("sleepHoursYes")) {// On verifie qu'il y ait bien un resultat
             String sleepHoursYes = savedInstanceState.getString("sleepHoursYes");
             yesSleepHours.setText(sleepHoursYes);
         }
-        if (savedInstanceState.containsKey("sleepHoursNo")) {// On verifie qu'il y ait bien un resultat
+        if (savedInstanceState != null && savedInstanceState.containsKey("sleepHoursNo")) {// On verifie qu'il y ait bien un resultat
             String sleepHoursNo = savedInstanceState.getString("sleepHoursNo");
             noSleepHours.setText(sleepHoursNo);
         }

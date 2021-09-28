@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,8 @@ public class Profil extends AppCompatActivity {
     private Person person; // Attribution a la classe Person
     private RadioButton genre; // Sexe de l'utilisateur
     private EditText age; // Age de l'utilisateur
+    private Button nextstep; // Bouton pour passer à la page suivante
+    private Button previousstep; // Bouton pour revenir à la page precedente
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,27 @@ public class Profil extends AppCompatActivity {
         // Reference aux elements graphiques
         genre = findViewById((R.id.SexButton));
         age = findViewById(R.id.editAge);
+        nextstep = findViewById(R.id.nextstep);
+        previousstep = findViewById(R.id.previousstep);
+        nextstep.setEnabled(false); // On desactive le bouton
+
+        // Notification lorsque l'utilisateur saisi du texte
+        age.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                nextstep.setEnabled(true); // On active le bouton quand le patient a saisie son age
+            }
+        });
 
         processIntentData();
     }

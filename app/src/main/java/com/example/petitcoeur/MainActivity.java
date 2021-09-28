@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Reference aux elements graphiques
         editName = findViewById((R.id.PersonName));
         start = findViewById(R.id.start);
-        start.setEnabled(true); // Bouton desactive tant que l'utilisateur n'a pas entre son nom
+        start.setEnabled(false); // Bouton desactive tant que l'utilisateur n'a pas entre son nom
 
         // Notification lorsque l'utilisateur saisi du texte
         editName.addTextChangedListener(new TextWatcher() {
@@ -69,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
         processIntentData();
 
     }
-
-
 
     // Permet de passer à la premiere page du formulaire via le bouton start
     public void action_start(View sender){

@@ -12,6 +12,7 @@ import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -25,6 +26,8 @@ public class MonCoeur extends AppCompatActivity {
 
     // Declaration des elements graphiques
     private Spinner spinner, spinner1, spinner2, spinner3;
+    private Button nextstep; // Demarrage du questionnaire
+    private Button previousstep; // Demarrage du questionnaire
 
     @SuppressLint("WrongViewCast")
 
@@ -37,6 +40,8 @@ public class MonCoeur extends AppCompatActivity {
         spinner1 = findViewById(R.id.spinner1);
         spinner2 = findViewById(R.id.spinner2);
         spinner3 = findViewById(R.id.spinner3);
+        nextstep = findViewById(R.id.nextstep2);
+        previousstep = findViewById(R.id.previousstep2);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -44,6 +49,7 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + spinner.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + spinner.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + spinner.getSelectedItemId());
+
             }
 
             @Override // Si rien est selectionne, un message apparait
@@ -58,6 +64,7 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + spinner1.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + spinner1.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + spinner1.getSelectedItemId());
+
             }
 
             @Override // Si rien n'est selectionne, un message apparait
@@ -72,6 +79,7 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + spinner2.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + spinner2.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + spinner2.getSelectedItemId());
+
             }
 
             @Override // Si rien n'est selectionne, un message apparait
@@ -86,6 +94,7 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + spinner3.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + spinner3.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + spinner3.getSelectedItemId());
+
             }
 
             @Override // Si rien n'est selectionne, un message apparait
