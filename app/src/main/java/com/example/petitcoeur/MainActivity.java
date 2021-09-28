@@ -76,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Profil.class);
         intent.putExtra("personname",editName.getText().toString());// Permet de transferer la donnée de nom lors du changement de page
         startActivity(intent);
-
-        goToActivity2();
     }
 
     @Override // C'est android qui appel cette fonction de sauvegarde
@@ -100,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     private void processIntentData() {
         Intent intent = getIntent();
         if(intent != null) {
-            Person transferredPersonPrevious = intent.getParcelableExtra("FromActivity3ToActivity2");
+            Person transferredPersonPrevious = intent.getParcelableExtra("FromActivity2ToActivity1");
             if (transferredPersonPrevious != null) {
                 this.person = transferredPersonPrevious;
                 this.person.print();
@@ -112,13 +110,6 @@ public class MainActivity extends AppCompatActivity {
         else {
             Log.d(TAG, "Error when transferring from Activity2");
         }
-    }
-
-    // Passage de l'activite en cours a la suivante
-    public void goToActivity2(){
-        Intent activity2Intent = new Intent(this, Profil.class);
-        activity2Intent.putExtra("FromActivity1ToActivity2", this.person);
-        startActivity(activity2Intent);
     }
 
     // Creation d'une key pour l'application

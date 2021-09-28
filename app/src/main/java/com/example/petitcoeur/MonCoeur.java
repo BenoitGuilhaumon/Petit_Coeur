@@ -28,6 +28,9 @@ public class MonCoeur extends AppCompatActivity {
     private Spinner spinner, spinner1, spinner2, spinner3;
     private Button nextstep; // Demarrage du questionnaire
     private Button previousstep; // Demarrage du questionnaire
+    private String namePerson;
+    private String sexePerson;
+    private String agePerson;
 
     @SuppressLint("WrongViewCast")
 
@@ -35,6 +38,19 @@ public class MonCoeur extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_coeur);
+
+        // On recupere la valeur envoyée par la page précédente
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("personname");
+        String sexe = intent.getStringExtra("sexe");
+        String age = intent.getStringExtra("age");
+        // J'attribue les valeurs recuperees pour pouvoir les retransferrer
+        namePerson = name;
+        sexePerson = sexe;
+        agePerson = age;
+        Log.d(TAG, "onCreate: Person name : " + name); // Permet d'afficher dans les Log le nom transfere de la page precedente
+        Log.d(TAG, "onCreate: Person sexe : " + sexe);
+        Log.d(TAG, "onCreate: Person age : " + age);
 
         spinner = findViewById(R.id.spinner);
         spinner1 = findViewById(R.id.spinner1);
@@ -109,10 +125,17 @@ public class MonCoeur extends AppCompatActivity {
     // Permet de passer à la page suivante du formulaire
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
-        Intent intent = new Intent(this, hygiene_vie.class);
+        Intent intent = new Intent(this, Suivi_Cardiaque.class);
+        intent.putExtra("spinnerHeartCondition",spinner.getSelectedItem().toString());
+        intent.putExtra("spinnerDiabetic",spinner1.getSelectedItem().toString());
+        intent.putExtra("spinnerFirstDegree",spinner2.getSelectedItem().toString());
+        intent.putExtra("spinnerCholesterol",spinner3.getSelectedItem().toString());
+        intent.putExtra("sexe",sexePerson);
+        intent.putExtra("age",agePerson);
+        intent.putExtra("personname",namePerson);
         startActivity(intent);
 
-        goToActivity4();
+        //goToActivity4();
     }
 
     // Permet de revenir à la page précédente du formulaire

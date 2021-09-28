@@ -2,6 +2,7 @@ package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,30 +15,42 @@ import android.widget.RadioButton;
 
 public class Profil extends AppCompatActivity {
 
+    // Declaration du tag du projet
     public static final String TAG = MainActivity.TAG;
-    private Person person; // Attribution a la classe Person
+
+    // Attribution a la classe Person
+    private Person person;
+
+    // Delcaration des elements graphiques
     private RadioButton genre; // Sexe de l'utilisateur
     private EditText age; // Age de l'utilisateur
+    private String namePerson;
     private Button nextstep; // Bouton pour passer à la page suivante
     private Button previousstep; // Bouton pour revenir à la page precedente
 
+    @SuppressLint("WrongViewCast")
+
+    // Appele a la creation de la page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profil);
 
+        // Association a l'activite en layout
+        setContentView(R.layout.activity_profil);
         Log.d(TAG, "onCreate: ");
+
         // On recupere la valeur envoyée par la page précédente
         Intent intent = getIntent();
         String name = intent.getStringExtra("personname");
-        Log.d(TAG, "onCreate: Person name : " + name);
+        namePerson = name;
+        Log.d(TAG, "onCreate: Person name : " + name); // Permet d'afficher dans les Log le nom transfere de la page precedente
 
         // Reference aux elements graphiques
         genre = findViewById((R.id.SexButton));
         age = findViewById(R.id.editAge);
         nextstep = findViewById(R.id.nextstep);
         previousstep = findViewById(R.id.previousstep);
-        nextstep.setEnabled(false); // On desactive le bouton
+       // nextstep.setEnabled(false); // On desactive le bouton
 
         // Notification lorsque l'utilisateur saisi du texte
         age.addTextChangedListener(new TextWatcher() {
@@ -53,7 +66,7 @@ public class Profil extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                nextstep.setEnabled(true); // On active le bouton quand le patient a saisie son age
+                //nextstep.setEnabled(true); // On active le bouton quand le patient a saisie son age
             }
         });
 
@@ -64,9 +77,12 @@ public class Profil extends AppCompatActivity {
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, MonCoeur.class);
+        intent.putExtra("sexe",genre.getText().toString());
+        intent.putExtra("age",age.getText().toString());
+        intent.putExtra("personname",namePerson);
         startActivity(intent);
 
-        goToActivity3();
+        //goToActivity3();
     }
 
     // Permet de passer à la premiere page du formulaire via le bouton start
@@ -79,6 +95,7 @@ public class Profil extends AppCompatActivity {
     }
 
     // Methode appele par la methode onCreate
+    // elle permet le transfert des donnees renseignees
     private void processIntentData() {
         Intent intent = getIntent();
         if(intent != null) {
@@ -118,4 +135,6 @@ public class Profil extends AppCompatActivity {
         startActivity(activityIntent);
     }
 
+    // Creation d'une key pour l'application
+    private static final String KEY_COEUR = "coeur";
 }
