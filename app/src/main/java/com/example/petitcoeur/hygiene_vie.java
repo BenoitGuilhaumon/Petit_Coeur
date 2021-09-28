@@ -15,13 +15,13 @@ import android.widget.RadioButton;
 
 public class hygiene_vie extends AppCompatActivity {
 
-    // Déclaration du TAG du projet
+    // Declaration du TAG du projet
     public static final String TAG = MainActivity.TAG;
 
     // Attribution a la classe Person
     private Person person;
 
-    // Déclaration des elements graphiques
+    // Declaration des elements graphiques
     private RadioButton yesAlcohol; // L'utilisateur consomme de l'alcohol
     private RadioButton noAlcohol; // L'utilisateur ne consomme pas d'alcohol
     private RadioButton yesEnergyDrink; // L'utilisateur consomme des boissons energisantes
@@ -65,9 +65,37 @@ public class hygiene_vie extends AppCompatActivity {
         Log.d(TAG, "onCreate: Person name : " + name);
 
         // Restauration suite à un OnCreate
-        if(savedInstanceState != null && savedInstanceState.containsKey("personname")){
-            String personname = savedInstanceState.getString("personname");
-            editName.setText(personname);
+        if (savedInstanceState.containsKey("consoAlcoholYes")) {// On verifie qu'il y ait bien un resultat
+            String consoAlcoholYes = savedInstanceState.getString("consoAlcoholYes");
+            yesAlcohol.setText(consoAlcoholYes);
+        }
+        if (savedInstanceState.containsKey("consoAlcoholNo")) {// On verifie qu'il y ait bien un resultat
+            String consoAlcoholNo = savedInstanceState.getString("consoAlcoholNo");
+            noAlcohol.setText(consoAlcoholNo);
+        }
+        if (savedInstanceState.containsKey("consoEnergyYes")) {// On verifie qu'il y ait bien un resultat
+            String consoEnergyYes = savedInstanceState.getString("consoEnergyYes");
+            yesEnergyDrink.setText(consoEnergyYes);
+        }
+        if (savedInstanceState.containsKey("consoEnergyNo")) {// On verifie qu'il y ait bien un resultat
+            String consoEnergyNo = savedInstanceState.getString("consoEnergyNo");
+            noEnergyDrink.setText(consoEnergyNo);
+        }
+        if (savedInstanceState.containsKey("sleepDisorderYes")) {// On verifie qu'il y ait bien un resultat
+            String sleepDisorderYes = savedInstanceState.getString("sleepDisorderYes");
+            yesSleepDisorders.setText(sleepDisorderYes);
+        }
+        if (savedInstanceState.containsKey("sleepDisorderNo")) {// On verifie qu'il y ait bien un resultat
+            String sleepDisorderNo = savedInstanceState.getString("sleepDisorderNo");
+            noSleepDisorders.setText(sleepDisorderNo);
+        }
+        if (savedInstanceState.containsKey("sleepHoursYes")) {// On verifie qu'il y ait bien un resultat
+            String sleepHoursYes = savedInstanceState.getString("sleepHoursYes");
+            yesSleepHours.setText(sleepHoursYes);
+        }
+        if (savedInstanceState.containsKey("sleepHoursNo")) {// On verifie qu'il y ait bien un resultat
+            String sleepHoursNo = savedInstanceState.getString("sleepHoursNo");
+            noSleepHours.setText(sleepHoursNo);
         }
 
         processIntentData();
@@ -76,24 +104,55 @@ public class hygiene_vie extends AppCompatActivity {
     @Override // C'est android qui appel cette fonction de sauvegarde
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("consoAlcoholYes", yesAlcohol.getCheckedRadioButtonId()); // On sauvegarde le nom du patient
-        outState.putString("consoAlcoholNo", noAlcohol.getText().toString()); // On sauvegarde le nom du patient
-        outState.putString("consoEnergyYes", yesEnergyDrink.getText().toString()); // On sauvegarde le nom du patient
-        outState.putString("consoEnergyNo", noEnergyDrink.getText().toString()); // On sauvegarde le nom du patient
-        outState.putString("sleepDisorderYes", yesSleepDisorders.getText().toString()); // On sauvegarde le nom du patient
-        outState.putString("sleepDisorderNo", noSleepDisorders.getText().toString()); // On sauvegarde le nom du patient
-        outState.putString("sleepHoursYes", yesSleepHours.getText().toString()); // On sauvegarde le nom du patient
-        outState.putString("sleepHoursNo", noSleepHours.getText().toString()); // On sauvegarde le nom du patient
+        outState.putString("consoAlcoholYes", yesAlcohol.getText().toString()); // On sauvegarde la valeur du radiobutton
+        outState.putString("consoAlcoholNo", noAlcohol.getText().toString()); // On sauvegarde la valeur du radiobutton
+        outState.putString("consoEnergyYes", yesEnergyDrink.getText().toString()); // On sauvegarde la valeur du radiobutton
+        outState.putString("consoEnergyNo", noEnergyDrink.getText().toString()); // On sauvegarde la valeur du radiobutton
+        outState.putString("sleepDisorderYes", yesSleepDisorders.getText().toString()); // On sauvegarde la valeur du radiobutton
+        outState.putString("sleepDisorderNo", noSleepDisorders.getText().toString()); // On sauvegarde la valeur du radiobutton
+        outState.putString("sleepHoursYes", yesSleepHours.getText().toString()); // On sauvegarde la valeur du radiobutton
+        outState.putString("sleepHoursNo", noSleepHours.getText().toString()); // On sauvegarde la valeur du radiobutton
     }
 
     @Override // C'est android qui appel cette fonction de restauration
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        if (savedInstanceState.containsKey("personname")) {// On verifie qu'il y ait bien un resultat
-            String personname = savedInstanceState.getString("personname");
-            editName.setText(personname);
+        if (savedInstanceState.containsKey("consoAlcoholYes")) {// On verifie qu'il y ait bien un resultat
+            String consoAlcoholYes = savedInstanceState.getString("consoAlcoholYes");
+            yesAlcohol.setText(consoAlcoholYes);
+        }
+        if (savedInstanceState.containsKey("consoAlcoholNo")) {// On verifie qu'il y ait bien un resultat
+            String consoAlcoholNo = savedInstanceState.getString("consoAlcoholNo");
+            noAlcohol.setText(consoAlcoholNo);
+        }
+        if (savedInstanceState.containsKey("consoEnergyYes")) {// On verifie qu'il y ait bien un resultat
+            String consoEnergyYes = savedInstanceState.getString("consoEnergyYes");
+            yesEnergyDrink.setText(consoEnergyYes);
+        }
+        if (savedInstanceState.containsKey("consoEnergyNo")) {// On verifie qu'il y ait bien un resultat
+            String consoEnergyNo = savedInstanceState.getString("consoEnergyNo");
+            noEnergyDrink.setText(consoEnergyNo);
+        }
+        if (savedInstanceState.containsKey("sleepDisorderYes")) {// On verifie qu'il y ait bien un resultat
+            String sleepDisorderYes = savedInstanceState.getString("sleepDisorderYes");
+            yesSleepDisorders.setText(sleepDisorderYes);
+        }
+        if (savedInstanceState.containsKey("sleepDisorderNo")) {// On verifie qu'il y ait bien un resultat
+            String sleepDisorderNo = savedInstanceState.getString("sleepDisorderNo");
+            noSleepDisorders.setText(sleepDisorderNo);
+        }
+        if (savedInstanceState.containsKey("sleepHoursYes")) {// On verifie qu'il y ait bien un resultat
+            String sleepHoursYes = savedInstanceState.getString("sleepHoursYes");
+            yesSleepHours.setText(sleepHoursYes);
+        }
+        if (savedInstanceState.containsKey("sleepHoursNo")) {// On verifie qu'il y ait bien un resultat
+            String sleepHoursNo = savedInstanceState.getString("sleepHoursNo");
+            noSleepHours.setText(sleepHoursNo);
         }
     }
+
+    // Creation d'une key pour l'application
+    private static final String KEY_COEUR = "coeur";
 
     // Permet d'acceder a la page de la federation francaise de cardiologie
         public void on_Click (View sender) {

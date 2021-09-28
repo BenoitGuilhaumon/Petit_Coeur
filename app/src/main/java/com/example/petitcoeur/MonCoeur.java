@@ -2,6 +2,7 @@ package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -16,9 +17,16 @@ import android.widget.Toast;
 
 public class MonCoeur extends AppCompatActivity {
 
+    // Declaration du TAG du projet
     public static final String TAG = MainActivity.TAG;
+
+    // Attribution a la classe Person
     private Person person;
+
+    // Declaration des elements graphiques
     private Spinner spinner, spinner1, spinner2, spinner3;
+
+    @SuppressLint("WrongViewCast")
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
