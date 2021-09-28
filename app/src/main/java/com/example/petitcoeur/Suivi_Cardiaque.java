@@ -67,20 +67,32 @@ public class Suivi_Cardiaque extends AppCompatActivity {
             }
         });
 
-/*        yesCardiologist.setOnClickListener() {
+        yesCardiologist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Ajouter la recuperation de donnees
+            }
+        });
 
-        }
+        noCardiologist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Ajouter la recuperation de donnees
+            }
+        });
 
-        noCardiologist.setOnClickListener(){
-
-        }
-
-        dontKnowCardiologist.setOnClickListener();*/
+        dontKnowCardiologist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Ajouter la recuperation de donnees
+            }
+        });
 
         processIntentData();
+
+
+
     }
-
-
 
     // Methode pour passer a la page suivante
     public void goToActivity5(){

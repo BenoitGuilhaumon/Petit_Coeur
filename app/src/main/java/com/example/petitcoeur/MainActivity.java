@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Reference aux elements graphiques
         editName = findViewById((R.id.PersonName));
         start = findViewById(R.id.start);
-        start.setEnabled(false); // Bouton desactive tant que l'utilisateur n'a pas entre son nom
+        start.setEnabled(true); // Bouton desactive tant que l'utilisateur n'a pas entre son nom
 
         // Notification lorsque l'utilisateur saisi du texte
         editName.addTextChangedListener(new TextWatcher() {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                start.setEnabled(true);
             }
         });
 
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     @Override // C'est android qui appel cette fonction de sauvegarde
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("personname", editName.getText().toString()); // On sauvegarde le nom du patient
+        outState.putString("personname", editName.getText().toString()); // On sauvegarde le nom du pokémon
     }
 
     @Override // C'est android qui appel cette fonction de restauration
