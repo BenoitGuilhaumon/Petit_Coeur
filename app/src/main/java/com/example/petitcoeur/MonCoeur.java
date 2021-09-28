@@ -46,7 +46,7 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info id : " + spinner.getSelectedItemId());
             }
 
-            @Override // Si rien n'est selectionne, un message apparait
+            @Override // Si rien est selectionne, un message apparait
             public void onNothingSelected(AdapterView<?> adapterView) {
                 vibrate(60);
             }

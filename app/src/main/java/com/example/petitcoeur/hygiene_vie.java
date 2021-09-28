@@ -163,7 +163,7 @@ public class hygiene_vie extends AppCompatActivity {
             startActivity(intent);
         }
 
-    // Permet de revenir à la page précédente du formulaire
+    // Permet de revenir a la page précédente du formulaire
     public void action_previous_page(View sender){
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
         Intent intent = new Intent(this, Suivi_Cardiaque.class);

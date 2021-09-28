@@ -33,7 +33,7 @@
 
     <RadioButton
         android:id="@+id/radioButton19"
-        android:layout_width="201dp"
+        android:layout_width="200dp"
         android:layout_height="58dp"
         android:layout_marginEnd="20dp"
         android:text="No"
