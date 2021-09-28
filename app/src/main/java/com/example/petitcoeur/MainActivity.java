@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+
             }
         });
 
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     @Override // C'est android qui appel cette fonction de sauvegarde
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("personname", editName.getText().toString()); // On sauvegarde le nom du pokémon
+        outState.putString("personname", editName.getText().toString()); // On sauvegarde le nom du patient
     }
 
     @Override // C'est android qui appel cette fonction de restauration
