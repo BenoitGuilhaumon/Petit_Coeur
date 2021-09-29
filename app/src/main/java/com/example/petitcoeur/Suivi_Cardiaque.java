@@ -31,8 +31,17 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     private ImageButton yesCardiologist;
     private ImageButton noCardiologist;
     private ImageButton dontKnowCardiologist;
+    private String consultCardiologist;
     private Button nextstep;
     private Button previousstep;
+    private String namePerson;
+    private String sexePerson;
+    private String agePerson;
+    private String heartCondition;
+    private String diabetic;
+    private String firstDegree;
+    private String cholesterol;
+    private String checkUp;
 
     @SuppressLint("WrongViewCast")
 
@@ -60,9 +69,13 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         Log.d(TAG, "onCreate: Person first degree relative ? : " + spinnerFirstDegree);
         Log.d(TAG, "onCreate: Person cholesterol ? : " + spinnerCholesterol);
         // J'attribue les valeurs recuperees pour pouvoir les retransferrer
-        //namePerson = name;
-        //sexePerson = sexe;
-        //agePerson = age;
+        namePerson = name;
+        sexePerson = sexe;
+        agePerson = age;
+        heartCondition = spinnerHeartCondition;
+        diabetic = spinnerDiabetic;
+        firstDegree = spinnerFirstDegree;
+        cholesterol = spinnerCholesterol;
 
         risk = findViewById((R.id.CardiovascularRisk));
         cardiacCheckUp = findViewById(R.id.checkUp);
@@ -94,27 +107,30 @@ public class Suivi_Cardiaque extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 Log.d(TAG, "onCheckedChanged: Etat du switch : " + cardiacCheckUp.isChecked());
+                if (cardiacCheckUp.isChecked()==true) {
+                    checkUp = "Yes";
+                }else checkUp = "No";
             }
         });
 
         yesCardiologist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Ajouter la recuperation de donnees
+                consultCardiologist = "Yes";
             }
         });
 
         noCardiologist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Ajouter la recuperation de donnees
+                consultCardiologist = "No";
             }
         });
 
         dontKnowCardiologist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Ajouter la recuperation de donnees
+                consultCardiologist = "Don't know";
             }
         });
 
@@ -142,9 +158,19 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, hygiene_vie.class);
+        intent.putExtra("cardiovascularRisk",risk.getText().toString());
+        intent.putExtra("cardiacCheckUp",checkUp); // A VERIFIER
+        intent.putExtra("consultCardiologist",consultCardiologist);
+        intent.putExtra("spinnerHeartCondition",heartCondition);
+        intent.putExtra("spinnerDiabetic",diabetic);
+        intent.putExtra("spinnerFirstDegree",firstDegree);
+        intent.putExtra("spinnerCholesterol",cholesterol);
+        intent.putExtra("sexe",sexePerson);
+        intent.putExtra("age",agePerson);
+        intent.putExtra("personname",namePerson);
         startActivity(intent);
 
-        goToActivity5();
+        //goToActivity5();
     }
 
     // Permet de revenir à la page précédente du formulaire

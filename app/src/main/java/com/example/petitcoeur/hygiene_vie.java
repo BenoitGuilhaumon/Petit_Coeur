@@ -32,6 +32,16 @@ public class hygiene_vie extends AppCompatActivity {
     private Button previousStep; // Revien a la page precedente
     private Button nextStep; // Passe a la suite du questionnaire
     private Button cardiologyFederation; // Renvoie vers la page de la federation francaise de cardiologie
+    private String namePerson;
+    private String sexePerson;
+    private String agePerson;
+    private String heartCondition;
+    private String diabetic;
+    private String firstDegree;
+    private String cholesterol;
+    private String Cardiologist;
+    private String risk;
+    private String CheckUp;
 
     @SuppressLint("WrongViewCast")
 
@@ -42,6 +52,42 @@ public class hygiene_vie extends AppCompatActivity {
 
         // Association a l'activite en layout
         setContentView(R.layout.activity_hygiene_vie);
+
+        // On recupere les valeurs des pages precedentes
+        // On recupere la valeur envoyée par la page précédente
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("personname");
+        String sexe = intent.getStringExtra("sexe");
+        String age = intent.getStringExtra("age");
+        String spinnerHeartCondition = intent.getStringExtra("spinnerHeartCondition");
+        String spinnerDiabetic = intent.getStringExtra("spinnerDiabetic");
+        String spinnerFirstDegree = intent.getStringExtra("spinnerFirstDegree");
+        String spinnerCholesterol = intent.getStringExtra("spinnerCholesterol");
+        String cardiovascularRisk = intent.getStringExtra("cardiovascularRisk");
+        String cardiacCheckUp = intent.getStringExtra("cardiacCheckUp");
+        String consultCardiologist = intent.getStringExtra("consultCardiologist");
+        // Permet d'afficher dans les Log des infos transfere de la page precedente
+        Log.d(TAG, "onCreate: Person name : " + name);
+        Log.d(TAG, "onCreate: Person sexe : " + sexe);
+        Log.d(TAG, "onCreate: Person age : " + age);
+        Log.d(TAG, "onCreate: Person heart condition ? : " + spinnerHeartCondition);
+        Log.d(TAG, "onCreate: Person diabetic ? : " + spinnerDiabetic);
+        Log.d(TAG, "onCreate: Person first degree relative ? : " + spinnerFirstDegree);
+        Log.d(TAG, "onCreate: Person cholesterol ? : " + spinnerCholesterol);
+        Log.d(TAG, "onCreate: Person Cardiovascular Risk ? : " + cardiovascularRisk);
+        Log.d(TAG, "onCreate: Person Cardiac Check Up ? : " + cardiacCheckUp);
+        Log.d(TAG, "onCreate: Person Consult Cardiologist ? : " + consultCardiologist);
+        // J'attribue les valeurs recuperees pour pouvoir les retransferrer
+        namePerson = name;
+        sexePerson = sexe;
+        agePerson = age;
+        heartCondition = spinnerHeartCondition;
+        diabetic = spinnerDiabetic;
+        firstDegree = spinnerFirstDegree;
+        cholesterol = spinnerCholesterol;
+        CheckUp = cardiacCheckUp;
+        Cardiologist = consultCardiologist;
+        risk = cardiovascularRisk;
 
         // Reference aux elements graphiques
         yesAlcohol = findViewById((R.id.yesAlcohol));
@@ -56,12 +102,6 @@ public class hygiene_vie extends AppCompatActivity {
         previousStep = findViewById(R.id.previousstep4);
         cardiologyFederation = findViewById(R.id.buttonfed);
         nextStep.setEnabled(false); // Bouton desactive tant que l'utilisateur n'a pas entre les informations
-
-        Log.d(TAG, "onCreate: ");
-        // On recupere la valeur envoyée par la page précédente
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("coeur");
-        Log.d(TAG, "onCreate: Person name : " + name);
 
         // Restauration suite à un OnCreate
         if (savedInstanceState != null && savedInstanceState.containsKey("consoAlcoholYes")) {// On verifie qu'il y ait bien un resultat
@@ -182,6 +222,16 @@ public class hygiene_vie extends AppCompatActivity {
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, bilan.class);
+        intent.putExtra("cardiovascularRisk",risk);
+        intent.putExtra("cardiacCheckUp",CheckUp);
+        intent.putExtra("consultCardiologist",Cardiologist);
+        intent.putExtra("spinnerHeartCondition",heartCondition);
+        intent.putExtra("spinnerDiabetic",diabetic);
+        intent.putExtra("spinnerFirstDegree",firstDegree);
+        intent.putExtra("spinnerCholesterol",cholesterol);
+        intent.putExtra("sexe",sexePerson);
+        intent.putExtra("age",agePerson);
+        intent.putExtra("personname",namePerson);
         startActivity(intent);
 
         goToActivity6();

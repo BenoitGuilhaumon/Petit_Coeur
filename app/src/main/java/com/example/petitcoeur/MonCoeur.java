@@ -43,13 +43,15 @@ public class MonCoeur extends AppCompatActivity {
         String name = intent.getStringExtra("personname");
         String sexe = intent.getStringExtra("sexe");
         String age = intent.getStringExtra("age");
+        // Je verifie que les données sont bien transferees
+        Log.d(TAG, "onCreate: Person name : " + name); // Permet d'afficher dans les Log le nom transfere de la page precedente
+        Log.d(TAG, "onCreate: Person sexe : " + sexe);
+        Log.d(TAG, "onCreate: Person age : " + age);
         // J'attribue les valeurs recuperees pour pouvoir les retransferrer
         namePerson = name;
         sexePerson = sexe;
         agePerson = age;
-        Log.d(TAG, "onCreate: Person name : " + name); // Permet d'afficher dans les Log le nom transfere de la page precedente
-        Log.d(TAG, "onCreate: Person sexe : " + sexe);
-        Log.d(TAG, "onCreate: Person age : " + age);
+
 
         heartCondition = findViewById(R.id.heartCondition);
         diabetic = findViewById(R.id.diabetic);
@@ -121,7 +123,7 @@ public class MonCoeur extends AppCompatActivity {
         processIntentData();
     }
 
-    // Permet de passer à la page suivante du formulaire
+    // Permet de passer à la page suivante du formulaire en transferrant les informations des pages precedentes
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, Suivi_Cardiaque.class);

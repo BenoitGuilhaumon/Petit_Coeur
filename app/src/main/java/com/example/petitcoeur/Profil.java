@@ -42,8 +42,10 @@ public class Profil extends AppCompatActivity {
         // On recupere la valeur envoyée par la page précédente
         Intent intent = getIntent();
         String name = intent.getStringExtra("personname");
+        // Permet d'afficher dans les Log le nom transfere de la page precedente
+        Log.d(TAG, "onCreate: Person name : " + name);
+        // J'attribue la valeur recupere pour pouvoir la retransferrer
         namePerson = name;
-        Log.d(TAG, "onCreate: Person name : " + name); // Permet d'afficher dans les Log le nom transfere de la page precedente
 
         // Reference aux elements graphiques
         genre = findViewById((R.id.SexButton));
@@ -73,7 +75,7 @@ public class Profil extends AppCompatActivity {
         processIntentData();
     }
 
-    // Permet de passer à la page suivante du formulaire
+    // Permet de passer à la page suivante du formulaire en transferrant les informations des pages precedentes
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, MonCoeur.class);

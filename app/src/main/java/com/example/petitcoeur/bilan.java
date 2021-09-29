@@ -48,5 +48,4 @@ public class bilan extends AppCompatActivity {
     public void onClickExit(View view) {
         finish();
     }
-    }
 }
