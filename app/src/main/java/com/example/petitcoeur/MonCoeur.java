@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class MonCoeur extends AppCompatActivity {
 
@@ -25,7 +24,7 @@ public class MonCoeur extends AppCompatActivity {
     private Person person;
 
     // Declaration des elements graphiques
-    private Spinner spinner, spinner1, spinner2, spinner3;
+    private Spinner heartCondition, diabetic, firstDegree, cholesterol;
     private Button nextstep; // Demarrage du questionnaire
     private Button previousstep; // Demarrage du questionnaire
     private String namePerson;
@@ -52,19 +51,19 @@ public class MonCoeur extends AppCompatActivity {
         Log.d(TAG, "onCreate: Person sexe : " + sexe);
         Log.d(TAG, "onCreate: Person age : " + age);
 
-        spinner = findViewById(R.id.spinner);
-        spinner1 = findViewById(R.id.spinner1);
-        spinner2 = findViewById(R.id.spinner2);
-        spinner3 = findViewById(R.id.spinner3);
+        heartCondition = findViewById(R.id.heartCondition);
+        diabetic = findViewById(R.id.diabetic);
+        firstDegree = findViewById(R.id.fitstDegree);
+        cholesterol= findViewById(R.id.cholesterol);
         nextstep = findViewById(R.id.nextstep2);
         previousstep = findViewById(R.id.previousstep2);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        heartCondition.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d(TAG, "onItemSelected: Info position : " + spinner.getSelectedItemPosition());
-                Log.d(TAG, "onItemSelected: Info object: " + spinner.getSelectedItem());
-                Log.d(TAG, "onItemSelected: Info id : " + spinner.getSelectedItemId());
+                Log.d(TAG, "onItemSelected: Info position : " + heartCondition.getSelectedItemPosition());
+                Log.d(TAG, "onItemSelected: Info object: " + heartCondition.getSelectedItem());
+                Log.d(TAG, "onItemSelected: Info id : " + heartCondition.getSelectedItemId());
 
             }
 
@@ -74,12 +73,12 @@ public class MonCoeur extends AppCompatActivity {
             }
         });
 
-        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        diabetic.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d(TAG, "onItemSelected: Info position : " + spinner1.getSelectedItemPosition());
-                Log.d(TAG, "onItemSelected: Info object: " + spinner1.getSelectedItem());
-                Log.d(TAG, "onItemSelected: Info id : " + spinner1.getSelectedItemId());
+                Log.d(TAG, "onItemSelected: Info position : " + diabetic.getSelectedItemPosition());
+                Log.d(TAG, "onItemSelected: Info object: " + diabetic.getSelectedItem());
+                Log.d(TAG, "onItemSelected: Info id : " + diabetic.getSelectedItemId());
 
             }
 
@@ -89,12 +88,12 @@ public class MonCoeur extends AppCompatActivity {
             }
         });
 
-        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        firstDegree.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d(TAG, "onItemSelected: Info position : " + spinner2.getSelectedItemPosition());
-                Log.d(TAG, "onItemSelected: Info object: " + spinner2.getSelectedItem());
-                Log.d(TAG, "onItemSelected: Info id : " + spinner2.getSelectedItemId());
+                Log.d(TAG, "onItemSelected: Info position : " + firstDegree.getSelectedItemPosition());
+                Log.d(TAG, "onItemSelected: Info object: " + firstDegree.getSelectedItem());
+                Log.d(TAG, "onItemSelected: Info id : " + firstDegree.getSelectedItemId());
 
             }
 
@@ -104,12 +103,12 @@ public class MonCoeur extends AppCompatActivity {
             }
         });
 
-        spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        cholesterol.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d(TAG, "onItemSelected: Info position : " + spinner3.getSelectedItemPosition());
-                Log.d(TAG, "onItemSelected: Info object: " + spinner3.getSelectedItem());
-                Log.d(TAG, "onItemSelected: Info id : " + spinner3.getSelectedItemId());
+                Log.d(TAG, "onItemSelected: Info position : " + cholesterol.getSelectedItemPosition());
+                Log.d(TAG, "onItemSelected: Info object: " + cholesterol.getSelectedItem());
+                Log.d(TAG, "onItemSelected: Info id : " + cholesterol.getSelectedItemId());
 
             }
 
@@ -126,10 +125,10 @@ public class MonCoeur extends AppCompatActivity {
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, Suivi_Cardiaque.class);
-        intent.putExtra("spinnerHeartCondition",spinner.getSelectedItem().toString());
-        intent.putExtra("spinnerDiabetic",spinner1.getSelectedItem().toString());
-        intent.putExtra("spinnerFirstDegree",spinner2.getSelectedItem().toString());
-        intent.putExtra("spinnerCholesterol",spinner3.getSelectedItem().toString());
+        intent.putExtra("spinnerHeartCondition",heartCondition.getSelectedItem().toString());
+        intent.putExtra("spinnerDiabetic",diabetic.getSelectedItem().toString());
+        intent.putExtra("spinnerFirstDegree",firstDegree.getSelectedItem().toString());
+        intent.putExtra("spinnerCholesterol",cholesterol.getSelectedItem().toString());
         intent.putExtra("sexe",sexePerson);
         intent.putExtra("age",agePerson);
         intent.putExtra("personname",namePerson);

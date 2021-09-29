@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 
 public class hygiene_vie extends AppCompatActivity {
@@ -45,14 +44,14 @@ public class hygiene_vie extends AppCompatActivity {
         setContentView(R.layout.activity_hygiene_vie);
 
         // Reference aux elements graphiques
-        yesAlcohol = findViewById((R.id.radioButton20));
-        noAlcohol = findViewById((R.id.radioButton19));
-        yesEnergyDrink = findViewById((R.id.radioButton14));
-        noEnergyDrink = findViewById((R.id.radioButton13));
-        yesSleepDisorders = findViewById((R.id.radioButton16));
-        noSleepDisorders = findViewById((R.id.radioButton15));
-        yesSleepHours = findViewById((R.id.radioButton18));
-        noSleepHours = findViewById((R.id.radioButton17));
+        yesAlcohol = findViewById((R.id.yesAlcohol));
+        noAlcohol = findViewById((R.id.noAlcohol));
+        yesEnergyDrink = findViewById((R.id.yesEnergyDrink));
+        noEnergyDrink = findViewById((R.id.noEnergyDrink));
+        yesSleepDisorders = findViewById((R.id.yesSleepDisorders));
+        noSleepDisorders = findViewById((R.id.noSleepDisorders));
+        yesSleepHours = findViewById((R.id.yesSleepHours));
+        noSleepHours = findViewById((R.id.noSleepHours));
         nextStep = findViewById(R.id.nextstep5);
         previousStep = findViewById(R.id.previousstep4);
         cardiologyFederation = findViewById(R.id.buttonfed);

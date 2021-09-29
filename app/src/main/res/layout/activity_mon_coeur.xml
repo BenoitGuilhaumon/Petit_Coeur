@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.645"
         app:layout_constraintStart_toEndOf="@+id/previousstep2"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3"
+        app:layout_constraintTop_toBottomOf="@+id/cholesterol"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -32,11 +32,11 @@
         app:layout_constraintEnd_toStartOf="@+id/nextstep"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3"
+        app:layout_constraintTop_toBottomOf="@+id/cholesterol"
         app:layout_constraintVertical_bias="1.0" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/cholesterol"
         android:layout_width="364dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/fitstDegree"
         android:layout_width="360dp"
         android:layout_height="48dp"
         android:entries="@array/array_response"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/diabetic"
         android:layout_width="359dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/heartCondition" />
 
     <TextView
         android:id="@+id/textView6"
@@ -100,7 +100,7 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+        app:layout_constraintTop_toBottomOf="@+id/diabetic" />
 
     <TextView
         android:id="@+id/textView7"
@@ -112,10 +112,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/fitstDegree" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/heartCondition"
         android:layout_width="360dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
