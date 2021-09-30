@@ -3,12 +3,8 @@ package com.example.petitcoeur;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -32,8 +28,8 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     private ImageButton noCardiologist;
     private ImageButton dontKnowCardiologist;
     private String consultCardiologist;
-    private Button nextstep;
-    private Button previousstep;
+    private Button nextstep, nextstepLand;
+    private Button previousstep, previousstepLand;
     private String namePerson;
     private String sexePerson;
     private String agePerson;
@@ -84,6 +80,8 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         dontKnowCardiologist = findViewById(R.id.dontKnowConsult);
         nextstep = findViewById(R.id.nextstep3);
         previousstep = findViewById(R.id.previousstep3);
+        nextstepLand = findViewById(R.id.nextstep3);
+        previousstepLand = findViewById(R.id.previousstep3);
 
         // Notification lorsque l'utilisateur saisi du texte
         risk.addTextChangedListener(new TextWatcher() {

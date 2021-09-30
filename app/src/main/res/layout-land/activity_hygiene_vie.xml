@@ -7,15 +7,15 @@
     tools:context=".hygiene_vie">
 
     <Button
-        android:id="@+id/buttonfed2"
+        android:id="@+id/buttonfed"
         android:layout_width="329dp"
         android:layout_height="55dp"
         android:layout_marginTop="4dp"
         android:text="@string/federation_cardiology"
         app:iconTint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/nextstep4"
+        app:layout_constraintEnd_toEndOf="@+id/nextstep5"
         app:layout_constraintStart_toStartOf="@+id/previousstep4"
-        app:layout_constraintTop_toBottomOf="@+id/nextstep4" />
+        app:layout_constraintTop_toBottomOf="@+id/nextstep5" />
 
     <Button
         android:id="@+id/previousstep4"
@@ -25,14 +25,14 @@
         android:onClick="action_previous_page"
         android:text="@string/Previous_Step"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nextstep4"
+        app:layout_constraintEnd_toStartOf="@+id/nextstep5"
         app:layout_constraintHorizontal_bias="0.862"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.028" />
 
     <Button
-        android:id="@+id/nextstep4"
+        android:id="@+id/nextstep5"
         android:layout_width="160dp"
         android:layout_height="54dp"
         android:layout_marginEnd="92dp"

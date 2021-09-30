@@ -30,8 +30,8 @@ public class hygiene_vie extends AppCompatActivity {
     private RadioButton yesSleepHours; // L'utilisateur dors 7H par nuit
     private RadioButton noSleepHours; // L'utilisateur ne dors pas 7H par nuit
     private Button previousStep; // Revien a la page precedente
-    private Button nextStep; // Passe a la suite du questionnaire
-    private Button cardiologyFederation; // Renvoie vers la page de la federation francaise de cardiologie
+    private Button nextStep, nextStepLand; // Passe a la suite du questionnaire
+    private Button cardiologyFederation, cardiologyFederationLand; // Renvoie vers la page de la federation francaise de cardiologie
     private String namePerson;
     private String sexePerson;
     private String agePerson;
@@ -103,8 +103,10 @@ public class hygiene_vie extends AppCompatActivity {
         yesSleepHours = findViewById((R.id.yesSleepHours));
         noSleepHours = findViewById((R.id.noSleepHours));
         nextStep = findViewById(R.id.nextstep5);
+        nextStepLand = findViewById(R.id.nextstep5);
         previousStep = findViewById(R.id.previousstep4);
         cardiologyFederation = findViewById(R.id.buttonfed);
+        cardiologyFederationLand = findViewById(R.id.buttonfed);
 
         // On attribue pour chaques radio button une valeur si il est coché
         yesAlcohol.setOnClickListener(new View.OnClickListener() {

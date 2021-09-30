@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_bilan.xml" value="0.1" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_hygiene_vie.xml" value="0.25" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_mon_coeur.xml" value="0.1728395061728395" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_profil.xml" value="0.1728395061728395" />
+        <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/activity_suivi_cardiaque.xml" value="0.134375" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/je_suis.xml" value="0.33" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/mon_coeur.xml" value="0.1728395061728395" />
         <entry key="..\:/Users/benoi/AndroidStudioProjects/PetitCoeur/app/src/main/res/layout-land/mon_suivi_cardiaque.xml" value="0.1728395061728395" />

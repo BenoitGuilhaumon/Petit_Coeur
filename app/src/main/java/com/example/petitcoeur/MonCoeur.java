@@ -25,8 +25,8 @@ public class MonCoeur extends AppCompatActivity {
 
     // Declaration des elements graphiques
     private Spinner heartCondition, diabetic, firstDegree, cholesterol;
-    private Button nextstep; // Demarrage du questionnaire
-    private Button previousstep; // Demarrage du questionnaire
+    private Button nextstep, nextstepLand; // Demarrage du questionnaire
+    private Button previousstep, previousstepLand; // Demarrage du questionnaire
     private String namePerson;
     private String sexePerson;
     private String agePerson;
@@ -59,6 +59,8 @@ public class MonCoeur extends AppCompatActivity {
         cholesterol= findViewById(R.id.cholesterol);
         nextstep = findViewById(R.id.nextstep2);
         previousstep = findViewById(R.id.previousstep2);
+        nextstepLand = findViewById(R.id.nextstep2);
+        previousstepLand = findViewById(R.id.previousstep2);
 
         heartCondition.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -66,7 +68,6 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + heartCondition.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + heartCondition.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + heartCondition.getSelectedItemId());
-
             }
 
             @Override // Si rien est selectionne, un message apparait

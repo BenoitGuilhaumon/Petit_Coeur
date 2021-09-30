@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Déclaration des elements graphiques
     private EditText editName; // Nom que l'utilisateur a saisi
-    private Button start; // Demarrage du questionnaire
+    private Button start, start2; // Demarrage du questionnaire
     private String nameP;
 
     @SuppressLint("WrongViewCast")
@@ -46,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
         // Reference aux elements graphiques
         editName = findViewById((R.id.PersonName));
         start = findViewById(R.id.start);
+        //start2 = findViewById(R.id.start);
         start.setEnabled(false); // Bouton desactive tant que l'utilisateur n'a pas entre son nom
+        //start2.setEnabled(false); // Bouton desactive tant que l'utilisateur n'a pas entre son nom
+
 
         // Notification lorsque l'utilisateur saisi du texte
         editName.addTextChangedListener(new TextWatcher() {
@@ -63,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 start.setEnabled(true);
+                //start2.setEnabled(true);
             }
         });
 
