@@ -158,6 +158,6 @@ public class bilan extends AppCompatActivity {
 
     //public void action_finish(View v){finish();//Permet de revenir à la page initiale
     public void onClickExit(View view) {
-        finish();
+
     }
 }
