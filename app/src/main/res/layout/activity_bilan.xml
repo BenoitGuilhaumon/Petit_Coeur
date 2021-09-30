@@ -213,7 +213,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/RcardiovascularRisk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -230,10 +230,10 @@
             android:layout_marginTop="16dp"
             android:text="@string/cardiac_chekup"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+            app:layout_constraintTop_toBottomOf="@+id/RcardiovascularRisk" />
 
         <TextView
-            android:id="@+id/rcardiacCheckUp"
+            android:id="@+id/Rcardiologist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -252,7 +252,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
         <TextView
-            android:id="@+id/textView30"
+            android:id="@+id/Renergy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -261,7 +261,7 @@
             tools:layout_editor_absoluteY="836dp" />
 
         <TextView
-            android:id="@+id/textView34"
+            android:id="@+id/Rsleep7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -270,7 +270,7 @@
             tools:layout_editor_absoluteY="907dp" />
 
         <TextView
-            android:id="@+id/textView33"
+            android:id="@+id/RsleepDisorders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -288,7 +288,7 @@
             tools:layout_editor_absoluteY="743dp" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/Rdrink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -317,7 +317,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/energy"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+            app:layout_constraintTop_toBottomOf="@+id/Rdrink" />
 
         <TextView
             android:id="@+id/textView25"

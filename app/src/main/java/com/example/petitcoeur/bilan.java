@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class bilan extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
 
+    // Valeurs recuperees des pages precedentes
     private Person person;
     private Button finish;
     private String namePerson;
@@ -28,6 +30,24 @@ public class bilan extends AppCompatActivity {
     private String consoEnergyDrink;
     private String sleepDisorders;
     private String sleepHours;
+
+    // Valeurs de la page review
+    private TextView Rname;
+    private TextView RyouAre;
+    private TextView RheartCondition;
+    private TextView Rdiabetic;
+    private TextView RfirstDegree;
+    private TextView Rcholesterol;
+    private TextView RcardiovascularRisk;
+    private TextView RcardiacCheckUp;
+    private TextView Rcardiologist;
+    private TextView Rdrink;
+    private TextView Renergy;
+    private TextView RsleepDisorders;
+    private TextView Rsleep7;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +103,22 @@ public class bilan extends AppCompatActivity {
         consoEnergyDrink = consomEnergyDrink;
         sleepDisorders = sleepDisorder;
         sleepHours = sleepHour;
+
+        // Affichage des reponses sur la page bilan
+        Rname.setText(namePerson);
+        RyouAre.setText(sexePerson);
+        RheartCondition.setText(heartCondition);
+        Rdiabetic.setText(diabetic);
+        RfirstDegree.setText(firstDegree);
+        Rcholesterol.setText(cholesterol);
+        RcardiovascularRisk.setText(risk);
+        RcardiacCheckUp.setText(CheckUp);
+        Rcardiologist.setText(Cardiologist);
+        Rdrink.setText(consoAlcool);
+        Renergy.setText(consoEnergyDrink);
+        RsleepDisorders.setText(sleepDisorders);
+        Rsleep7.setText(sleepHours);
+
 
         finish = findViewById(R.id.finish);
     }
