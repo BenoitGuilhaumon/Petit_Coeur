@@ -26,6 +26,7 @@ public class Profil extends AppCompatActivity {
     private RadioButton SexWoman; // Sexe de l'utilisateur
     private RadioButton SexOther; // Sexe de l'utilisateur
     private EditText age; // Age de l'utilisateur
+    private String sexeP;
     private String namePerson;
     private Button nextstep; // Bouton pour passer à la page suivante
     private Button previousstep; // Bouton pour revenir à la page precedente
@@ -71,28 +72,28 @@ public class Profil extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                //nextstep.setEnabled(true); // On active le bouton quand le patient a saisie son age
+
             }
         });
 
         SexMan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Ajouter la recuperation de donnees
+                sexeP = "Man";
             }
         });
 
         SexWoman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Ajouter la recuperation de donnees
+                sexeP = "Woman";
             }
         });
 
         SexOther.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Ajouter la recuperation de donnees
+                sexeP = "Other";
             }
         });
 
@@ -103,9 +104,7 @@ public class Profil extends AppCompatActivity {
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, MonCoeur.class);
-        intent.putExtra("sexe",SexMan.getText().toString());
-        intent.putExtra("sexe",SexWoman.getText().toString());
-        intent.putExtra("sexe",SexOther.getText().toString());
+        intent.putExtra("sexe",sexeP);
         intent.putExtra("age",age.getText().toString());
         intent.putExtra("personname",namePerson);
         startActivity(intent);
