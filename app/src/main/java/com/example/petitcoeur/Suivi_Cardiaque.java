@@ -136,8 +136,6 @@ public class Suivi_Cardiaque extends AppCompatActivity {
 
         processIntentData();
 
-
-
     }
 
     // Methode pour passer a la page suivante

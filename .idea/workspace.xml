@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Declarations elements, desactivation boutons, pb divers">
+    <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Transferts et recuperation de donneees">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MonCoeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MonCoeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Profil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Profil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Suivi_Cardiaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Suivi_Cardiaque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/bilan.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/bilan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/hygiene_vie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/hygiene_vie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_hygiene_vie.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_hygiene_vie.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632849577758</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Transferts et recuperation de donneees">
+      <created>1632945966195</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1632945966195</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,6 +353,7 @@
     <MESSAGE value="Reprise des pages Main, Profil et Suivi Cardiaque" />
     <MESSAGE value="hygiene vie" />
     <MESSAGE value="Declarations elements, desactivation boutons, pb divers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Declarations elements, desactivation boutons, pb divers" />
+    <MESSAGE value="Transferts et recuperation de donneees" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transferts et recuperation de donneees" />
   </component>
 </project>

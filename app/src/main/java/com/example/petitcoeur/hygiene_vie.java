@@ -42,6 +42,10 @@ public class hygiene_vie extends AppCompatActivity {
     private String Cardiologist;
     private String risk;
     private String CheckUp;
+    private String consoAlcool;
+    private String consoEnergyDrink;
+    private String sleepDisorders;
+    private String sleepHours;
 
     @SuppressLint("WrongViewCast")
 
@@ -101,7 +105,56 @@ public class hygiene_vie extends AppCompatActivity {
         nextStep = findViewById(R.id.nextstep5);
         previousStep = findViewById(R.id.previousstep4);
         cardiologyFederation = findViewById(R.id.buttonfed);
-        nextStep.setEnabled(false); // Bouton desactive tant que l'utilisateur n'a pas entre les informations
+
+        // On attribue pour chaques radio button une valeur si il est coché
+        yesAlcohol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                consoAlcool = "Yes";
+            }
+        });
+        noAlcohol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                consoAlcool = "No";
+            }
+        });
+        yesEnergyDrink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                consoEnergyDrink = "Yes";
+            }
+        });
+        noEnergyDrink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                consoEnergyDrink = "No";
+            }
+        });
+        yesSleepDisorders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sleepDisorders = "Yes";
+            }
+        });
+        noSleepDisorders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sleepDisorders = "No";
+            }
+        });
+        yesSleepHours.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sleepHours = "Yes";
+            }
+        });
+        noSleepHours.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sleepHours = "No";
+            }
+        });
 
         // Restauration suite à un OnCreate
         if (savedInstanceState != null && savedInstanceState.containsKey("consoAlcoholYes")) {// On verifie qu'il y ait bien un resultat
@@ -232,9 +285,13 @@ public class hygiene_vie extends AppCompatActivity {
         intent.putExtra("sexe",sexePerson);
         intent.putExtra("age",agePerson);
         intent.putExtra("personname",namePerson);
+        intent.putExtra("alcool",consoAlcool);
+        intent.putExtra("energyDrink",consoEnergyDrink);
+        intent.putExtra("sleepDisorders",sleepDisorders);
+        intent.putExtra("sleepHours",sleepHours);
         startActivity(intent);
 
-        goToActivity6();
+        // goToActivity6();
     }
 
     // Passage de l'activite en cours a la suivante
