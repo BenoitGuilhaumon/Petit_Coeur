@@ -105,18 +105,31 @@ public class bilan extends AppCompatActivity {
         sleepHours = sleepHour;
 
         // Affichage des reponses sur la page bilan
+        TextView Rname = (TextView) findViewById(R.id.Rname);
         Rname.setText(namePerson);
+        TextView RyouAre = (TextView) findViewById(R.id.RyouAre);
         RyouAre.setText(sexePerson);
+        TextView RheartCondition = (TextView) findViewById(R.id.RheartCondition);
         RheartCondition.setText(heartCondition);
+        TextView Rdiabetic = (TextView) findViewById(R.id.Rdiabetic);
         Rdiabetic.setText(diabetic);
+        TextView RfirstDegree = (TextView) findViewById(R.id.RfirstDegree);
         RfirstDegree.setText(firstDegree);
+        TextView Rcholesterol = (TextView) findViewById(R.id.Rcholesterol);
         Rcholesterol.setText(cholesterol);
+        TextView RcardiovascularRisk = (TextView) findViewById(R.id.RcardiovascularRisk);
         RcardiovascularRisk.setText(risk);
+        TextView RcardiacCheckUp = (TextView) findViewById(R.id.RcardiacCheckUp);
         RcardiacCheckUp.setText(CheckUp);
+        TextView Rcardiologist = (TextView) findViewById(R.id.Rcardiologist);
         Rcardiologist.setText(Cardiologist);
+        TextView Rdrink = (TextView) findViewById(R.id.Rdrink);
         Rdrink.setText(consoAlcool);
+        TextView Renergy = (TextView) findViewById(R.id.Renergy);
         Renergy.setText(consoEnergyDrink);
+        TextView RsleepDisorders = (TextView) findViewById(R.id.RsleepDisorders);
         RsleepDisorders.setText(sleepDisorders);
+        TextView Rsleep7 = (TextView) findViewById(R.id.Rsleep7);
         Rsleep7.setText(sleepHours);
 
 
