@@ -41,15 +41,13 @@ public class MainActivity extends AppCompatActivity {
         String name = intent.getStringExtra("personname");
         // Permet d'afficher dans les Log le nom transfere de la page suivante
         Log.d(TAG, "onCreate: Person name : " + name);
+        // On attribue la valeur pour pouvoir afficher
         nameP = name;
 
         // Reference aux elements graphiques
         editName = findViewById((R.id.PersonName));
         start = findViewById(R.id.start);
-        //start2 = findViewById(R.id.start);
         start.setEnabled(false); // Bouton desactive tant que l'utilisateur n'a pas entre son nom
-        //start2.setEnabled(false); // Bouton desactive tant que l'utilisateur n'a pas entre son nom
-
 
         // Notification lorsque l'utilisateur saisi du texte
         editName.addTextChangedListener(new TextWatcher() {
@@ -66,19 +64,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 start.setEnabled(true);
-                //start2.setEnabled(true);
             }
         });
 
-        // Restauration suite à un OnCreate
-//        if(savedInstanceState != null && savedInstanceState.containsKey("personname")){
-//            String personname = savedInstanceState.getString("personname");
-//            editName.setText(personname);
-//        }
-
-        if(savedInstanceState != null){
-            editName.setText(nameP);
-        }
+        // On restaure la valeur du champs lors d'un retour depuis la page précédente
+        editName.setText(nameP);
 
         processIntentData();
 
