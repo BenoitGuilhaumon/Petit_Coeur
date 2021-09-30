@@ -22,7 +22,9 @@ public class Profil extends AppCompatActivity {
     private Person person;
 
     // Delcaration des elements graphiques
-    private RadioButton genre; // Sexe de l'utilisateur
+    private RadioButton SexMan; // Sexe de l'utilisateur
+    private RadioButton SexWoman; // Sexe de l'utilisateur
+    private RadioButton SexOther; // Sexe de l'utilisateur
     private EditText age; // Age de l'utilisateur
     private String namePerson;
     private Button nextstep; // Bouton pour passer à la page suivante
@@ -48,11 +50,12 @@ public class Profil extends AppCompatActivity {
         namePerson = name;
 
         // Reference aux elements graphiques
-        genre = findViewById((R.id.SexButton));
+        SexMan = findViewById((R.id.man));
+        SexWoman = findViewById(R.id.woman);
+        SexOther = findViewById(R.id.other);
         age = findViewById(R.id.editAge);
         nextstep = findViewById(R.id.nextstep);
         previousstep = findViewById(R.id.previousstep);
-       // nextstep.setEnabled(false); // On desactive le bouton
 
         // Notification lorsque l'utilisateur saisi du texte
         age.addTextChangedListener(new TextWatcher() {
@@ -72,6 +75,27 @@ public class Profil extends AppCompatActivity {
             }
         });
 
+        SexMan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Ajouter la recuperation de donnees
+            }
+        });
+
+        SexWoman.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Ajouter la recuperation de donnees
+            }
+        });
+
+        SexOther.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Ajouter la recuperation de donnees
+            }
+        });
+
         processIntentData();
     }
 
@@ -79,7 +103,9 @@ public class Profil extends AppCompatActivity {
     public void action_next_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, MonCoeur.class);
-        intent.putExtra("sexe",genre.getText().toString());
+        intent.putExtra("sexe",SexMan.getText().toString());
+        intent.putExtra("sexe",SexWoman.getText().toString());
+        intent.putExtra("sexe",SexOther.getText().toString());
         intent.putExtra("age",age.getText().toString());
         intent.putExtra("personname",namePerson);
         startActivity(intent);
