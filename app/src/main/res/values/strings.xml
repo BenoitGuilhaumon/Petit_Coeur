@@ -28,4 +28,8 @@
     <string name="heart_condition_2">Heart condition ?</string>
     <string name="diabetic_2">Diabetic ?</string>
     <string name="cholesterol_2">Cholesterol problem ?</string>
+    <string name="yourProfil" >Your profil</string>
+    <string name="myHeart">My heart</string>
+    <string name="myHeartMonitoring">My heart monitoring</string>
+    <string name="myHeartMonitoring">My heart monitoring</string>
 </resources>

@@ -28,4 +28,7 @@
     <string name="heart_condition_2">Problème cardiaque ?</string>
     <string name="diabetic_2">Diabétique ?</string>
     <string name="cholesterol_2">Problème de cholesterol ?</string>
+    <string name="yourProfil">Votre profil</string>
+    <string name="myHeart">Mon coeur</string>
+    <string name="myHeartMonitoring">Mon suivi cardiaque</string>
 </resources>
