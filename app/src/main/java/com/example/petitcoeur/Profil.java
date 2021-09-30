@@ -28,6 +28,8 @@ public class Profil extends AppCompatActivity {
     private EditText age; // Age de l'utilisateur
     private String sexeP;
     private String namePerson;
+    private String sexePerson;
+    private String agePerson;
     private Button nextstep; // Bouton pour passer à la page suivante
     private Button previousstep; // Bouton pour revenir à la page precedente
 
@@ -42,6 +44,14 @@ public class Profil extends AppCompatActivity {
         setContentView(R.layout.activity_profil);
         Log.d(TAG, "onCreate: ");
 
+        // Reference aux elements graphiques
+        SexMan = findViewById((R.id.man));
+        SexWoman = findViewById(R.id.woman);
+        SexOther = findViewById(R.id.other);
+        age = findViewById(R.id.editAge);
+        nextstep = findViewById(R.id.nextstep);
+        previousstep = findViewById(R.id.previousstep);
+
         // On recupere la valeur envoyée par la page précédente
         Intent intent = getIntent();
         String name = intent.getStringExtra("personname");
@@ -50,13 +60,22 @@ public class Profil extends AppCompatActivity {
         // J'attribue la valeur recupere pour pouvoir la retransferrer
         namePerson = name;
 
-        // Reference aux elements graphiques
-        SexMan = findViewById((R.id.man));
-        SexWoman = findViewById(R.id.woman);
-        SexOther = findViewById(R.id.other);
-        age = findViewById(R.id.editAge);
-        nextstep = findViewById(R.id.nextstep);
-        previousstep = findViewById(R.id.previousstep);
+        // On recupere la valeur envoyée par la page suivante
+        Intent intentP = getIntent();
+        String sexe = intentP.getStringExtra("sexe");
+        String ageP = intentP.getStringExtra("age");
+        // On attribue la valeur pour pouvoir afficher
+        sexePerson = sexe;
+        agePerson = ageP;
+        // On affiche les valeurs envoyees par la page suivante
+//            if (sexePerson.equals("Man")) {
+//                SexMan.setChecked(true);
+//            } else if (sexePerson.equals("Woman")) {
+//                SexWoman.setChecked(true);
+//            } else if (sexePerson.equals("Other")) {
+//                SexOther.setChecked(true);
+//            }
+        age.setText(agePerson);
 
         // Notification lorsque l'utilisateur saisi du texte
         age.addTextChangedListener(new TextWatcher() {

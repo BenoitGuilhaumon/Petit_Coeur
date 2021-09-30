@@ -144,9 +144,11 @@ public class MonCoeur extends AppCompatActivity {
     public void action_previous_page(View sender){
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
         Intent intent = new Intent(this, Profil.class);
+        intent.putExtra("sexe",sexePerson);
+        intent.putExtra("age",agePerson);
         startActivity(intent);
 
-        goToActivity2();
+        // goToActivity2();
     }
 
         public void vibrate(long duration_ms) {
