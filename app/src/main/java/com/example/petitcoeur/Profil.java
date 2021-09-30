@@ -116,9 +116,10 @@ public class Profil extends AppCompatActivity {
     public void action_previous_page(View sender){
         Log.d(TAG, "action_next_page: Passage à la page précédente du formulaire");
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("personname",namePerson);
         startActivity(intent);
 
-        goToActivity1();
+        // goToActivity1();
     }
 
     // Methode appele par la methode onCreate

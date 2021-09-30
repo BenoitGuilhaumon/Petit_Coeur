@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     // Déclaration des elements graphiques
     private EditText editName; // Nom que l'utilisateur a saisi
     private Button start; // Demarrage du questionnaire
+    private String nameP;
 
     @SuppressLint("WrongViewCast")
 
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Association a l'activite en layout
         setContentView(R.layout.activity_main);
+
+        // On recupere la valeur envoyée par la page suivante
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("personname");
+        // Permet d'afficher dans les Log le nom transfere de la page suivante
+        Log.d(TAG, "onCreate: Person name : " + name);
+        nameP = name;
 
         // Reference aux elements graphiques
         editName = findViewById((R.id.PersonName));
@@ -58,12 +66,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         // Restauration suite à un OnCreate
-        if(savedInstanceState != null && savedInstanceState.containsKey("personname")){
-            String personname = savedInstanceState.getString("personname");
-            editName.setText(personname);
+//        if(savedInstanceState != null && savedInstanceState.containsKey("personname")){
+//            String personname = savedInstanceState.getString("personname");
+//            editName.setText(personname);
+//        }
+
+        if(savedInstanceState != null){
+            editName.setText(nameP);
         }
 
         processIntentData();
