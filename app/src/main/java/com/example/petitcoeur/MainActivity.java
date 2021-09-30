@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Profil.class);
         intent.putExtra("personname",editName.getText().toString());// Permet de transferer la donnée de nom lors du changement de page
         startActivity(intent);
+        Toast.makeText(this,"You must answer all the questions", Toast.LENGTH_LONG).show();
     }
 
     @Override // C'est android qui appel cette fonction de sauvegarde
