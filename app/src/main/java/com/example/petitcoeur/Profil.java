@@ -64,6 +64,9 @@ public class Profil extends AppCompatActivity {
         Intent intentP = getIntent();
         String sexe = intentP.getStringExtra("sexe");
         String ageP = intentP.getStringExtra("age");
+        String nameP = intent.getStringExtra("personname");
+        // Permet d'afficher dans les Log le nom transfere de la page suivante
+        Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexe);
         // On attribue la valeur pour pouvoir afficher
         sexePerson = sexe;
         agePerson = ageP;

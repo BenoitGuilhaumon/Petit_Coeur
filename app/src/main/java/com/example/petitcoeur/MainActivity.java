@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String name = intent.getStringExtra("personname");
         // Permet d'afficher dans les Log le nom transfere de la page suivante
-        Log.d(TAG, "onCreate: Person name : " + name);
+        Log.d(TAG, "onCreate: Previous Person name : " + name);
         // On attribue la valeur pour pouvoir afficher
         nameP = name;
 

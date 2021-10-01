@@ -30,14 +30,9 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     private String consultCardiologist;
     private Button nextstep, nextstepLand;
     private Button previousstep, previousstepLand;
-    private String namePerson;
-    private String sexePerson;
-    private String agePerson;
-    private String heartCondition;
-    private String diabetic;
-    private String firstDegree;
-    private String cholesterol;
-    private String checkUp;
+    private String namePerson, sexePerson, agePerson;
+    private String heartCondition, diabetic, firstDegree, cholesterol, checkUp;
+    private String cardioVascularPerson, checkUpPerson, consultPerson;
 
     @SuppressLint("WrongViewCast")
 
@@ -45,6 +40,17 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suivi_cardiaque);
+
+        // References aux elements de la page
+        risk = findViewById((R.id.CardiovascularRisk));
+        cardiacCheckUp = findViewById(R.id.checkUp);
+        yesCardiologist = findViewById((R.id.YesConsult));
+        noCardiologist = findViewById((R.id.NoConsult));
+        dontKnowCardiologist = findViewById(R.id.dontKnowConsult);
+        nextstep = findViewById(R.id.nextstep3);
+        previousstep = findViewById(R.id.previousstep3);
+        nextstepLand = findViewById(R.id.nextstep3);
+        previousstepLand = findViewById(R.id.previousstep3);
 
         // On recupere les valeurs des pages precedentes
         // On recupere la valeur envoyée par la page précédente
@@ -73,15 +79,25 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         firstDegree = spinnerFirstDegree;
         cholesterol = spinnerCholesterol;
 
-        risk = findViewById((R.id.CardiovascularRisk));
-        cardiacCheckUp = findViewById(R.id.checkUp);
-        yesCardiologist = findViewById((R.id.YesConsult));
-        noCardiologist = findViewById((R.id.NoConsult));
-        dontKnowCardiologist = findViewById(R.id.dontKnowConsult);
-        nextstep = findViewById(R.id.nextstep3);
-        previousstep = findViewById(R.id.previousstep3);
-        nextstepLand = findViewById(R.id.nextstep3);
-        previousstepLand = findViewById(R.id.previousstep3);
+        // On recupere la valeur envoyée par la page suivante
+        Intent intentP = getIntent();
+        String sexeP = intentP.getStringExtra("sexe");
+        String ageP = intentP.getStringExtra("age");
+        String nameP = intent.getStringExtra("personname");
+        String spinnerHeartConditionP = intent.getStringExtra("spinnerHeartCondition");
+        String spinnerDiabeticP = intent.getStringExtra("spinnerDiabetic");
+        String spinnerFirstDegreeP = intent.getStringExtra("spinnerFirstDegree");
+        String spinnerCholesterolP = intent.getStringExtra("spinnerCholesterol");
+        String cardiovascularRiskP = intent.getStringExtra("cardiovascularRisk");
+        String cardiacCheckUpPrevP = intent.getStringExtra("cardiacCheckUp");
+        String consultCardiologistP = intent.getStringExtra("consultCardiologist");
+        // Permet d'afficher dans les Log le nom transfere de la page suivante
+        Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexeP + spinnerHeartConditionP + spinnerDiabeticP + spinnerFirstDegreeP + spinnerCholesterolP);
+        Log.d(TAG, "onCreate: Previous Person Informations : " + cardiovascularRiskP + cardiacCheckUpPrevP + consultCardiologistP);
+        // On attribue la valeur pour pouvoir afficher
+        cardioVascularPerson = cardiovascularRiskP;
+        checkUpPerson = cardiacCheckUpPrevP;
+        consultPerson = consultCardiologistP;
 
         // Notification lorsque l'utilisateur saisi du texte
         risk.addTextChangedListener(new TextWatcher() {
@@ -155,7 +171,7 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, hygiene_vie.class);
         intent.putExtra("cardiovascularRisk",risk.getText().toString());
-        intent.putExtra("cardiacCheckUp",checkUp); // A VERIFIER
+        intent.putExtra("cardiacCheckUp",checkUp);
         intent.putExtra("consultCardiologist",consultCardiologist);
         intent.putExtra("spinnerHeartCondition",heartCondition);
         intent.putExtra("spinnerDiabetic",diabetic);
@@ -173,9 +189,16 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     public void action_previous_page(View sender){
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
         Intent intent = new Intent(this, MonCoeur.class);
+        intent.putExtra("spinnerHeartCondition",heartCondition);
+        intent.putExtra("spinnerDiabetic",diabetic);
+        intent.putExtra("spinnerFirstDegree",firstDegree);
+        intent.putExtra("spinnerCholesterol",cholesterol);
+        intent.putExtra("sexe",sexePerson);
+        intent.putExtra("age",agePerson);
+        intent.putExtra("personname",namePerson);
         startActivity(intent);
 
-        goToActivity3();
+        // goToActivity3();
     }
 
     // Methode appele par la methode onCreate

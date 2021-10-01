@@ -27,9 +27,8 @@ public class MonCoeur extends AppCompatActivity {
     private Spinner heartCondition, diabetic, firstDegree, cholesterol;
     private Button nextstep, nextstepLand; // Demarrage du questionnaire
     private Button previousstep, previousstepLand; // Demarrage du questionnaire
-    private String namePerson;
-    private String sexePerson;
-    private String agePerson;
+    private String namePerson, sexePerson, agePerson;
+    private String heartPerson, diabeticPerson, fDegreePerson, cholesterolPerson;
 
     @SuppressLint("WrongViewCast")
 
@@ -51,6 +50,23 @@ public class MonCoeur extends AppCompatActivity {
         namePerson = name;
         sexePerson = sexe;
         agePerson = age;
+
+        // On recupere la valeur envoyée par la page suivante
+        Intent intentP = getIntent();
+        String sexeP = intentP.getStringExtra("sexe");
+        String ageP = intentP.getStringExtra("age");
+        String nameP = intent.getStringExtra("personname");
+        String spinnerHeartCondition = intent.getStringExtra("spinnerHeartCondition");
+        String spinnerDiabetic = intent.getStringExtra("spinnerDiabetic");
+        String spinnerFirstDegree = intent.getStringExtra("spinnerFirstDegree");
+        String spinnerCholesterol = intent.getStringExtra("spinnerCholesterol");
+        // Permet d'afficher dans les Log le nom transfere de la page suivante
+        Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexeP + spinnerHeartCondition + spinnerDiabetic + spinnerFirstDegree + spinnerCholesterol);
+        // On attribue la valeur pour pouvoir afficher
+        heartPerson = spinnerHeartCondition;
+        diabeticPerson = spinnerDiabetic;
+        fDegreePerson = spinnerFirstDegree;
+        cholesterolPerson = spinnerCholesterol;
 
 
         heartCondition = findViewById(R.id.heartCondition);
@@ -146,6 +162,7 @@ public class MonCoeur extends AppCompatActivity {
         Intent intent = new Intent(this, Profil.class);
         intent.putExtra("sexe",sexePerson);
         intent.putExtra("age",agePerson);
+        intent.putExtra("personname",namePerson);
         startActivity(intent);
 
         // goToActivity2();

@@ -32,20 +32,10 @@ public class hygiene_vie extends AppCompatActivity {
     private Button previousStep; // Revien a la page precedente
     private Button nextStep, nextStepLand; // Passe a la suite du questionnaire
     private Button cardiologyFederation, cardiologyFederationLand; // Renvoie vers la page de la federation francaise de cardiologie
-    private String namePerson;
-    private String sexePerson;
-    private String agePerson;
-    private String heartCondition;
-    private String diabetic;
-    private String firstDegree;
-    private String cholesterol;
-    private String Cardiologist;
-    private String risk;
-    private String CheckUp;
-    private String consoAlcool;
-    private String consoEnergyDrink;
-    private String sleepDisorders;
-    private String sleepHours;
+    private String namePerson, sexePerson, agePerson;
+    private String heartCondition, diabetic, firstDegree, cholesterol, Cardiologist, risk;
+    private String CheckUp, consoAlcool, consoEnergyDrink, sleepDisorders, sleepHours;
+    private String alccolPerson, eDrinkPerson, disordersPerson, hoursPerson;
 
     @SuppressLint("WrongViewCast")
 
@@ -56,6 +46,21 @@ public class hygiene_vie extends AppCompatActivity {
 
         // Association a l'activite en layout
         setContentView(R.layout.activity_hygiene_vie);
+
+        // Reference aux elements graphiques
+        yesAlcohol = findViewById((R.id.yesAlcohol));
+        noAlcohol = findViewById((R.id.noAlcohol));
+        yesEnergyDrink = findViewById((R.id.yesEnergyDrink));
+        noEnergyDrink = findViewById((R.id.noEnergyDrink));
+        yesSleepDisorders = findViewById((R.id.yesSleepDisorders));
+        noSleepDisorders = findViewById((R.id.noSleepDisorders));
+        yesSleepHours = findViewById((R.id.yesSleepHours));
+        noSleepHours = findViewById((R.id.noSleepHours));
+        nextStep = findViewById(R.id.nextstep5);
+        nextStepLand = findViewById(R.id.nextstep5);
+        previousStep = findViewById(R.id.previousstep4);
+        cardiologyFederation = findViewById(R.id.buttonfed);
+        cardiologyFederationLand = findViewById(R.id.buttonfed);
 
         // On recupere les valeurs des pages precedentes
         // On recupere la valeur envoyée par la page précédente
@@ -93,20 +98,32 @@ public class hygiene_vie extends AppCompatActivity {
         Cardiologist = consultCardiologist;
         risk = cardiovascularRisk;
 
-        // Reference aux elements graphiques
-        yesAlcohol = findViewById((R.id.yesAlcohol));
-        noAlcohol = findViewById((R.id.noAlcohol));
-        yesEnergyDrink = findViewById((R.id.yesEnergyDrink));
-        noEnergyDrink = findViewById((R.id.noEnergyDrink));
-        yesSleepDisorders = findViewById((R.id.yesSleepDisorders));
-        noSleepDisorders = findViewById((R.id.noSleepDisorders));
-        yesSleepHours = findViewById((R.id.yesSleepHours));
-        noSleepHours = findViewById((R.id.noSleepHours));
-        nextStep = findViewById(R.id.nextstep5);
-        nextStepLand = findViewById(R.id.nextstep5);
-        previousStep = findViewById(R.id.previousstep4);
-        cardiologyFederation = findViewById(R.id.buttonfed);
-        cardiologyFederationLand = findViewById(R.id.buttonfed);
+        // On recupere la valeur envoyée par la page suivante
+        Intent intentP = getIntent();
+        String sexeP = intentP.getStringExtra("sexe");
+        String ageP = intentP.getStringExtra("age");
+        String nameP = intent.getStringExtra("personname");
+        String spinnerHeartConditionP = intent.getStringExtra("spinnerHeartCondition");
+        String spinnerDiabeticP = intent.getStringExtra("spinnerDiabetic");
+        String spinnerFirstDegreeP = intent.getStringExtra("spinnerFirstDegree");
+        String spinnerCholesterolP = intent.getStringExtra("spinnerCholesterol");
+        String cardiovascularRiskP = intent.getStringExtra("cardiovascularRisk");
+        String cardiacCheckUpPrevP = intent.getStringExtra("cardiacCheckUp");
+        String consultCardiologistP = intent.getStringExtra("consultCardiologist");
+        String consomAlcoolP = intent.getStringExtra("alcool");
+        String consomEnergyDrinkP = intent.getStringExtra("energyDrink");
+        String sleepDisorderP = intent.getStringExtra("sleepDisorders");
+        String sleepHourP = intent.getStringExtra("sleepHours");
+        // Permet d'afficher dans les Log le nom transfere de la page suivante
+        Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexeP);
+        Log.d(TAG, "onCreate: Previous Person Informations : " + spinnerHeartConditionP + spinnerDiabeticP + spinnerFirstDegreeP + spinnerCholesterolP);
+        Log.d(TAG, "onCreate: Previous Person Informations : " + cardiovascularRiskP + cardiacCheckUpPrevP + consultCardiologistP);
+        Log.d(TAG, "onCreate: Previous Person Informations : " + consomAlcoolP + consomEnergyDrinkP + sleepDisorderP + sleepHourP);
+        // On attribue la valeur pour pouvoir afficher
+        alccolPerson = consomAlcoolP;
+        eDrinkPerson = consomEnergyDrinkP;
+        disordersPerson = sleepDisorderP;
+        hoursPerson = sleepHourP;
 
         // On attribue pour chaques radio button une valeur si il est coché
         yesAlcohol.setOnClickListener(new View.OnClickListener() {
@@ -261,9 +278,19 @@ public class hygiene_vie extends AppCompatActivity {
     public void action_previous_page(View sender){
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
         Intent intent = new Intent(this, Suivi_Cardiaque.class);
+        intent.putExtra("cardiovascularRisk",risk);
+        intent.putExtra("cardiacCheckUp",CheckUp);
+        intent.putExtra("consultCardiologist",Cardiologist);
+        intent.putExtra("spinnerHeartCondition",heartCondition);
+        intent.putExtra("spinnerDiabetic",diabetic);
+        intent.putExtra("spinnerFirstDegree",firstDegree);
+        intent.putExtra("spinnerCholesterol",cholesterol);
+        intent.putExtra("sexe",sexePerson);
+        intent.putExtra("age",agePerson);
+        intent.putExtra("personname",namePerson);
         startActivity(intent);
 
-        goToActivity4();
+        //goToActivity4();
     }
 
     // Passage de l'activite en cours a la precedente
