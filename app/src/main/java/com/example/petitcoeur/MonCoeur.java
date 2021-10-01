@@ -26,7 +26,7 @@ public class MonCoeur extends AppCompatActivity {
     // Declaration des elements graphiques
     private Spinner heartCondition, diabetic, firstDegree, cholesterol;
     private Button nextstep, nextstepLand; // Demarrage du questionnaire
-    private Button previousstep, previousstepLand; // Demarrage du questionnaire
+    private Button previousstep, previousstepLand; // retour à la page precedente du questionnaire
     private String namePerson, sexePerson, agePerson;
     private String heartPerson, diabeticPerson, fDegreePerson, cholesterolPerson;
 

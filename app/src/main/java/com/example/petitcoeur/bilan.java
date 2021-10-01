@@ -47,9 +47,6 @@ public class bilan extends AppCompatActivity {
     private TextView RsleepDisorders;
     private TextView Rsleep7;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
