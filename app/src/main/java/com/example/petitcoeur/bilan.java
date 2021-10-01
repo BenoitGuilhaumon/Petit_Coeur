@@ -34,6 +34,7 @@ public class bilan extends AppCompatActivity {
     // Valeurs de la page review
     private TextView Rname;
     private TextView RyouAre;
+    private TextView RyourAge;
     private TextView RheartCondition;
     private TextView Rdiabetic;
     private TextView RfirstDegree;
@@ -109,6 +110,8 @@ public class bilan extends AppCompatActivity {
         Rname.setText(namePerson);
         TextView RyouAre = (TextView) findViewById(R.id.RyouAre);
         RyouAre.setText(sexePerson);
+        TextView RyourAge = (TextView) findViewById(R.id.RyourAge);
+        RyourAge.setText(agePerson);
         TextView RheartCondition = (TextView) findViewById(R.id.RheartCondition);
         RheartCondition.setText(heartCondition);
         TextView Rdiabetic = (TextView) findViewById(R.id.Rdiabetic);
@@ -158,6 +161,6 @@ public class bilan extends AppCompatActivity {
 
     //public void action_finish(View v){finish();//Permet de revenir à la page initiale
     public void onClickExit(View view) {
-
+        finishAffinity();
     }
 }

@@ -191,11 +191,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
+            android:layout_marginTop="17dp"
             android:text="@string/myHeartMonitoring"
             android:textColor="#FF0000"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="475dp" />
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
         <TextView
             android:id="@+id/textView12"
@@ -272,27 +273,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
             android:text="TextView"
             app:layout_constraintStart_toEndOf="@+id/textView27"
-            app:layout_constraintTop_toTopOf="@+id/textView27" />
+            app:layout_constraintTop_toBottomOf="@+id/RsleepDisorders" />
 
         <TextView
             android:id="@+id/RsleepDisorders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="21dp"
             android:text="TextView"
             app:layout_constraintStart_toEndOf="@+id/textView25"
-            tools:layout_editor_absoluteY="872dp" />
+            app:layout_constraintTop_toBottomOf="@+id/Renergy" />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="366dp"
             android:layout_height="42dp"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="31dp"
             android:text="@string/drink"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="743dp" />
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
         <TextView
             android:id="@+id/Rdrink"
@@ -312,7 +316,6 @@
             android:layout_marginTop="16dp"
             android:text="@string/HealthPractice"
             android:textColor="#FF0000"
-            app:layout_constraintBottom_toTopOf="@+id/textView18"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -345,6 +348,23 @@
             android:text="@string/sleep"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <TextView
+            android:id="@+id/yourAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age"
+            app:layout_constraintTop_toTopOf="@+id/textView19"
+            tools:layout_editor_absoluteX="206dp" />
+
+        <TextView
+            android:id="@+id/RyourAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/yourAge"
+            app:layout_constraintTop_toTopOf="@+id/yourAge" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
