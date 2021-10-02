@@ -11,7 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Affichage informations après retour d'informations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Suivi_Cardiaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Suivi_Cardiaque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/hygiene_vie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/hygiene_vie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +55,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/androidTest/java" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.petitcoeur" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.petitcoeur" />
     </key>
     <key name="android.template.-1762561158">
@@ -401,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633169896097</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Affichage informations après retour d'informations">
+      <created>1633177671208</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1633177671208</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
