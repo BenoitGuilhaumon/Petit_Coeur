@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private Person person;
 
     // Déclaration des elements graphiques
-    private EditText editName; // Nom que l'utilisateur a saisi
-    private Button start, start2; // Demarrage du questionnaire
+    private EditText editName; // Nom de l'utilisateur
+    private Button start; // Demarrage du questionnaire
     private String nameP;
 
     @SuppressLint("WrongViewCast")
@@ -37,18 +37,22 @@ public class MainActivity extends AppCompatActivity {
         // Association a l'activite en layout
         setContentView(R.layout.activity_main);
 
-        // On recupere la valeur envoyée par la page suivante
+        // On recupere la valeur envoyee par la page suivante
         Intent intent = getIntent();
         String name = intent.getStringExtra("personname");
+
         // Permet d'afficher dans les Log le nom transfere de la page suivante
         Log.d(TAG, "onCreate: Previous Person name : " + name);
         // On attribue la valeur pour pouvoir afficher
         nameP = name;
 
-        // Reference aux elements graphiques
+        // Reference aux elements graphiques de  l'activité
         editName = findViewById((R.id.PersonName));
         start = findViewById(R.id.start);
-        start.setEnabled(false); // Bouton desactive tant que l'utilisateur n'a pas entre son nom
+        // Bouton desactive tant que l'utilisateur n'a pas entre son nom
+        start.setEnabled(false);
+        // Valeur du champs par défaut
+        editName.setText("Name");
 
         // Notification lorsque l'utilisateur saisi du texte
         editName.addTextChangedListener(new TextWatcher() {
@@ -69,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // On restaure la valeur du champs lors d'un retour depuis la page précédente
-        editName.setText(nameP);
+        //editName.setText(nameP);
 
         processIntentData();
 
