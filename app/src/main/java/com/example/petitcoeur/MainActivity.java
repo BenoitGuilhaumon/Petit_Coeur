@@ -79,13 +79,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void toast(String msg) {
+        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
+    }
+
     // Permet de passer à la premiere page du formulaire via le bouton start
     public void action_start(View sender){
         Log.d(TAG, "action_start: Demarrage du test");
         Intent intent = new Intent(this, Profil.class);
         intent.putExtra("personname",editName.getText().toString());// Permet de transferer la donnée de nom lors du changement de page
         startActivity(intent);
-        Toast.makeText(this,"You must answer all the questions", Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Recorded response", Toast.LENGTH_LONG).show();
     }
 
     @Override // C'est android qui appel cette fonction de sauvegarde
@@ -154,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         Log.d(TAG, "onStop: onStop");
-}
+    }
 
     // le systeme arrete l'activite
     @Override

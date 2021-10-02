@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MonCoeur extends AppCompatActivity {
 
@@ -50,6 +51,9 @@ public class MonCoeur extends AppCompatActivity {
         namePerson = name;
         sexePerson = sexe;
         agePerson = age;
+
+        // Bouton desactive tant que l'utilisateur n'a complété toutes les questions
+        nextstep.setEnabled(false);
 
         // On recupere la valeur envoyée par la page suivante
         Intent intentP = getIntent();
@@ -137,7 +141,15 @@ public class MonCoeur extends AppCompatActivity {
             }
         });
 
+        /*if ((heartCondition.isActivated()) && (diabetic.isActivated()) && (firstDegree.isActivated()) && (cholesterol.isActivated())) {
+            nextstep.setEnabled(true);
+        }*/
+
         processIntentData();
+    }
+
+    public void toast(String msg) {
+        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 
     // Permet de passer à la page suivante du formulaire en transferrant les informations des pages precedentes

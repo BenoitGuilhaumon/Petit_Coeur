@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class Profil extends AppCompatActivity {
 
@@ -25,6 +27,7 @@ public class Profil extends AppCompatActivity {
     private RadioButton SexMan; // Sexe de l'utilisateur
     private RadioButton SexWoman; // Sexe de l'utilisateur
     private RadioButton SexOther; // Sexe de l'utilisateur
+    private RadioGroup SexGroup; // Groupe de boutton sexe
     private EditText age; // Age de l'utilisateur
     private String sexeP;
     private String namePerson;
@@ -59,6 +62,8 @@ public class Profil extends AppCompatActivity {
         Log.d(TAG, "onCreate: Person name : " + name);
         // J'attribue la valeur recupere pour pouvoir la retransferrer
         namePerson = name;
+        // Bouton desactive tant que l'utilisateur n'a complété toutes les questions
+        nextstep.setEnabled(false);
 
         // On recupere la valeur envoyée par la page suivante
         Intent intentP = getIntent();
@@ -70,14 +75,6 @@ public class Profil extends AppCompatActivity {
         // On attribue la valeur pour pouvoir afficher
         sexePerson = sexe;
         agePerson = ageP;
-        // On affiche les valeurs envoyees par la page suivante
-//            if (sexePerson.equals("Man")) {
-//                SexMan.setChecked(true);
-//            } else if (sexePerson.equals("Woman")) {
-//                SexWoman.setChecked(true);
-//            } else if (sexePerson.equals("Other")) {
-//                SexOther.setChecked(true);
-//            }
         age.setText(agePerson);
 
         // Notification lorsque l'utilisateur saisi du texte
@@ -94,7 +91,7 @@ public class Profil extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                nextstep.setEnabled(true);
             }
         });
 
@@ -119,7 +116,20 @@ public class Profil extends AppCompatActivity {
             }
         });
 
+        // On vérifie qu'un des boutons radios a ete coche
+        if (SexMan.isChecked() || (SexWoman.isChecked()) || (SexOther.isChecked())) {
+            nextstep.setEnabled(true);
+        } else {
+                toast("You must answer all questions");
+            }
+
         processIntentData();
+    }
+
+
+
+    public void toast(String msg) {
+        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 
     // Permet de passer à la page suivante du formulaire en transferrant les informations des pages precedentes
@@ -176,6 +186,7 @@ public class Profil extends AppCompatActivity {
         Intent activity3Intent = new Intent(this, MonCoeur.class);
         activity3Intent.putExtra("FromActivity2ToActivity3", this.person);
         startActivity(activity3Intent);
+        toast("Recorded response");
     }
 
     // Retour a l'activite precedente
@@ -185,6 +196,4 @@ public class Profil extends AppCompatActivity {
         startActivity(activityIntent);
     }
 
-    // Creation d'une key pour l'application
-    private static final String KEY_COEUR = "coeur";
 }

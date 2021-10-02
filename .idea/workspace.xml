@@ -11,8 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Affichage informations après retour d'informations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_hygiene_vie.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_hygiene_vie.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bilan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bilan.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MonCoeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MonCoeur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Profil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Profil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_profil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_profil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\benoi\.android\avd\Pixel_4_XL_API_25_3.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/leana/.android/avd/Pixel_4_XL_API_25.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
