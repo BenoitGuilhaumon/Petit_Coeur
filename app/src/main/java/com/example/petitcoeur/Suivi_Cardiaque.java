@@ -123,7 +123,7 @@ public class Suivi_Cardiaque extends AppCompatActivity {
                 Log.d(TAG, "onCheckedChanged: Etat du switch : " + cardiacCheckUp.isChecked());
                 if (cardiacCheckUp.isChecked()==true) {
                     checkUp = "Yes";
-                }else checkUp = "No";
+                }else {checkUp = "No";}
             }
         });
 
