@@ -353,9 +353,10 @@
             android:id="@+id/yourAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
             android:text="@string/age"
-            app:layout_constraintTop_toTopOf="@+id/textView19"
-            tools:layout_editor_absoluteX="206dp" />
+            app:layout_constraintStart_toEndOf="@+id/RyouAre"
+            app:layout_constraintTop_toTopOf="@+id/textView19" />
 
         <TextView
             android:id="@+id/RyourAge"

@@ -11,6 +11,7 @@
         android:layout_width="329dp"
         android:layout_height="55dp"
         android:layout_marginTop="4dp"
+        android:onClick="on_Click"
         android:text="@string/federation_cardiology"
         app:iconTint="#000000"
         app:layout_constraintEnd_toEndOf="@+id/nextstep5"
