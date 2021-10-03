@@ -5,10 +5,9 @@
  */
 
 /**
- * @Class Profil
- * Cette classe est la seconde page du questionnaire.
- * Elle va permmettre à l'utilisateur de reznseigner son genre via des radioButton
- * Et son age via un EditText.
+ * @Class Previous_Profil
+ * Cette classe permet de récuperer les valeurs du questionnaire lors d'un retour en arriére à partir de la classe Mon_Coeur.
+ * On va pouvoir afficher les valeurs renseignées sur l'interface Profil.xml.
  */
 
 package com.example.petitcoeur;
@@ -30,7 +29,7 @@ import android.widget.Toast;
 
 
 // Activity 2
-public class Profil extends AppCompatActivity {
+public class Previous_Profil extends AppCompatActivity {
 
     // Declaration du tag du projet
     public static final String TAG = MainActivity.TAG;
@@ -69,7 +68,7 @@ public class Profil extends AppCompatActivity {
         nextstep = findViewById(R.id.nextstep);
         previousstep = findViewById(R.id.previousstep);
 
-        // On recupere la valeur envoyée par la page précédente
+        /*// On recupere la valeur envoyée par la page précédente
         Intent intent = getIntent();
         String name = intent.getStringExtra("personname");
 
@@ -80,13 +79,16 @@ public class Profil extends AppCompatActivity {
         namePerson = name;
 
         // Bouton desactive tant que l'utilisateur n'a complété toutes les questions
-        nextstep.setEnabled(false);
+        nextstep.setEnabled(false);*/
 
-        // On recupere la valeur envoyée par la page suivante
+        // On recupere la valeur envoyée par la page Mon Coeur
         Intent intentP = getIntent();
         String sexe = intentP.getStringExtra("sexe");
         String ageP = intentP.getStringExtra("age");
-        String nameP = intent.getStringExtra("personname");
+        String nameP = intentP.getStringExtra("personname");
+
+        // On attribue les informations pour retransfrerer
+        namePerson = nameP;
 
         // Permet d'afficher dans les Log le nom transfere de la page suivante
         Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexe);
@@ -94,8 +96,24 @@ public class Profil extends AppCompatActivity {
         // On attribue la valeur pour pouvoir afficher
         sexePerson = sexe;
         agePerson = ageP;
-        age.setText(agePerson);
 
+        // On affiche les informations
+        age.setText(agePerson);
+        if (sexePerson != "Man" && sexePerson != "Woman" && sexePerson != "null"){
+            SexOther.setChecked(true);
+        }else{
+            SexOther.setChecked(false);
+        }
+        if (sexePerson != "Man" && sexePerson != "Other" && sexePerson != "null"){
+            SexWoman.setChecked(true);
+        }else{
+            SexWoman.setChecked(false);
+        }
+        if (sexePerson != "Other" && sexePerson != "Woman" && sexePerson != "null"){
+            SexMan.setChecked(true);
+        }else{
+            SexMan.setChecked(false);
+        }
         // Notification lorsque l'utilisateur saisi du texte
         age.addTextChangedListener(new TextWatcher() {
             @Override
@@ -110,7 +128,7 @@ public class Profil extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                nextstep.setEnabled(true);
+                //xtstep.setEnabled(true);
             }
         });
 

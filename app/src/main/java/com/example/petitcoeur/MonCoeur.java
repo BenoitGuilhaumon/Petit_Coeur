@@ -196,7 +196,7 @@ public class MonCoeur extends AppCompatActivity {
     // Permet de revenir à la page précédente du formulaire
     public void action_previous_page(View sender) {
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
-        Intent intent = new Intent(this, Profil.class);
+        Intent intent = new Intent(this, Previous_Profil.class);
         intent.putExtra("sexe", sexePerson);
         intent.putExtra("age", agePerson);
         intent.putExtra("personname", namePerson);

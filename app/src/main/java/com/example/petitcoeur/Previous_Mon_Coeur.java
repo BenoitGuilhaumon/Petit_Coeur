@@ -96,6 +96,11 @@ public class Previous_Mon_Coeur extends AppCompatActivity {
         Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexeP);
         Log.d(TAG, "onCreate: Previous Person Informations : " + spinnerHeartConditionP + spinnerDiabeticP + spinnerFirstDegreeP + spinnerCholesterolP);
 
+        // J'attribue les valeurs recuperees pour pouvoir les retransferrer
+        namePerson = nameP;
+        sexePerson = sexeP;
+        agePerson = ageP;
+
         // On attribue la valeur pour pouvoir afficher
         HConditionPerson = spinnerHeartConditionP;
         diabeticPerson = spinnerDiabeticP;
@@ -225,7 +230,7 @@ public class Previous_Mon_Coeur extends AppCompatActivity {
     // Permet de revenir à la page précédente du formulaire
     public void action_previous_page(View sender) {
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
-        Intent intent = new Intent(this, Profil.class);
+        Intent intent = new Intent(this, Previous_Profil.class);
         intent.putExtra("sexe", sexePerson);
         intent.putExtra("age", agePerson);
         intent.putExtra("personname", namePerson);
