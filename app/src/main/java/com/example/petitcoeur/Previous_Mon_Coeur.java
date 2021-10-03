@@ -41,7 +41,6 @@ public class Previous_Mon_Coeur extends AppCompatActivity {
     private Button nextstep;
     private String namePerson, sexePerson, agePerson;
     private String HConditionPerson, diabeticPerson, FDegreePerson, cholesterolPerson;
-    //private int selec, selec1, selec2, selec3, selec4;
 
     @SuppressLint({"WrongViewCast", "CutPasteId"})
 
@@ -61,26 +60,6 @@ public class Previous_Mon_Coeur extends AppCompatActivity {
         findViewById(R.id.nextstep2);
         // retour à la page precedente du questionnaire
         findViewById(R.id.previousstep2);
-
-        /*// On recupere la valeur envoyée par la page précédente
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("personname");
-        String sexe = intent.getStringExtra("sexe");
-        String age = intent.getStringExtra("age");
-
-        // Je verifie que les données sont bien transferees
-        // Permet d'afficher dans les Log le nom transfere de la page precedente
-        Log.d(TAG, "onCreate: Person name : " + name);
-        Log.d(TAG, "onCreate: Person sexe : " + sexe);
-        Log.d(TAG, "onCreate: Person age : " + age);
-
-        // J'attribue les valeurs recuperees pour pouvoir les retransferrer
-        namePerson = name;
-        sexePerson = sexe;
-        agePerson = age;*/
-
-        // Bouton desactive tant que l'utilisateur n'a complété toutes les questions
-        //nextstep.setEnabled(false);
 
         // On recupere la valeur envoyée par la page Suivi_Cardiaque
         Intent intent = getIntent();
@@ -136,8 +115,6 @@ public class Previous_Mon_Coeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + heartCondition.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + heartCondition.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + heartCondition.getSelectedItemId());
-
-                //selec1 = selec1 + 1;
             }
 
             @Override // Si rien est selectionne, un message apparait
@@ -152,8 +129,6 @@ public class Previous_Mon_Coeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + diabetic.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + diabetic.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + diabetic.getSelectedItemId());
-
-                //selec2 = selec1 + 1;
             }
 
             @Override // Si rien n'est selectionne, un message apparait
@@ -168,8 +143,6 @@ public class Previous_Mon_Coeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + firstDegree.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + firstDegree.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + firstDegree.getSelectedItemId());
-
-                //selec3 = selec2 + 1;
             }
 
             @Override // Si rien n'est selectionne, un message apparait
@@ -184,13 +157,6 @@ public class Previous_Mon_Coeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + cholesterol.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + cholesterol.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + cholesterol.getSelectedItemId());
-
-                /*selec4 = selec3 + 1;
-                // On verifie si tous les champs sont remplis pour débloquer le bouton Nextstep
-                Log.d(TAG, "onItemSelected: Select item " + selec4);
-                if (selec4 >= 4) {
-                    nextstep.setEnabled(true);
-                }*/
             }
 
             @Override // Si rien n'est selectionne, un message apparait
@@ -199,15 +165,6 @@ public class Previous_Mon_Coeur extends AppCompatActivity {
             }
         });
 
-        // Essai pour debloquer le bouton nextstep que si toutes les réponses ont été sélectionnées
-        /*if ((heartCondition.isActivated()) && (diabetic.isActivated()) && (firstDegree.isActivated()) && (cholesterol.isActivated())) {
-            nextstep.setEnabled(true);
-        }
-        String nameS = null;
-        if(heartCondition != null && heartCondition.getSelectedItem() !=null ) {
-            nameS = (String)heartCondition.getSelectedItem();
-        }
-*/
         processIntentData();
     }
 

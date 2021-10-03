@@ -89,9 +89,6 @@ public class Previous_Main_Activity extends AppCompatActivity {
             }
         });
 
-        // On restaure la valeur du champs lors d'un retour depuis la page précédente
-        //editName.setText(nameP);
-
         processIntentData();
 
     }

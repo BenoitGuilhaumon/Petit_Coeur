@@ -83,9 +83,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // On restaure la valeur du champs lors d'un retour depuis la page précédente
-        //editName.setText(nameP);
-
         processIntentData();
 
     }
@@ -129,9 +126,6 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "Error when transferring from Activity2");
         }
     }
-
-    // Creation d'une key pour l'application
-
 
     // CYCLE DE VIE DE L'APPLICATION
 

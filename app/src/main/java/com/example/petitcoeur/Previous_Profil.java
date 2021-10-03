@@ -68,19 +68,6 @@ public class Previous_Profil extends AppCompatActivity {
         nextstep = findViewById(R.id.nextstep);
         previousstep = findViewById(R.id.previousstep);
 
-        /*// On recupere la valeur envoyée par la page précédente
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("personname");
-
-        // Permet d'afficher dans les Log le nom transfere de la page precedente
-        Log.d(TAG, "onCreate: Person name : " + name);
-
-        // J'attribue la valeur recupere pour pouvoir la retransferrer
-        namePerson = name;
-
-        // Bouton desactive tant que l'utilisateur n'a complété toutes les questions
-        nextstep.setEnabled(false);*/
-
         // On recupere la valeur envoyée par la page Mon Coeur
         Intent intentP = getIntent();
         String sexe = intentP.getStringExtra("sexe");
@@ -152,13 +139,6 @@ public class Previous_Profil extends AppCompatActivity {
                 sexeP = "Other";
             }
         });
-/*
-        // On vérifie qu'un des boutons radios a ete coche
-        if (SexMan.isChecked() || (SexWoman.isChecked()) || (SexOther.isChecked())) {
-            nextstep.setEnabled(true);
-        } else {
-            toast("You must answer all questions");
-        }*/
 
         processIntentData();
     }

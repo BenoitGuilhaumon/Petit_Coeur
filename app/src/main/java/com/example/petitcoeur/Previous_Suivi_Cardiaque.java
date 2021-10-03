@@ -66,33 +66,6 @@ public class Previous_Suivi_Cardiaque extends AppCompatActivity {
         nextstepLand = findViewById(R.id.nextstep3);
         previousstepLand = findViewById(R.id.previousstep3);
 
-        /*// On recupere les valeurs des pages precedentes
-        // On recupere la valeur envoyée par la page précédente
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("personname");
-        String sexe = intent.getStringExtra("sexe");
-        String age = intent.getStringExtra("age");
-        String spinnerHeartCondition = intent.getStringExtra("spinnerHeartCondition");
-        String spinnerDiabetic = intent.getStringExtra("spinnerDiabetic");
-        String spinnerFirstDegree = intent.getStringExtra("spinnerFirstDegree");
-        String spinnerCholesterol = intent.getStringExtra("spinnerCholesterol");
-        // Permet d'afficher dans les Log des infos transfere de la page precedente
-        Log.d(TAG, "onCreate: Person name : " + name);
-        Log.d(TAG, "onCreate: Person sexe : " + sexe);
-        Log.d(TAG, "onCreate: Person age : " + age);
-        Log.d(TAG, "onCreate: Person heart condition ? : " + spinnerHeartCondition);
-        Log.d(TAG, "onCreate: Person diabetic ? : " + spinnerDiabetic);
-        Log.d(TAG, "onCreate: Person first degree relative ? : " + spinnerFirstDegree);
-        Log.d(TAG, "onCreate: Person cholesterol ? : " + spinnerCholesterol);
-        // J'attribue les valeurs recuperees pour pouvoir les retransferrer
-        namePerson = name;
-        sexePerson = sexe;
-        agePerson = age;
-        heartCondition = spinnerHeartCondition;
-        diabetic = spinnerDiabetic;
-        firstDegree = spinnerFirstDegree;
-        cholesterol = spinnerCholesterol;*/
-
         // On recupere la valeur envoyée par la page hygiene_vie
         Intent intent = getIntent();
         String sexeP = intent.getStringExtra("sexe");
