@@ -1,6 +1,10 @@
-package com.example.petitcoeur;
+/**
+  Projet programmation Android
+  @author GUILHAUMON Benoit, MOUSSET Leana M2 GPhy
+ * @version 03/10/2021
+ */
 
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.petitcoeur;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,8 +18,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+// Activite 3
 public class MonCoeur extends AppCompatActivity {
 
     // Declaration du TAG du projet
@@ -26,12 +32,10 @@ public class MonCoeur extends AppCompatActivity {
 
     // Declaration des elements graphiques
     private Spinner heartCondition, diabetic, firstDegree, cholesterol;
-    private Button nextstep, nextstepLand; // Demarrage du questionnaire
-    private Button previousstep, previousstepLand; // retour à la page precedente du questionnaire
+    private Button nextstep;
     private String namePerson, sexePerson, agePerson;
-    private String heartPerson, diabeticPerson, fDegreePerson, cholesterolPerson;
 
-    @SuppressLint("WrongViewCast")
+    @SuppressLint({"WrongViewCast", "CutPasteId"})
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +47,12 @@ public class MonCoeur extends AppCompatActivity {
         String name = intent.getStringExtra("personname");
         String sexe = intent.getStringExtra("sexe");
         String age = intent.getStringExtra("age");
+
         // Je verifie que les données sont bien transferees
         Log.d(TAG, "onCreate: Person name : " + name); // Permet d'afficher dans les Log le nom transfere de la page precedente
         Log.d(TAG, "onCreate: Person sexe : " + sexe);
         Log.d(TAG, "onCreate: Person age : " + age);
+
         // J'attribue les valeurs recuperees pour pouvoir les retransferrer
         namePerson = name;
         sexePerson = sexe;
@@ -64,23 +70,22 @@ public class MonCoeur extends AppCompatActivity {
         String spinnerDiabetic = intent.getStringExtra("spinnerDiabetic");
         String spinnerFirstDegree = intent.getStringExtra("spinnerFirstDegree");
         String spinnerCholesterol = intent.getStringExtra("spinnerCholesterol");
+
         // Permet d'afficher dans les Log le nom transfere de la page suivante
         Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexeP + spinnerHeartCondition + spinnerDiabetic + spinnerFirstDegree + spinnerCholesterol);
-        // On attribue la valeur pour pouvoir afficher
-        heartPerson = spinnerHeartCondition;
-        diabeticPerson = spinnerDiabetic;
-        fDegreePerson = spinnerFirstDegree;
-        cholesterolPerson = spinnerCholesterol;
 
+        // On attribue la valeur pour pouvoir afficher
 
         heartCondition = findViewById(R.id.heartCondition);
         diabetic = findViewById(R.id.diabetic);
         firstDegree = findViewById(R.id.fitstDegree);
-        cholesterol= findViewById(R.id.cholesterol);
+        cholesterol = findViewById(R.id.cholesterol);
         nextstep = findViewById(R.id.nextstep2);
-        previousstep = findViewById(R.id.previousstep2);
-        nextstepLand = findViewById(R.id.nextstep2);
-        previousstepLand = findViewById(R.id.previousstep2);
+        findViewById(R.id.previousstep2);
+        // Demarrage du questionnaire
+        findViewById(R.id.nextstep2);
+        // retour à la page precedente du questionnaire
+        findViewById(R.id.previousstep2);
 
         heartCondition.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -92,7 +97,7 @@ public class MonCoeur extends AppCompatActivity {
 
             @Override // Si rien est selectionne, un message apparait
             public void onNothingSelected(AdapterView<?> adapterView) {
-                vibrate(60);
+                vibrate();
             }
         });
 
@@ -102,12 +107,11 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + diabetic.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + diabetic.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + diabetic.getSelectedItemId());
-
             }
 
             @Override // Si rien n'est selectionne, un message apparait
             public void onNothingSelected(AdapterView<?> adapterView) {
-                vibrate(60);
+                vibrate();
             }
         });
 
@@ -117,12 +121,11 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + firstDegree.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + firstDegree.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + firstDegree.getSelectedItemId());
-
             }
 
             @Override // Si rien n'est selectionne, un message apparait
             public void onNothingSelected(AdapterView<?> adapterView) {
-                vibrate(60);
+                vibrate();
             }
         });
 
@@ -132,72 +135,71 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + cholesterol.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + cholesterol.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + cholesterol.getSelectedItemId());
-
             }
 
             @Override // Si rien n'est selectionne, un message apparait
             public void onNothingSelected(AdapterView<?> adapterView) {
-                vibrate(60);
+                vibrate();
             }
         });
 
+        // Essai pour debloquer le bouton nextstep que si toutes les réponses ont été sélectionnée
         /*if ((heartCondition.isActivated()) && (diabetic.isActivated()) && (firstDegree.isActivated()) && (cholesterol.isActivated())) {
             nextstep.setEnabled(true);
-        }*/
-
+        }
+        String nameS = null;
+        if(heartCondition != null && heartCondition.getSelectedItem() !=null ) {
+            nameS = (String)heartCondition.getSelectedItem();
+        }
+*/
         processIntentData();
     }
 
-    public void toast(String msg) {
-        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
-    }
-
     // Permet de passer à la page suivante du formulaire en transferrant les informations des pages precedentes
-    public void action_next_page(View sender){
+    public void action_next_page(View sender) {
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, Suivi_Cardiaque.class);
-        intent.putExtra("spinnerHeartCondition",heartCondition.getSelectedItem().toString());
-        intent.putExtra("spinnerDiabetic",diabetic.getSelectedItem().toString());
-        intent.putExtra("spinnerFirstDegree",firstDegree.getSelectedItem().toString());
-        intent.putExtra("spinnerCholesterol",cholesterol.getSelectedItem().toString());
-        intent.putExtra("sexe",sexePerson);
-        intent.putExtra("age",agePerson);
-        intent.putExtra("personname",namePerson);
+        intent.putExtra("spinnerHeartCondition", heartCondition.getSelectedItem().toString());
+        intent.putExtra("spinnerDiabetic", diabetic.getSelectedItem().toString());
+        intent.putExtra("spinnerFirstDegree", firstDegree.getSelectedItem().toString());
+        intent.putExtra("spinnerCholesterol", cholesterol.getSelectedItem().toString());
+        intent.putExtra("sexe", sexePerson);
+        intent.putExtra("age", agePerson);
+        intent.putExtra("personname", namePerson);
         startActivity(intent);
 
         //goToActivity4();
     }
 
     // Permet de revenir à la page précédente du formulaire
-    public void action_previous_page(View sender){
+    public void action_previous_page(View sender) {
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
         Intent intent = new Intent(this, Profil.class);
-        intent.putExtra("sexe",sexePerson);
-        intent.putExtra("age",agePerson);
-        intent.putExtra("personname",namePerson);
+        intent.putExtra("sexe", sexePerson);
+        intent.putExtra("age", agePerson);
+        intent.putExtra("personname", namePerson);
         startActivity(intent);
 
         // goToActivity2();
     }
 
-        public void vibrate(long duration_ms) {
-            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-            if (duration_ms < 1);
-                duration_ms = 1;
-                if(v != null && v.hasVibrator()) {
-                    if(Build.VERSION.SDK_INT >= 26) {
-                        v.vibrate(VibrationEffect.createOneShot(duration_ms, VibrationEffect.DEFAULT_AMPLITUDE));
-                    }
-                }
-                    else {
-                v.vibrate(duration_ms);
+    public void vibrate() {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        long duration_ms = 1;
+        if (v != null && v.hasVibrator()) {
+            if (Build.VERSION.SDK_INT >= 26) {
+                v.vibrate(VibrationEffect.createOneShot(duration_ms, VibrationEffect.DEFAULT_AMPLITUDE));
             }
-                    // Pas de vibration
+        } else {
+            assert v != null;
+            v.vibrate(duration_ms);
         }
+        // Pas de vibration
+    }
 
     private void processIntentData() {
         Intent intent = getIntent();
-        if(intent != null) {
+        if (intent != null) {
 // intent may store different data. To get the one matching the Person class,
 // we need the key "FromActivity1ToActivity2" which was used for transfer
 // No need to calls "new()" for allocating memory to transferredPerson
@@ -206,30 +208,27 @@ public class MonCoeur extends AppCompatActivity {
             if (transferredPerson != null) {
                 this.person = transferredPerson;
                 this.person.print();
-            }
-            else {
+            } else {
                 Log.d(TAG, "No Person found after transfer from Activity2");
             }
             if (transferredPersonPrevious != null) {
                 this.person = transferredPersonPrevious;
                 this.person.print();
-            }
-            else {
+            } else {
                 Log.d(TAG, "No Person found after transfer from Activity4");
             }
-        }
-        else {
+        } else {
             Log.d(TAG, "Error when transferring from Activity2");
         }
     }
 
-    public void goToActivity4(){
+    public void goToActivity4() {
         Intent activity4Intent = new Intent(this, Suivi_Cardiaque.class);
         activity4Intent.putExtra("FromActivity3ToActivity4", this.person);
         startActivity(activity4Intent);
     }
 
-    public void goToActivity2(){
+    public void goToActivity2() {
         Intent activityIntent = new Intent(this, Profil.class);
         activityIntent.putExtra("FromActivity3ToActivity2", this.person);
         startActivity(activityIntent);

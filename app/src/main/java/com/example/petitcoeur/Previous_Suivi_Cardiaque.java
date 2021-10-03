@@ -1,3 +1,8 @@
+/**
+ * Projet programmation Android
+ * @author GUILHAUMON Benoit, MOUSSET Leana M2 GPhy
+ * @version 03/10/2021
+ */
 package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;

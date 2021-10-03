@@ -1,3 +1,8 @@
+/**
+ * Projet programmation Android
+ * @author GUILHAUMON Benoit, MOUSSET Leana M2 GPhy
+ * @version 03/10/2021
+ */
 package com.example.petitcoeur;
 
 import androidx.annotation.NonNull;
@@ -12,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
+// Activity 5
 public class hygiene_vie extends AppCompatActivity {
 
     // Declaration du TAG du projet
@@ -114,11 +120,13 @@ public class hygiene_vie extends AppCompatActivity {
         String consomEnergyDrinkP = intent.getStringExtra("energyDrink");
         String sleepDisorderP = intent.getStringExtra("sleepDisorders");
         String sleepHourP = intent.getStringExtra("sleepHours");
+
         // Permet d'afficher dans les Log le nom transfere de la page suivante
         Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexeP);
         Log.d(TAG, "onCreate: Previous Person Informations : " + spinnerHeartConditionP + spinnerDiabeticP + spinnerFirstDegreeP + spinnerCholesterolP);
         Log.d(TAG, "onCreate: Previous Person Informations : " + cardiovascularRiskP + cardiacCheckUpPrevP + consultCardiologistP);
         Log.d(TAG, "onCreate: Previous Person Informations : " + consomAlcoolP + consomEnergyDrinkP + sleepDisorderP + sleepHourP);
+
         // On attribue la valeur pour pouvoir afficher
         alccolPerson = consomAlcoolP;
         eDrinkPerson = consomEnergyDrinkP;
@@ -132,42 +140,49 @@ public class hygiene_vie extends AppCompatActivity {
                 consoAlcool = "Yes";
             }
         });
+
         noAlcohol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 consoAlcool = "No";
             }
         });
+
         yesEnergyDrink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 consoEnergyDrink = "Yes";
             }
         });
+
         noEnergyDrink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 consoEnergyDrink = "No";
             }
         });
+
         yesSleepDisorders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sleepDisorders = "Yes";
             }
         });
+
         noSleepDisorders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sleepDisorders = "No";
             }
         });
+
         yesSleepHours.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sleepHours = "Yes";
             }
         });
+
         noSleepHours.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

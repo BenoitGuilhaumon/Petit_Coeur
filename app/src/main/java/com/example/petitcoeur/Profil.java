@@ -1,3 +1,9 @@
+/**
+ * Projet programmation Android
+ * @author GUILHAUMON Benoit, MOUSSET Leana M2 GPhy
+ * @version 03/10/2021
+ */
+
 package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +21,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+
+// Activite 2
 public class Profil extends AppCompatActivity {
 
     // Declaration du tag du projet
@@ -23,11 +31,10 @@ public class Profil extends AppCompatActivity {
     // Attribution a la classe Person
     private Person person;
 
-    // Delcaration des elements graphiques
+    // Declaration des elements graphiques
     private RadioButton SexMan; // Sexe de l'utilisateur
     private RadioButton SexWoman; // Sexe de l'utilisateur
     private RadioButton SexOther; // Sexe de l'utilisateur
-    private RadioGroup SexGroup; // Groupe de boutton sexe
     private EditText age; // Age de l'utilisateur
     private String sexeP;
     private String namePerson;
@@ -58,10 +65,13 @@ public class Profil extends AppCompatActivity {
         // On recupere la valeur envoyée par la page précédente
         Intent intent = getIntent();
         String name = intent.getStringExtra("personname");
+
         // Permet d'afficher dans les Log le nom transfere de la page precedente
         Log.d(TAG, "onCreate: Person name : " + name);
+
         // J'attribue la valeur recupere pour pouvoir la retransferrer
         namePerson = name;
+
         // Bouton desactive tant que l'utilisateur n'a complété toutes les questions
         nextstep.setEnabled(false);
 
@@ -70,8 +80,10 @@ public class Profil extends AppCompatActivity {
         String sexe = intentP.getStringExtra("sexe");
         String ageP = intentP.getStringExtra("age");
         String nameP = intent.getStringExtra("personname");
+
         // Permet d'afficher dans les Log le nom transfere de la page suivante
         Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexe);
+
         // On attribue la valeur pour pouvoir afficher
         sexePerson = sexe;
         agePerson = ageP;
@@ -115,74 +127,69 @@ public class Profil extends AppCompatActivity {
                 sexeP = "Other";
             }
         });
-
+/*
         // On vérifie qu'un des boutons radios a ete coche
         if (SexMan.isChecked() || (SexWoman.isChecked()) || (SexOther.isChecked())) {
             nextstep.setEnabled(true);
         } else {
-                toast("You must answer all questions");
-            }
+            toast("You must answer all questions");
+        }*/
 
         processIntentData();
     }
 
-
-
+    // Affichage d'un message
     public void toast(String msg) {
-        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
     // Permet de passer à la page suivante du formulaire en transferrant les informations des pages precedentes
-    public void action_next_page(View sender){
+    public void action_next_page(View sender) {
         Log.d(TAG, "action_next_page: Passage à la suite du formulaire");
         Intent intent = new Intent(this, MonCoeur.class);
-        intent.putExtra("sexe",sexeP);
-        intent.putExtra("age",age.getText().toString());
-        intent.putExtra("personname",namePerson);
+        intent.putExtra("sexe", sexeP);
+        intent.putExtra("age", age.getText().toString());
+        intent.putExtra("personname", namePerson);
         startActivity(intent);
 
         //goToActivity3();
     }
 
     // Permet de passer à la premiere page du formulaire via le bouton start
-    public void action_previous_page(View sender){
+    public void action_previous_page(View sender) {
         Log.d(TAG, "action_next_page: Passage à la page précédente du formulaire");
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("personname",namePerson);
+        intent.putExtra("personname", namePerson);
         startActivity(intent);
 
         // goToActivity1();
     }
 
-    // Methode appele par la methode onCreate
-    // elle permet le transfert des donnees renseignees
+    // Methode appele par la methode onCreate, elle permet le transfert des donnees renseignees
     private void processIntentData() {
         Intent intent = getIntent();
-        if(intent != null) {
+        if (intent != null) {
             Person transferredPerson = intent.getParcelableExtra("FromActivity1ToActivity2");
             Person transferredPersonPrevious = intent.getParcelableExtra("FromActivity3ToActivity2");
             if (transferredPerson != null) {
                 this.person = transferredPerson;
                 this.person.print();
-            }
-            else {
+            } else {
                 Log.d(TAG, "No Person found after transfer from Activity1");
             }
             if (transferredPersonPrevious != null) {
                 this.person = transferredPersonPrevious;
                 this.person.print();
-            }
-            else {
+            } else {
                 Log.d(TAG, "No Person found after transfer from Activity3");
             }
-        }
-        else {
+        } else {
             Log.d(TAG, "Error when transferring from Activity1");
         }
     }
 
     // Passage a l'activite suivante
-    public void goToActivity3(){
+    public void goToActivity3() {
         Intent activity3Intent = new Intent(this, MonCoeur.class);
         activity3Intent.putExtra("FromActivity2ToActivity3", this.person);
         startActivity(activity3Intent);
@@ -190,7 +197,7 @@ public class Profil extends AppCompatActivity {
     }
 
     // Retour a l'activite precedente
-    public void goToActivity1(){
+    public void goToActivity1() {
         Intent activityIntent = new Intent(this, MainActivity.class);
         activityIntent.putExtra("FromActivity2ToActivity1", this.person);
         startActivity(activityIntent);

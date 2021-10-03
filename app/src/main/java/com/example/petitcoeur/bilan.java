@@ -1,3 +1,9 @@
+/**
+ * Projet programmation Android
+ * @author GUILHAUMON Benoit, MOUSSET Leana M2 GPhy
+ * @version 03/10/2021
+ */
+
 package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -71,6 +77,7 @@ public class bilan extends AppCompatActivity {
         String consomEnergyDrink = intent.getStringExtra("energyDrink");
         String sleepDisorder = intent.getStringExtra("sleepDisorders");
         String sleepHour = intent.getStringExtra("sleepHours");
+
         // Permet d'afficher dans les Log des infos transfere de la page precedente
         Log.d(TAG, "onCreate: Person name : " + name);
         Log.d(TAG, "onCreate: Person sexe : " + sexe);
@@ -86,6 +93,7 @@ public class bilan extends AppCompatActivity {
         Log.d(TAG, "onCreate: Person Conso Energy Drink ? : " + consomEnergyDrink);
         Log.d(TAG, "onCreate: Person Sleep Disorders ? : " + sleepDisorder);
         Log.d(TAG, "onCreate: Person Sleep 7 Hours ? : " + sleepHour);
+
         // J'attribue les valeurs recuperees pour pouvoir les retransferrer
         namePerson = name;
         sexePerson = sexe;
@@ -131,7 +139,6 @@ public class bilan extends AppCompatActivity {
         RsleepDisorders.setText(sleepDisorders);
         TextView Rsleep7 = (TextView) findViewById(R.id.Rsleep7);
         Rsleep7.setText(sleepHours);
-
 
         finish = findViewById(R.id.finish);
     }

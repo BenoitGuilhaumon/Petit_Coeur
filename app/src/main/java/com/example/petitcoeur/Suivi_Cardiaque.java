@@ -1,3 +1,9 @@
+/**
+ * Projet programmation Android
+ * @author GUILHAUMON Benoit, MOUSSET Leana M2 GPhy
+ * @version 03/10/2021
+ */
+
 package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,13 +21,15 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
 
-
+// Activite 4
 public class Suivi_Cardiaque extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
 
-    private Person person; // Attribution a la classe Person
+    // Attribution a la classe Person
+    private Person person;
 
+    // Declaration des elements graphiques
     private EditText risk;
     private Switch cardiacCheckUp;
     private ImageButton yesCardiologist;

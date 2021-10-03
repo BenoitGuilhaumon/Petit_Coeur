@@ -9,14 +9,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Affichage informations après retour d'informations">
+    <list default="true" id="6d98f8b5-2530-49f1-be61-5fff12696140" name="Default Changelist" comment="Essaies de bouton désactivés">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MonCoeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/MonCoeur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Previous_Suivi_Cardiaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Previous_Suivi_Cardiaque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Profil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Profil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_profil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_profil.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profil.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Suivi_Cardiaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/Suivi_Cardiaque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/bilan.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/bilan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/hygiene_vie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/petitcoeur/hygiene_vie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1yOgSiECuNYXOgPyY0Drh3ZqzSY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -61,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/androidTest/java" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -430,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633180516453</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Essaies de bouton désactivés">
+      <created>1633184622279</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1633184622279</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -461,6 +473,7 @@
     <MESSAGE value="Page bilan et affichage" />
     <MESSAGE value="Retour informations page suivante" />
     <MESSAGE value="Affichage informations après retour d'informations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Affichage informations après retour d'informations" />
+    <MESSAGE value="Essaies de bouton désactivés" />
+    <option name="LAST_COMMIT_MESSAGE" value="Essaies de bouton désactivés" />
   </component>
 </project>

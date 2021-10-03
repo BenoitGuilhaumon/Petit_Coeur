@@ -1,3 +1,9 @@
+/**
+  Projet programmation Android
+  @author GUILHAUMON Benoit, MOUSSET Leana M2 GPhy
+ * @version 03/10/2021
+ */
+
 package com.example.petitcoeur;
 
 import androidx.annotation.NonNull;
@@ -14,20 +20,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+// Activite 1
 public class MainActivity extends AppCompatActivity {
 
     // Déclaration du TAG du projet
     public static final String TAG = "UPCoeur";
 
-    // Attribution a la classe Person
-    private Person person;
-
     // Déclaration des elements graphiques
     private EditText editName; // Nom de l'utilisateur
     private Button start; // Demarrage du questionnaire
-    private String nameP;
 
-    @SuppressLint("WrongViewCast")
+    @SuppressLint({"WrongViewCast", "SetTextI18n"})
 
     // Appele lorsque l'application est creee
     @Override
@@ -43,14 +46,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Permet d'afficher dans les Log le nom transfere de la page suivante
         Log.d(TAG, "onCreate: Previous Person name : " + name);
+
         // On attribue la valeur pour pouvoir afficher
-        nameP = name;
 
         // Reference aux elements graphiques de  l'activité
         editName = findViewById((R.id.PersonName));
         start = findViewById(R.id.start);
+
         // Bouton desactive tant que l'utilisateur n'a pas entre son nom
         start.setEnabled(false);
+
         // Valeur du champs par défaut
         editName.setText("Name");
 
@@ -79,17 +84,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void toast(String msg) {
-        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
-    }
-
     // Permet de passer à la premiere page du formulaire via le bouton start
-    public void action_start(View sender){
+    public void action_start(View sender) {
         Log.d(TAG, "action_start: Demarrage du test");
         Intent intent = new Intent(this, Profil.class);
-        intent.putExtra("personname",editName.getText().toString());// Permet de transferer la donnée de nom lors du changement de page
+        intent.putExtra("personname", editName.getText().toString());// Permet de transferer la donnée de nom lors du changement de page
         startActivity(intent);
-        Toast.makeText(this,"Recorded response", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Recorded response", Toast.LENGTH_LONG).show();
     }
 
     @Override // C'est android qui appel cette fonction de sauvegarde
@@ -107,27 +108,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Cette methode est appelee par la methode onCreate
-    // elle permet le transfert des donnees renseignees
+    // Cette methode est appelee par la methode onCreate, elle permet le transfert des donnees renseignees
     private void processIntentData() {
         Intent intent = getIntent();
-        if(intent != null) {
+        if (intent != null) {
             Person transferredPersonPrevious = intent.getParcelableExtra("FromActivity2ToActivity1");
             if (transferredPersonPrevious != null) {
-                this.person = transferredPersonPrevious;
-                this.person.print();
-            }
-            else {
+                // Attribution a la classe Person
+                transferredPersonPrevious.print();
+            } else {
                 Log.d(TAG, "No Person found after transfer from Activity2");
             }
-        }
-        else {
+        } else {
             Log.d(TAG, "Error when transferring from Activity2");
         }
     }
 
     // Creation d'une key pour l'application
-    private static final String KEY_COEUR = "coeur";
 
 
     // CYCLE DE VIE DE L'APPLICATION
