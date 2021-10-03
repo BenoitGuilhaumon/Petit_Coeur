@@ -2,6 +2,7 @@
 
 <resources>
     <string-array name="array_response">
+        <item>Choisir</item>
         <item>Oui</item>
         <item>Non</item>
     </string-array>

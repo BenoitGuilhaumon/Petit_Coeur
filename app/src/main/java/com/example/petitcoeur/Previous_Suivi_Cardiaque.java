@@ -3,6 +3,13 @@
  * @author GUILHAUMON Benoit, MOUSSET Leana M2 GPhy
  * @version 03/10/2021
  */
+
+/**
+ * @Class Previous_Suivi_Cardiaque
+ * Cette classe permet de récuperer les valeurs du questionnaire lors d'un retour en arriére à partir de la classe Hygiene_Vie.
+ * On va pouvoir afficher les valeurs renseignées sur l'interface Suivi_Cardiaque.xml.
+ */
+
 package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -84,7 +91,7 @@ public class Previous_Suivi_Cardiaque extends AppCompatActivity {
         firstDegree = spinnerFirstDegree;
         cholesterol = spinnerCholesterol;*/
 
-        // On recupere la valeur envoyée par la page suivante
+        // On recupere la valeur envoyée par la page hygiene_vie
         Intent intent = getIntent();
         String sexeP = intent.getStringExtra("sexe");
         String ageP = intent.getStringExtra("age");

@@ -3,6 +3,15 @@
  * @author GUILHAUMON Benoit, MOUSSET Leana M2 GPhy
  * @version 03/10/2021
  */
+
+/**
+ * @Class Hygiene_Vie
+ * Cette classe est la cinquième page du questionnaire.
+ * Permet à l'utilisateur de renseigner des informations sur les conditions d'hygiènes de vie.
+ * Le tout via des RadioButtons.
+ * La page permet également d'avoir un lien vers la Federation Francaise de Cardiologie.
+ */
+
 package com.example.petitcoeur;
 
 import androidx.annotation.NonNull;
@@ -42,6 +51,7 @@ public class hygiene_vie extends AppCompatActivity {
     private String heartCondition, diabetic, firstDegree, cholesterol, Cardiologist, risk;
     private String CheckUp, consoAlcool, consoEnergyDrink, sleepDisorders, sleepHours;
     private String alccolPerson, eDrinkPerson, disordersPerson, hoursPerson;
+    private int selec, selec1, selec2, selec3, selec4;
 
     @SuppressLint("WrongViewCast")
 
@@ -133,11 +143,17 @@ public class hygiene_vie extends AppCompatActivity {
         disordersPerson = sleepDisorderP;
         hoursPerson = sleepHourP;
 
+        // Bouton desactive tant que l'utilisateur n'a complété toutes les questions
+        nextStep.setEnabled(false);
+        cardiologyFederation.setEnabled(false);
+
+        selec = 0;
         // On attribue pour chaques radio button une valeur si il est coché
         yesAlcohol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 consoAlcool = "Yes";
+                selec1 = selec + 1;
             }
         });
 
@@ -145,6 +161,7 @@ public class hygiene_vie extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 consoAlcool = "No";
+                selec1 = selec + 1;
             }
         });
 
@@ -152,6 +169,7 @@ public class hygiene_vie extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 consoEnergyDrink = "Yes";
+                selec2 = selec1 + 1;
             }
         });
 
@@ -159,6 +177,7 @@ public class hygiene_vie extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 consoEnergyDrink = "No";
+                selec2 = selec1 + 1;
             }
         });
 
@@ -166,6 +185,7 @@ public class hygiene_vie extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sleepDisorders = "Yes";
+                selec3 = selec2 + 1;
             }
         });
 
@@ -173,6 +193,8 @@ public class hygiene_vie extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sleepDisorders = "No";
+                selec3 = selec2 + 1;
+
             }
         });
 
@@ -180,6 +202,14 @@ public class hygiene_vie extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sleepHours = "Yes";
+                selec4 = selec3 + 1;
+
+                // On verifie si tous les champs sont remplis pour débloquer le bouton Nextstep
+                Log.d(TAG, "onItemSelected: Select item " + selec4);
+                if (selec4 >= 4) {
+                    nextStep.setEnabled(true);
+                    cardiologyFederation.setEnabled(true);
+                }
             }
         });
 
@@ -187,6 +217,14 @@ public class hygiene_vie extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sleepHours = "No";
+                selec4 = selec3 + 1;
+
+                // On verifie si tous les champs sont remplis pour débloquer le bouton Nextstep
+                Log.d(TAG, "onItemSelected: Select item " + selec4);
+                if (selec4 >= 4) {
+                    nextStep.setEnabled(true);
+                    cardiologyFederation.setEnabled(true);
+                }
             }
         });
 
@@ -292,7 +330,7 @@ public class hygiene_vie extends AppCompatActivity {
     // Permet de revenir a la page précédente du formulaire
     public void action_previous_page(View sender){
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
-        Intent intent = new Intent(this, Suivi_Cardiaque.class);
+        Intent intent = new Intent(this, Previous_Suivi_Cardiaque.class);
         intent.putExtra("cardiovascularRisk",risk);
         intent.putExtra("cardiacCheckUp",CheckUp);
         intent.putExtra("consultCardiologist",Cardiologist);

@@ -4,6 +4,12 @@
  * @version 03/10/2021
  */
 
+/**
+ * @Class Bilan
+ * Cette classe est la sixième et dernière page du questionnaire.
+ * Permet à l'utilisateur d'avoir un récapitulatif complet des informations renseignées.
+ */
+
 package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+// Activity 6
 public class bilan extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;

@@ -4,6 +4,13 @@
  * @version 03/10/2021
  */
 
+/**
+ * @Class MonCoeur
+ * Cette classe est la troisième page du questionnaire.
+ * Permet à l'utilisateur de renseigner des informations sur la condition cardiaque, les antécédants, le diabéte ou le cholesterol.
+ * Le tout via des spinners.
+ */
+
 package com.example.petitcoeur;
 
 import android.annotation.SuppressLint;
@@ -21,7 +28,7 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-// Activite 3
+// Activity 3
 public class MonCoeur extends AppCompatActivity {
 
     // Declaration du TAG du projet
@@ -34,6 +41,7 @@ public class MonCoeur extends AppCompatActivity {
     private Spinner heartCondition, diabetic, firstDegree, cholesterol;
     private Button nextstep;
     private String namePerson, sexePerson, agePerson;
+    private int selec, selec1, selec2, selec3, selec4;
 
     @SuppressLint({"WrongViewCast", "CutPasteId"})
 
@@ -42,6 +50,18 @@ public class MonCoeur extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_coeur);
 
+        // On attribue la valeur pour pouvoir afficher
+        heartCondition = findViewById(R.id.heartCondition);
+        diabetic = findViewById(R.id.diabetic);
+        firstDegree = findViewById(R.id.fitstDegree);
+        cholesterol = findViewById(R.id.cholesterol);
+        nextstep = findViewById(R.id.nextstep2);
+        findViewById(R.id.previousstep2);
+        // Demarrage du questionnaire
+        findViewById(R.id.nextstep2);
+        // retour à la page precedente du questionnaire
+        findViewById(R.id.previousstep2);
+
         // On recupere la valeur envoyée par la page précédente
         Intent intent = getIntent();
         String name = intent.getStringExtra("personname");
@@ -49,7 +69,8 @@ public class MonCoeur extends AppCompatActivity {
         String age = intent.getStringExtra("age");
 
         // Je verifie que les données sont bien transferees
-        Log.d(TAG, "onCreate: Person name : " + name); // Permet d'afficher dans les Log le nom transfere de la page precedente
+        // Permet d'afficher dans les Log le nom transfere de la page precedente
+        Log.d(TAG, "onCreate: Person name : " + name);
         Log.d(TAG, "onCreate: Person sexe : " + sexe);
         Log.d(TAG, "onCreate: Person age : " + age);
 
@@ -74,25 +95,15 @@ public class MonCoeur extends AppCompatActivity {
         // Permet d'afficher dans les Log le nom transfere de la page suivante
         Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexeP + spinnerHeartCondition + spinnerDiabetic + spinnerFirstDegree + spinnerCholesterol);
 
-        // On attribue la valeur pour pouvoir afficher
-
-        heartCondition = findViewById(R.id.heartCondition);
-        diabetic = findViewById(R.id.diabetic);
-        firstDegree = findViewById(R.id.fitstDegree);
-        cholesterol = findViewById(R.id.cholesterol);
-        nextstep = findViewById(R.id.nextstep2);
-        findViewById(R.id.previousstep2);
-        // Demarrage du questionnaire
-        findViewById(R.id.nextstep2);
-        // retour à la page precedente du questionnaire
-        findViewById(R.id.previousstep2);
-
+        selec = 0;
         heartCondition.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 Log.d(TAG, "onItemSelected: Info position : " + heartCondition.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + heartCondition.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + heartCondition.getSelectedItemId());
+
+                selec1 = selec1 + 1;
             }
 
             @Override // Si rien est selectionne, un message apparait
@@ -107,6 +118,8 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + diabetic.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + diabetic.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + diabetic.getSelectedItemId());
+
+                selec2 = selec1 + 1;
             }
 
             @Override // Si rien n'est selectionne, un message apparait
@@ -121,6 +134,8 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + firstDegree.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + firstDegree.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + firstDegree.getSelectedItemId());
+
+                selec3 = selec2 + 1;
             }
 
             @Override // Si rien n'est selectionne, un message apparait
@@ -135,6 +150,13 @@ public class MonCoeur extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: Info position : " + cholesterol.getSelectedItemPosition());
                 Log.d(TAG, "onItemSelected: Info object: " + cholesterol.getSelectedItem());
                 Log.d(TAG, "onItemSelected: Info id : " + cholesterol.getSelectedItemId());
+
+                selec4 = selec3 + 1;
+                // On verifie si tous les champs sont remplis pour débloquer le bouton Nextstep
+                Log.d(TAG, "onItemSelected: Select item " + selec4);
+                if (selec4 >= 4) {
+                    nextstep.setEnabled(true);
+                }
             }
 
             @Override // Si rien n'est selectionne, un message apparait
@@ -143,7 +165,7 @@ public class MonCoeur extends AppCompatActivity {
             }
         });
 
-        // Essai pour debloquer le bouton nextstep que si toutes les réponses ont été sélectionnée
+        // Essai pour debloquer le bouton nextstep que si toutes les réponses ont été sélectionnées
         /*if ((heartCondition.isActivated()) && (diabetic.isActivated()) && (firstDegree.isActivated()) && (cholesterol.isActivated())) {
             nextstep.setEnabled(true);
         }

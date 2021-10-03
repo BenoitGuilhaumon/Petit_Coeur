@@ -4,6 +4,13 @@
  * @version 03/10/2021
  */
 
+/**
+ * @Class Profil
+ * Cette classe est la seconde page du questionnaire.
+ * Elle va permmettre à l'utilisateur de reznseigner son genre via des radioButton
+ * Et son age via un EditText.
+ */
+
 package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +29,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
-// Activite 2
+// Activity 2
 public class Profil extends AppCompatActivity {
 
     // Declaration du tag du projet

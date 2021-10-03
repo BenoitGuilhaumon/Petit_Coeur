@@ -4,6 +4,12 @@
  * @version 03/10/2021
  */
 
+/**
+ * @Class MainActivity
+ * Cette classe constitue la page d'accueil, premièere page du questionnaire.
+ * L'utilisateur va saisir sont Prénom et pourra commencer le test une fois cela fait.
+ */
+
 package com.example.petitcoeur;
 
 import androidx.annotation.NonNull;
@@ -20,7 +26,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-// Activite 1
+// Activity 1
 public class MainActivity extends AppCompatActivity {
 
     // Déclaration du TAG du projet

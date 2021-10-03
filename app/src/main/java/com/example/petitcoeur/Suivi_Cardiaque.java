@@ -4,6 +4,13 @@
  * @version 03/10/2021
  */
 
+/**
+ * @Class Suivi_Cardiaque
+ * Cette classe est la quatrième page du questionnaire.
+ * Permet à l'utilisateur de renseigner des informations sur les visites médicales relatives à la condition cardiaque.
+ * Le tout via un EditText, un bouton Switch et des ImagesButtons.
+ */
+
 package com.example.petitcoeur;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +28,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
 
-// Activite 4
+// Activity 4
 public class Suivi_Cardiaque extends AppCompatActivity {
 
     public static final String TAG = MainActivity.TAG;
@@ -41,6 +48,7 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     private String namePerson, sexePerson, agePerson;
     private String heartCondition, diabetic, firstDegree, cholesterol, checkUp;
     private String cardioVascularPerson, checkUpPerson, consultPerson;
+    private int selec, selec1, selec2, selec3;
 
     @SuppressLint("WrongViewCast")
 
@@ -107,6 +115,10 @@ public class Suivi_Cardiaque extends AppCompatActivity {
         checkUpPerson = cardiacCheckUpPrevP;
         consultPerson = consultCardiologistP;
 
+        // Bouton desactive tant que l'utilisateur n'a complété toutes les questions
+        nextstep.setEnabled(false);
+
+        selec = 0;
         // Notification lorsque l'utilisateur saisi du texte
         risk.addTextChangedListener(new TextWatcher() {
             @Override
@@ -121,6 +133,7 @@ public class Suivi_Cardiaque extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                selec1 = selec + 1;
             }
         });
 
@@ -131,7 +144,10 @@ public class Suivi_Cardiaque extends AppCompatActivity {
                 Log.d(TAG, "onCheckedChanged: Etat du switch : " + cardiacCheckUp.isChecked());
                 if (cardiacCheckUp.isChecked()==true) {
                     checkUp = "Yes";
-                }else {checkUp = "No";}
+                }else {
+                    checkUp = "No";
+                }
+                selec2 = selec1 + 1;
             }
         });
 
@@ -139,6 +155,14 @@ public class Suivi_Cardiaque extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 consultCardiologist = "Yes";
+                Log.d(TAG, "onCheckedChanged: Selection Cardiologist : " + consultCardiologist);
+                selec3 = selec2 + 1;
+
+                // On verifie si tous les champs sont remplis pour débloquer le bouton Nextstep
+                Log.d(TAG, "onItemSelected: Select item " + selec3);
+                if (selec3 >= 3) {
+                    nextstep.setEnabled(true);
+                }
             }
         });
 
@@ -146,6 +170,14 @@ public class Suivi_Cardiaque extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 consultCardiologist = "No";
+                Log.d(TAG, "onCheckedChanged: Selection Cardiologist : " + consultCardiologist);
+                selec3 = selec2 + 1;
+
+                // On verifie si tous les champs sont remplis pour débloquer le bouton Nextstep
+                Log.d(TAG, "onItemSelected: Select item " + selec3);
+                if (selec3 >= 3) {
+                    nextstep.setEnabled(true);
+                }
             }
         });
 
@@ -153,6 +185,14 @@ public class Suivi_Cardiaque extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 consultCardiologist = "Don't know";
+                Log.d(TAG, "onCheckedChanged: Selection Cardiologist : " + consultCardiologist);
+                selec3 = selec2 + 1;
+
+                // On verifie si tous les champs sont remplis pour débloquer le bouton Nextstep
+                Log.d(TAG, "onItemSelected: Select item " + selec3);
+                if (selec3 >= 3) {
+                    nextstep.setEnabled(true);
+                }
             }
         });
 
