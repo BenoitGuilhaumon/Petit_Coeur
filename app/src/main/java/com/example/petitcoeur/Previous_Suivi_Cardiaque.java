@@ -108,6 +108,14 @@ public class Previous_Suivi_Cardiaque extends AppCompatActivity {
         // Permet d'afficher dans les Log le nom transfere de la page suivante
         Log.d(TAG, "onCreate: Previous Person Informations : " + nameP + ageP + sexeP + spinnerHeartConditionP + spinnerDiabeticP + spinnerFirstDegreeP + spinnerCholesterolP);
         Log.d(TAG, "onCreate: Previous Person Informations : " + cardiovascularRiskP + cardiacCheckUpPrevP + consultCardiologistP);
+        // J'attribue les valeurs recuperees pour pouvoir les retransferrer
+        namePerson = nameP;
+        sexePerson = sexeP;
+        agePerson = ageP;
+        heartCondition = spinnerHeartConditionP;
+        diabetic = spinnerDiabeticP;
+        firstDegree = spinnerFirstDegreeP;
+        cholesterol = spinnerCholesterolP;
         // On attribue la valeur pour pouvoir afficher
         cardioVascularPerson = cardiovascularRiskP;
         checkUpPerson = cardiacCheckUpPrevP;

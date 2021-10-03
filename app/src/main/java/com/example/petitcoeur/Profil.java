@@ -96,24 +96,7 @@ public class Profil extends AppCompatActivity {
         agePerson = ageP;
         age.setText(agePerson);
 
-        // Notification lorsque l'utilisateur saisi du texte
-        age.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                nextstep.setEnabled(true);
-            }
-        });
-
+        // Notification lorsque l'utilisateur rempli les champs
         SexMan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -134,13 +117,23 @@ public class Profil extends AppCompatActivity {
                 sexeP = "Other";
             }
         });
-/*
-        // On vérifie qu'un des boutons radios a ete coche
-        if (SexMan.isChecked() || (SexWoman.isChecked()) || (SexOther.isChecked())) {
-            nextstep.setEnabled(true);
-        } else {
-            toast("You must answer all questions");
-        }*/
+
+        age.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                    nextstep.setEnabled(true);
+                }
+        });
 
         processIntentData();
     }
