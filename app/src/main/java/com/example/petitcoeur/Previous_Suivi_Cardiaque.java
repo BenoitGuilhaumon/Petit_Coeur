@@ -30,9 +30,11 @@ import android.widget.Switch;
 
 public class Previous_Suivi_Cardiaque extends AppCompatActivity {
 
+    // Declaration du TAG du projet
     public static final String TAG = MainActivity.TAG;
 
-    private Person person; // Attribution a la classe Person
+    // Attribution a la classe Person
+    private Person person;
 
     private EditText risk;
     private Switch cardiacCheckUp;
@@ -110,8 +112,13 @@ public class Previous_Suivi_Cardiaque extends AppCompatActivity {
         cardioVascularPerson = cardiovascularRiskP;
         checkUpPerson = cardiacCheckUpPrevP;
         consultPerson = consultCardiologistP;
-        // On affiche les valeurs
+        // On affiche les informations renseignées
         risk.setText(cardioVascularPerson);
+        if (cardiacCheckUpPrevP != "No"){
+            cardiacCheckUp.setChecked(true);
+        } else {
+            cardiacCheckUp.setChecked(false);
+        }
 
         // Notification lorsque l'utilisateur saisi du texte
         risk.addTextChangedListener(new TextWatcher() {
@@ -202,7 +209,7 @@ public class Previous_Suivi_Cardiaque extends AppCompatActivity {
     // Permet de revenir à la page précédente du formulaire
     public void action_previous_page(View sender){
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
-        Intent intent = new Intent(this, MonCoeur.class);
+        Intent intent = new Intent(this, Previous_Mon_Coeur.class);
         intent.putExtra("spinnerHeartCondition",heartCondition);
         intent.putExtra("spinnerDiabetic",diabetic);
         intent.putExtra("spinnerFirstDegree",firstDegree);

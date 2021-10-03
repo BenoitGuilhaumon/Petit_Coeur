@@ -236,7 +236,7 @@ public class Suivi_Cardiaque extends AppCompatActivity {
     // Permet de revenir à la page précédente du formulaire
     public void action_previous_page(View sender){
         Log.d(TAG, "action_previous_page: Passage à la page précédente du formulaire");
-        Intent intent = new Intent(this, MonCoeur.class);
+        Intent intent = new Intent(this, Previous_Mon_Coeur.class);
         intent.putExtra("spinnerHeartCondition",heartCondition);
         intent.putExtra("spinnerDiabetic",diabetic);
         intent.putExtra("spinnerFirstDegree",firstDegree);
